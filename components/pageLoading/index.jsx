@@ -2,6 +2,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { useRouter } from "next/router";
+import styles from "./style.module.scss";
 
 export default function pageLoading() {
   const router = useRouter();
@@ -14,15 +15,10 @@ export default function pageLoading() {
 
   useEffect(() => {
     if (router.pathname == "/about") {
-      document.querySelector(".page-title > h2").textContent = "ABOUT";
+      loadingWord.current.innerText = "ABOUT";
     } else {
-      document.querySelector(".page-title > h2").textContent = "FORTPOLIO";
+      loadingWord.current.innerText = "FORTPOLIO";
     }
-
-    // if (performance.navigation.type === 1) {
-    //   document.querySelector("body").style.cssText = "background: #141517";
-    //   //console.log("새로고침");
-    // }
 
     if (localStorage.getItem("load") != null) {
       document.body.style.cssText = "background: #141517";
@@ -73,12 +69,12 @@ export default function pageLoading() {
           ease: "power3.inOut",
           onStart: function () {
             document.body.style.cssText = "";
+            window.scrollTo(0, 0);
           },
           onComplete: function () {
             gsap.set(loadingCont.current, { zIndex: "-1" });
             gsap.set(loadingBox.current, { top: "100%" });
             document.body.classList.remove("scroll-none");
-            window.scrollTo(0, 0);
           },
         });
       },
@@ -86,16 +82,16 @@ export default function pageLoading() {
   }, []);
 
   return (
-    <div className="loading-container" ref={loadingCont}>
-      <div className="loading" ref={loadingBox}>
-        <div className="top" ref={loadingTop}>
-          <div className="round-div"></div>
+    <div className={styles.loading_container} ref={loadingCont}>
+      <div className={styles.loading} ref={loadingBox}>
+        <div className={styles.top} ref={loadingTop}>
+          <div className={styles.round_div}></div>
         </div>
-        <div className="page-title">
+        <div className={styles.page_title}>
           <h2 ref={loadingWord}></h2>
         </div>
-        <div className="bottom" ref={loadingBottom}>
-          <div className="round-div"></div>
+        <div className={styles.bottom} ref={loadingBottom}>
+          <div className={styles.round_div}></div>
         </div>
       </div>
     </div>

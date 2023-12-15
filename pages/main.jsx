@@ -3,13 +3,13 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "@/styles/Page.module.scss";
+import styles from "@/styles/main.module.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "../components/Preloader";
 
-import Layout from "./layout";
+import Layout from "./sub_layout";
 
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -60,7 +60,7 @@ export default function Main() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className={`${styles.main}`}>
+        <div className={styles.main}>
           <div>
             <ul>
               <li>test</li>

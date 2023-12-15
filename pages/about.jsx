@@ -1,5 +1,5 @@
-import styles from "@/styles/Sub.module.scss";
-import Layout from "./layout";
+import styles from "@/styles/sub.module.scss";
+import Layout from "./sub_layout";
 import Head from "next/head";
 import PageLoading from "../components/pageLoading";
 
@@ -14,9 +14,57 @@ export default function about() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <section>
-          <h2 className={styles.scroll}>ABOUT</h2>
+        <section className={styles.section}>
+          <h2>ABOUT</h2>
           <ul>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
+            <li>Helping brands thrive in the digital world</li>
             <li>Helping brands thrive in the digital world</li>
             <li>Helping brands thrive in the digital world</li>
             <li>Helping brands thrive in the digital world</li>

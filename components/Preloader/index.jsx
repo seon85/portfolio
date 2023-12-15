@@ -1,5 +1,5 @@
 "use client";
-//import styles from './style.module.scss';
+import styles from "./style.module.scss";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { opacity, slideUp } from "./anime";
@@ -58,7 +58,7 @@ export default function Index() {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="introduction"
+      className={styles.introduction}
     >
       {dimension.width > 0 && (
         <>

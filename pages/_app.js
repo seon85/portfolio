@@ -7,6 +7,11 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+
     const handleRouteChange = (url, { shallow }) => {
       // console.log(
       //   `App is changing to ${url} ${

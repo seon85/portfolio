@@ -1,7 +1,10 @@
-.main-container {
-    // opacity: 0;
-  }
+.main_container {
+  position: relative;
+  opacity: 0;
+}
 
-  .scroll{
-    color: yellow;
+.section {
+  @media (width > 768px) {
+    padding-top: 130px;
   }
+}

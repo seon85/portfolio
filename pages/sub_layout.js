@@ -1,3 +1,4 @@
+import Style from "@/styles/sub.module.scss";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -10,17 +11,14 @@ export default function Layout({ children }) {
   const router = useRouter();
 
   useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
-
     if (router.pathname != "/") {
       // 메인페이지가 아니라면
-      gsap.set(main.current, { y: "20%" });
+      //gsap.set(main.current, { y: "20%" });
+      gsap.set(main.current, { top: "100px" });
       gsap.to(main.current, {
         delay: 1,
-        y: "0%",
+        //y: "0%",
+        top: 0,
         duration: 1,
         opacity: 1,
         ease: "power3.inOut",
@@ -30,7 +28,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <main className="main-container" ref={main}>
+      <main className={Style.main_container} ref={main}>
         <Header />
         {children}
         <Footer />

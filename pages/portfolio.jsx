@@ -1,4 +1,4 @@
-import Layout from "./layout";
+import Layout from "./sub_layout";
 import PageLoading from "../components/pageLoading";
 
 export default function portfolio() {
