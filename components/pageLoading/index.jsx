@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { useRouter } from "next/router";
 import styles from "./style.module.scss";
 
-export default function pageLoading() {
+export default function PageLoading() {
   const router = useRouter();
 
   const loadingCont = useRef(null);

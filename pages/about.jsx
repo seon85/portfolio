@@ -5,7 +5,7 @@ import Layout from "./sub_layout";
 import Head from "next/head";
 import PageLoading from "../components/pageLoading";
 
-export default function about() {
+export default function About() {
   const [aa, aaa] =useState(false);
 
   useEffect(()=>{
