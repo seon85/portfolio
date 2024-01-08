@@ -1,4 +1,4 @@
-import Style from "@/styles/sub.module.scss";
+import Style from "../styles/sub.module.scss";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import styles from "@/styles/sub.module.scss";
+import styles from "../styles/sub.module.scss";
 import Layout from "./sub_layout";
 import Head from "next/head";
 import PageLoading from "../components/pageLoading";
