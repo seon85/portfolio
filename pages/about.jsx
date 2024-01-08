@@ -1,9 +1,18 @@
+"use client";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styles from "@/styles/sub.module.scss";
 import Layout from "./sub_layout";
 import Head from "next/head";
 import PageLoading from "../components/pageLoading";
 
 export default function about() {
+  const [aa, aaa] =useState(false);
+
+  useEffect(()=>{
+    
+  })
+
+
   return (
     <>
       <PageLoading />
@@ -16,6 +25,14 @@ export default function about() {
         </Head>
         <section className={styles.section}>
           <h2>ABOUT</h2>
+          <div>
+            <button type="button" onClick={()=>{
+              aaa(!aa)
+            }} className={`${aa ? styles.test : ""}`}>button</button>
+            {
+              aa && <p>open test</p>
+            }
+          </div>
           <ul>
             <li>Helping brands thrive in the digital world</li>
             <li>Helping brands thrive in the digital world</li>

@@ -23,32 +23,32 @@ export default function Header() {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(button.current, {
-      scale: 1,
+      //scale: 1,
       duration: 0.25,
       ease: "power3.inOut",
       scrollTrigger: {
-        scrub: 1,
+        //scrub: 1,
         trigger: document.documentElement,
-        start: "50% 70%",
+        start: 0,
         end: window.innerHeight,
-        //markers: true,
-        // onLeave: () => {
-        //   gsap.to(button.current, {
-        //     scale: 1,
-        //     duration: 0.25,
-        //     ease: "power1.out",
-        //   });
-        // },
-        // onEnterBack: () => {
-        //   gsap.to(
-        //     button.current,
-        //     { scale: 0, duration: 0.25, ease: "power1.out" },
-        //     setIsActive(false)
-        //   );
-        // },
+        markers: true,
+        onLeave: () => {
+          gsap.to(button.current, {
+            scale: 1,
+            duration: 0.25,
+            ease: "power1.out",
+          });
+        },
+        onEnterBack: () => {
+          gsap.to(
+            button.current,
+            { scale: 0, duration: 0.25, ease: "power1.out" },
+            setIsActive(false)
+          );
+        },
       },
     });
-  }, []);
+  });
 
   return (
     <>
@@ -64,7 +64,7 @@ export default function Header() {
         <div className={styles.nav}>
           <Magnetic>
             <div className={styles.el}>
-              <Link href="/about" scroll={false}>
+              <Link href="/about">
                 About
               </Link>
               <div className={styles.indicator}></div>
@@ -72,7 +72,7 @@ export default function Header() {
           </Magnetic>
           <Magnetic>
             <div className={styles.el}>
-              <Link href="/portfolio" scroll={false}>
+              <Link href="/portfolio">
                 Portfolio
               </Link>
               <div className={styles.indicator}></div>
@@ -80,7 +80,7 @@ export default function Header() {
           </Magnetic>
           <Magnetic>
             <div className={styles.el}>
-              <Link href="/contact" scroll={false}>
+              <Link href="/contact">
                 Contact
               </Link>
               <div className={styles.indicator}></div>

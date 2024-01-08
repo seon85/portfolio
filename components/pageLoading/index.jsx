@@ -79,7 +79,7 @@ export default function pageLoading() {
         });
       },
     });
-  }, []);
+  });
 
   return (
     <div className={styles.loading_container} ref={loadingCont}>

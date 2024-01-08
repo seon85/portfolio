@@ -24,7 +24,7 @@ export default function Layout({ children }) {
         ease: "power3.inOut",
       });
     }
-  }, []);
+  });
 
   return (
     <>
