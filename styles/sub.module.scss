@@ -1,0 +1,14 @@
+.main_container {
+    position: relative;
+    opacity: 0;
+  }
+  
+  .section {
+    @media (width > 768px) {
+      padding-top: 130px;
+    }
+  }
+  
+  .test{
+    color: red;
+  }
