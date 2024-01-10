@@ -10,7 +10,8 @@ import { AnimatePresence } from "framer-motion";
 export default function Projects() {
   return (
     <>
-      <div className={styles.projects}>프로젝트 영역</div>
+      {/* <div className={styles.projects}>프로젝트 영역</div> */}
+      <div>aaa</div>
     </>
   );
 }
