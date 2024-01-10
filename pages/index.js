@@ -9,6 +9,7 @@ import { AnimatePresence } from "framer-motion";
 import Header from "../components/Header";
 import Preloader from "../components/Preloader";
 import Landing from "../components/Landing";
+import About from "../components/about";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 
@@ -59,6 +60,7 @@ export default function Home() {
       </AnimatePresence>
       <Header />
       <Landing />
+      <About />
       <Projects />
       <Contact />
     </>

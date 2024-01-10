@@ -31,7 +31,7 @@ export default function Header() {
         trigger: document.documentElement,
         start: 0,
         end: window.innerHeight,
-        markers: true,
+        markers: false,
         onLeave: () => {
           gsap.to(button.current, {
             scale: 1,
