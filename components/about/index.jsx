@@ -83,7 +83,7 @@ export default function About() {
             <p>text text</p>
           </div>
           <div ref={secp} className={styles.txt}>
-            <p>Hi&cedil; I&apos;m Callum Smith</p>
+            <p>Hi, I&apos;m Callum Smith</p>
             <p>
               I&apos;m a designer &amp; developer with a passion for web design.
               I enjoy developing simple&cedil; clean and slick websites that
