@@ -72,7 +72,6 @@ export default function About() {
         setexpT(expT);
       },
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -84,7 +83,7 @@ export default function About() {
             <p>text text</p>
           </div>
           <div ref={secp} className={styles.txt}>
-            <p>Hi, Im Callum Smith</p>
+            <p>Hi Im Callum Smith</p>
             <p>
               Im a designer developer with a passion for web design. I enjoy
               developing simple clean and slick websites that provide real value
