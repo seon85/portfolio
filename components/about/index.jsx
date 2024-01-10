@@ -72,7 +72,6 @@ export default function About() {
         setexpT(expT);
       },
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -86,8 +85,8 @@ export default function About() {
           <div ref={secp} className={styles.txt}>
             <p>Hi, I&apos;m Callum Smith</p>
             <p>
-              I&apos;m a designer & developer with a passion for web design. I
-              enjoy developing simple, clean and slick websites that provide
+              I&apos;m a designer &amp; developer with a passion for web design.
+              I enjoy developing simple, clean and slick websites that provide
               real value to the end user. Thousands of clients have procured
               exceptional results while working with me. Delivering work within
               time and budget which meets client’s requirements is our moto.
