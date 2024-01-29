@@ -1,18 +1,63 @@
-"use client";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import styles from "../styles/sub.module.scss";
-import Layout from "./sub_layout";
-import Head from "next/head";
-import PageLoading from "../components/pageLoading";
+'use client';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import styles from '../styles/sub.module.scss';
+import Layout from './sub_layout';
+import Head from 'next/head';
+import PageLoading from '../components/pageLoading';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 export default function About() {
-  const [aa, aaa] =useState(false);
+  const overImg = useRef(null);
+  const aboutTxt = useRef(null);
 
-  useEffect(()=>{
-    
-  })
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.matchMedia({
+      '(min-width: 768px)': function () {
+        gsap.to(aboutTxt.current, {
+          scrollTrigger: {
+            trigger: document.documentElement,
+            scrub: 0.5,
+            start: 0,
+            //end: '+=100%',
+          },
+          y: '200px',
+        });
 
+        gsap.to(overImg.current, {
+          scrollTrigger: {
+            trigger: document.documentElement,
+            scrub: 0.5,
+            start: 0,
+            //end: '+=100%',
+          },
+          y: '-500px',
+        });
+      },
+      '(max-width: 767px)': function () {
+        gsap.to(aboutTxt.current, {
+          scrollTrigger: {
+            trigger: document.documentElement,
+            scrub: 0.5,
+            start: 0,
+            //end: '+=100%',
+          },
+          y: '-50px',
+        });
 
+        gsap.to(overImg.current, {
+          scrollTrigger: {
+            trigger: document.documentElement,
+            scrub: 0.5,
+            start: 0,
+            //end: '+=100%',
+          },
+          y: '-100px',
+        });
+      },
+    });
+  });
   return (
     <>
       <PageLoading />
@@ -23,122 +68,20 @@ export default function About() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <section className={styles.section}>
-          <h2>ABOUT</h2>
-          <div>
-            <button type="button" onClick={()=>{
-              aaa(!aa)
-            }} className={`${aa ? styles.test : ""}`}>button</button>
-            {
-              aa && <p>open test</p>
-            }
+        <div className={styles.section}>
+          <h2 className={styles.subTit}>Helping brands thrive in the digital world</h2>
+          {/* <div style={{ height: '500px' }}></div> */}
+          <div className={styles.about}>
+            <div className={styles.aboutTxt} ref={aboutTxt}>
+              I help companies from all over the world with tailor-made solutions. With each project, I push my work to
+              new horizons, always putting quality first.
+            </div>
+            <div className={styles.overWrap}>
+              <div className={styles.over} ref={overImg}></div>
+            </div>
           </div>
-          <ul>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-            <li>Helping brands thrive in the digital world</li>
-          </ul>
-        </section>
+          <div style={{ height: '1000px', background: 'yellow' }}>aaa</div>
+        </div>
       </Layout>
     </>
   );

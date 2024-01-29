@@ -1,11 +1,11 @@
-"use client";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import styles from "./style.module.scss";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+'use client';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from './style.module.scss';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 export default function About() {
   const about = useRef(null);
@@ -26,8 +26,8 @@ export default function About() {
       scrollTrigger: {
         trigger: about.current,
         scrub: 1,
-        start: "0 90%",
-        end: "30% 30%",
+        start: '0 90%',
+        end: '30% 30%',
         pin: false,
         //markers: true
       },
@@ -43,8 +43,8 @@ export default function About() {
         trigger: about.current,
         //scrub: 1.5,
         scrub: 0.5,
-        start: "5% 70%",
-        end: "80% 80%",
+        start: '5% 70%',
+        end: '80% 80%',
         pin: false,
         //markers: true,
       },
@@ -58,8 +58,8 @@ export default function About() {
         trigger: about.current,
         //scrub: 1,
         scrub: 0.5,
-        start: "75% 75%",
-        end: "75% 75%",
+        start: '75% 75%',
+        end: '90% 90%',
         pin: false,
         //markers: true
       },
@@ -85,25 +85,17 @@ export default function About() {
           <div ref={secp} className={styles.txt}>
             <p>Hi, I&apos;m Callum Smith</p>
             <p>
-              I&apos;m a designer &amp; developer with a passion for web design.
-              I enjoy developing simple&cedil; clean and slick websites that
-              provide real value to the end user. Thousands of clients have
-              procured exceptional results while working with me. Delivering
-              work within time and budget which meets client’s requirements is
+              I&apos;m a designer &amp; developer with a passion for web design. I enjoy developing simple&cedil; clean
+              and slick websites that provide real value to the end user. Thousands of clients have procured exceptional
+              results while working with me. Delivering work within time and budget which meets client’s requirements is
               our moto.
             </p>
           </div>
           <div className={styles.exp} ref={exp}>
-            <div
-              className={`${styles.expnumber} ${expN ? styles.heartBeat : ""}`}
-              ref={expNumber}
-            >
+            <div className={`${styles.expnumber} ${expN ? styles.heartBeat : ''}`} ref={expNumber}>
               10
             </div>
-            <div
-              className={`${styles.exptxt} ${expT ? styles.rubberBand : ""}`}
-              ref={expTxt}
-            >
+            <div className={`${styles.exptxt} ${expT ? styles.rubberBand : ''}`} ref={expTxt}>
               Years of <strong>Experiance</strong>
             </div>
           </div>

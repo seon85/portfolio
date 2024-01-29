@@ -1,8 +1,8 @@
-"use client";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { useRouter } from "next/router";
-import styles from "./style.module.scss";
+'use client';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { gsap } from 'gsap';
+import { useRouter } from 'next/router';
+import styles from './style.module.scss';
 
 export default function PageLoading() {
   const router = useRouter();
@@ -14,67 +14,67 @@ export default function PageLoading() {
   const loadingWord = useRef(null);
 
   useEffect(() => {
-    if (router.pathname == "/about") {
-      loadingWord.current.innerText = "ABOUT";
+    if (router.pathname == '/about') {
+      loadingWord.current.innerText = 'ABOUT';
     } else {
-      loadingWord.current.innerText = "FORTPOLIO";
+      loadingWord.current.innerText = 'FORTPOLIO';
     }
 
-    if (localStorage.getItem("load") != null) {
-      document.body.style.cssText = "background: #141517";
+    if (localStorage.getItem('load') != null) {
+      document.body.style.cssText = 'background: #141517';
     } else {
-      localStorage.setItem("load", "Y");
+      localStorage.setItem('load', 'Y');
     }
 
-    document.body.classList.add("scroll-none");
-    gsap.set(loadingCont.current, { zIndex: "1000" });
+    document.body.classList.add('scroll-none');
+    gsap.set(loadingCont.current, { zIndex: '1000' });
     gsap.to(loadingBox.current, {
       //height: 0,
-      top: "0%",
+      top: '0%',
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
 
     gsap.to(loadingTop.current, {
-      height: "10vh",
+      height: '10vh',
       //y: '-100vh',
       duration: 0.5,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
     });
 
     gsap.to(loadingWord.current, {
       opacity: 1,
       y: 0,
       duration: 1,
-      ease: "power3.inOut",
+      ease: 'power3.inOut',
       onComplete: function () {
         gsap.to(loadingTop.current, {
-          height: "0vh",
+          height: '0vh',
           //y: '-100vh',
           duration: 0.5,
-          ease: "power3.inOut",
+          ease: 'power3.inOut',
         });
 
         gsap.to(loadingBottom.current, {
-          height: "10vh",
+          height: '10vh',
           //y: '-100vh',
           duration: 0.5,
-          ease: "power3.inOut",
+          ease: 'power3.inOut',
         });
 
         gsap.to(loadingBox.current, {
           //height: 0,
-          top: "-130%",
+          top: '-130%',
           duration: 1,
-          ease: "power3.inOut",
+          ease: 'power3.inOut',
           onStart: function () {
-            document.body.style.cssText = "";
+            document.body.style.cssText = '';
             window.scrollTo(0, 0);
           },
           onComplete: function () {
-            gsap.set(loadingCont.current, { zIndex: "-1" });
-            gsap.set(loadingBox.current, { top: "100%" });
-            document.body.classList.remove("scroll-none");
+            gsap.set(loadingCont.current, { zIndex: '-1' });
+            gsap.set(loadingBox.current, { top: '100%' });
+            document.body.classList.remove('scroll-none');
           },
         });
       },

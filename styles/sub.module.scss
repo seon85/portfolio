@@ -1,14 +1,95 @@
 .main_container {
-    position: relative;
-    opacity: 0;
+  position: relative;
+  opacity: 0;
+}
+
+.section {
+  @media (width > 768px) {
+    padding-top: 130px;
   }
-  
-  .section {
-    @media (width > 768px) {
-      padding-top: 130px;
+}
+
+.test {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .about {
+    display: block;
+  }
+
+  .aboutTxt {
+    width: 100%;
+  }
+}
+
+.about {
+  display: flex;
+  padding: 0 5vw;
+}
+
+.aboutTxt {
+  width: 40%;
+  font-size: 30px;
+}
+
+.overWrap {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+
+  &::before {
+    display: block;
+    content: '';
+    padding-top: 100%;
+  }
+}
+
+.over {
+  flex: 1;
+  //background: url(https://dennissnellenberg.com/assets/img/DSC07312-2.jpg) center center no-repeat;
+  background: url(../public/images/about2.jpg) center center no-repeat;
+  background-size: cover;
+  top: -20vh;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  right: 140px;
+}
+
+.subTit {
+  @media (width > 768px) {
+    margin-bottom: 150px;
+    padding: 0 5vw;
+    line-height: 1.1;
+    font-size: calc(clamp(3.25em, 7vw, 8em) * 0.875);
+  }
+}
+
+.portfolio_list {
+  //display: flex;
+  @media (width > 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 0 7vw;
+
+    .port {
+      flex: 1 1 calc(50% - 50px);
+    }
+
+    .port_link {
+      display: block;
+    }
+
+    .port_tit {
+    }
+
+    .port_image {
+      img {
+        width: 100%;
+      }
     }
   }
-  
-  .test{
-    color: red;
-  }
+}
