@@ -6,31 +6,54 @@ import Image from 'next/image';
 import { createElement, useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 export default function Portfolio() {
-  const datas = require('/public/data.json');
+  // const datas = require('/public/data.json');
   const portfolioList = useRef(null);
-  let count = 1;
+  const loader = useRef(null);
+  let page = 0;
+  let limit = 10;
+  let total;
 
   useEffect(() => {
-    datas.forEach((item, key) => {
-      //console.log(`${key} : ${item.title}`);
-      if (count <= 4) {
-        let temp = document.createElement('div');
-        temp.classList.add(`${styles.port}`);
-        temp.innerHTML = `
-          <a href="#" target="_blank" class="${styles.port_link}">
-            <div class="${styles.port_tit}">${item.title}</div>
-            <div class="${styles.port_image}"><img src="${item.image}" alt=""></div>
-          </a>`;
-        portfolioList.current.append(temp);
-      }
-      count++;
-    });
+    const getData = (skip, take) => {
+      const datas = require('/public/data.json');
+      drawCard(datas.slice(skip * take, take * (page + 1)), datas.length);
+    };
 
-    // window.addEventListener('scroll', () => {
-    //   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-    //     console.log('a');
-    //   }
-    // });
+    const drawCard = (results, length) => {
+      total = length;
+      const html = results
+        .map(
+          result =>
+            `<div class="${styles.port}">
+              <a href="#" target="_blank" class="${styles.port_link}">
+                <div class="${styles.port_tit}">${result.title}</div>
+                <div class="${styles.port_image}"><img src="${result.image}" alt="${result.title}"></div>
+              </a>
+            </div>
+          `,
+        )
+        .join('');
+      portfolioList.current.innerHTML += html;
+    };
+
+    document.addEventListener('DOMContentLoaded', getData(0, 10));
+    window.addEventListener('scroll', () => {
+      if (
+        document.documentElement.scrollTop + document.documentElement.clientHeight + 100 >=
+        document.documentElement.scrollHeight
+      ) {
+        if (page + 1 < total / limit) {
+          page++;
+          loader.current.classList.remove(`${styles.hidden}`);
+          getData(page, limit);
+          setTimeout(() => {
+            loader.current.classList.add(`${styles.hidden}`);
+          }, 500);
+        } else {
+          return;
+        }
+      }
+    });
   }, []);
 
   return (
@@ -40,6 +63,11 @@ export default function Portfolio() {
         <div className={styles.container}>
           <h2 className={styles.subTit}>Creating next level digital products</h2>
           <div className={styles.portfolio_list} ref={portfolioList}></div>
+        </div>
+        <div className={`${styles.loader} ${styles.hidden}`} ref={loader}>
+          <div className={styles.circle}></div>
+          <div className={styles.circle}></div>
+          <div className={styles.circle}></div>
         </div>
       </Layout>
     </>
