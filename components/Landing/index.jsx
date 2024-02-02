@@ -21,7 +21,7 @@ export default function Landing() {
     const handleRouteChange = (url, { shallow }) => {
       setTimeout(() => {
         cancelAnimationFrame(myReq);
-      }, 10);
+      }, 1);
     };
     router.events.on('routeChangeStart', handleRouteChange);
 
