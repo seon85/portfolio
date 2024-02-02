@@ -88,6 +88,10 @@
       cursor: pointer;
     }
   }
+
+  @media (width > 1000px) {
+    padding: 35px 5vw;
+  }
 }
 .headerButtonContainer {
   transform: scale(0);
@@ -114,7 +118,7 @@
     z-index: 1;
     &::after,
     &::before {
-      content: "";
+      content: '';
       display: block;
       height: 1px;
       width: 40%;

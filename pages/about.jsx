@@ -2,6 +2,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import styles from '../styles/sub.module.scss';
 import Layout from './sub_layout';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import PageLoading from '../components/pageLoading';
 import gsap from 'gsap';
@@ -10,52 +11,70 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 export default function About() {
   const overImg = useRef(null);
   const aboutTxt = useRef(null);
+  const router = useRouter();
+  let mm = gsap.matchMedia();
 
   useEffect(() => {
+    const handleRouteChange = (url, { shallow }) => {
+      setTimeout(() => {
+        mm.kill();
+      }, 500);
+    };
+    router.events.on('routeChangeStart', handleRouteChange);
+
     gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.matchMedia({
-      '(min-width: 768px)': function () {
-        gsap.to(aboutTxt.current, {
-          scrollTrigger: {
-            trigger: document.documentElement,
-            scrub: 0.5,
-            start: 0,
-            //end: '+=100%',
-          },
-          y: '200px',
-        });
 
-        gsap.to(overImg.current, {
-          scrollTrigger: {
-            trigger: document.documentElement,
-            scrub: 0.5,
-            start: 0,
-            //end: '+=100%',
-          },
-          y: '-500px',
-        });
-      },
-      '(max-width: 767px)': function () {
-        gsap.to(aboutTxt.current, {
-          scrollTrigger: {
-            trigger: document.documentElement,
-            scrub: 0.5,
-            start: 0,
-            //end: '+=100%',
-          },
-          y: '-50px',
-        });
+    mm.add('(min-width: 1000px)', () => {
+      gsap.to(aboutTxt.current, {
+        scrollTrigger: {
+          trigger: document.documentElement,
+          scrub: 0.5,
+          start: 0,
+          //end: '+=100%',
+        },
+        y: '200px',
+      });
 
-        gsap.to(overImg.current, {
-          scrollTrigger: {
-            trigger: document.documentElement,
-            scrub: 0.5,
-            start: 0,
-            //end: '+=100%',
-          },
-          y: '-100px',
-        });
-      },
+      gsap.to(overImg.current, {
+        scrollTrigger: {
+          trigger: document.documentElement,
+          scrub: 0.5,
+          start: 0,
+          //end: '+=100%',
+        },
+        y: '-500px',
+      });
+    });
+
+    mm.add('(max-width: 999px)', () => {
+      gsap.to(aboutTxt.current, {
+        scrollTrigger: {
+          trigger: document.documentElement,
+          scrub: 0.5,
+          start: 0,
+          //end: '+=100%',
+        },
+        y: '-30px',
+      });
+
+      gsap.to(overImg.current, {
+        scrollTrigger: {
+          trigger: document.documentElement,
+          scrub: 0.5,
+          start: 0,
+          //end: '+=100%',
+        },
+        y: '-160px',
+      });
+    });
+
+    let timeOutFunctionId;
+    function workAfterResizeIsDone() {
+      ScrollTrigger.refresh();
+    }
+    window.addEventListener('resize', function () {
+      clearTimeout(timeOutFunctionId);
+      timeOutFunctionId = setTimeout(workAfterResizeIsDone, 200);
     });
   });
   return (
@@ -68,7 +87,7 @@ export default function About() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className={styles.section}>
+        <div className={styles.container}>
           <h2 className={styles.subTit}>Helping brands thrive in the digital world</h2>
           {/* <div style={{ height: '500px' }}></div> */}
           <div className={styles.about}>

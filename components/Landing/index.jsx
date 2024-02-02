@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import styles from './style.module.scss';
+import { useRouter } from 'next/router';
 import { useRef, useLayoutEffect, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -11,10 +12,19 @@ export default function Landing() {
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
+  const router = useRouter();
   let xPercent = 0;
   let direction = -1;
+  let myReq;
 
   useEffect(() => {
+    const handleRouteChange = (url, { shallow }) => {
+      setTimeout(() => {
+        cancelAnimationFrame(myReq);
+      }, 20);
+    };
+    router.events.on('routeChangeStart', handleRouteChange);
+
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(slider.current, {
       scrollTrigger: {
@@ -26,7 +36,8 @@ export default function Landing() {
       },
       x: '-500px',
     });
-    requestAnimationFrame(animate);
+
+    myReq = requestAnimationFrame(animate);
   });
 
   const animate = () => {
@@ -37,7 +48,7 @@ export default function Landing() {
     }
     gsap.set(firstText.current, { xPercent: xPercent });
     gsap.set(secondText.current, { xPercent: xPercent });
-    requestAnimationFrame(animate);
+    myReq = requestAnimationFrame(animate);
     xPercent += 0.1 * direction;
   };
 
