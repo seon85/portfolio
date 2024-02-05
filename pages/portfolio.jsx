@@ -1,3 +1,4 @@
+'use client';
 import Layout from './sub_layout';
 import PageLoading from '../components/pageLoading';
 import styles from '../styles/sub.module.scss';
