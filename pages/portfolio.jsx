@@ -4,17 +4,12 @@ import styles from '../styles/sub.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 import { createElement, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Curve from '@/components/Layout/index';
-import { slideUp } from './slideup';
-import { motion } from 'framer-motion';
 
 export default function Portfolio() {
   // const datas = require('/public/data.json');
   const portfolioList = useRef(null);
   const loader = useRef(null);
-  const portTit = useRef(null);
   let page = 0;
   let limit = 10;
   let total;
@@ -32,12 +27,8 @@ export default function Portfolio() {
           result =>
             `<div class="${styles.port}">
               <a href="#" target="_blank" class="${styles.port_link}">
+                <div class="${styles.port_tit}">${result.title}</div>
                 <div class="${styles.port_image}"><img src="${result.image}" alt="${result.title}"></div>
-                <div class="${styles.port_tit}"><h2>${result.title}</h2></div>
-                <div class="${styles.posi_date}">
-                  <div class="${styles.l}">${result.position}</div>
-                  <div class="${styles.r}">${result.date}</div>
-                </div>
               </a>
             </div>
           `,
@@ -70,12 +61,10 @@ export default function Portfolio() {
     <>
       {/* <PageLoading /> */}
       <Curve>
-        <motion.div className={styles.container} variants={slideUp} initial="initial" animate="enter">
-          <h2 className={styles.subTit} ref={portTit}>
-            Creating next level digital products
-          </h2>
+        <div className={styles.container}>
+          <h2 className={styles.subTit}>Creating next level digital products</h2>
           <div className={styles.portfolio_list} ref={portfolioList}></div>
-        </motion.div>
+        </div>
         <div className={`${styles.loader} ${styles.hidden}`} ref={loader}>
           <div className={styles.circle}></div>
           <div className={styles.circle}></div>
