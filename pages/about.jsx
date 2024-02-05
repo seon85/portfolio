@@ -77,7 +77,7 @@ export default function About() {
       clearTimeout(timeOutFunctionId);
       timeOutFunctionId = setTimeout(workAfterResizeIsDone, 200);
     });
-  }, []);
+  });
   return (
     <>
       {/* <PageLoading /> */}
