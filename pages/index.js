@@ -1,17 +1,17 @@
-"use client";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { AnimatePresence } from "framer-motion";
-import Header from "../components/Header";
-import Preloader from "../components/Preloader";
-import Landing from "../components/Landing";
-import About from "../components/About";
-import Projects from "../components/Projects";
-import Contact from "../components/Contact";
+'use client';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { AnimatePresence } from 'framer-motion';
+import Header from '../components/Header';
+import Preloader from '../components/Preloader';
+import Landing from '../components/Landing';
+import About from '../components/About';
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -24,7 +24,7 @@ export default function Home() {
     (async () => {
       setTimeout(() => {
         setIsLoading(false);
-        document.body.style.cursor = "default";
+        document.body.style.cursor = 'default';
         window.scrollTo(0, 0);
       }, 2000);
     })();
@@ -55,10 +55,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <AnimatePresence mode="wait">
-        {isLoading && <Preloader />}
-      </AnimatePresence>
-      <Header />
+      <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence>
+      {/* <Header /> */}
       <Landing />
       <About />
       <Projects />

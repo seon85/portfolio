@@ -1,12 +1,15 @@
 import '@/styles/globals.scss';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 //import { useRouter } from "next/router"
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { AnimatePresence } from 'framer-motion';
 
-export default function App({ Component, pageProps }) {
-  const router = useRouter();
+export default function App({ Component, pageProps, router }) {
+  //const router = useRouter();
 
   useEffect(() => {
     (async () => {
@@ -20,7 +23,7 @@ export default function App({ Component, pageProps }) {
       //     shallow ? "with" : "without"
       //   } shallow routing`
       // );
-      localStorage.removeItem('load');
+      //localStorage.removeItem('load');
       ScrollTrigger.getAll().forEach(t => t.kill());
     };
 
@@ -32,5 +35,15 @@ export default function App({ Component, pageProps }) {
       router.events.off('routeChangeStart', handleRouteChange);
     };
   }, [router]);
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Header />
+      <main>
+        <AnimatePresence mode="wait">
+          <Component key={router.route} {...pageProps} />
+        </AnimatePresence>
+      </main>
+      <Footer />
+    </>
+  );
 }

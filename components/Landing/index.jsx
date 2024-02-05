@@ -19,9 +19,7 @@ export default function Landing() {
 
   useEffect(() => {
     const handleRouteChange = (url, { shallow }) => {
-      setTimeout(() => {
-        cancelAnimationFrame(myReq);
-      }, 1);
+      cancelAnimationFrame(myReq);
     };
     router.events.on('routeChangeStart', handleRouteChange);
 
@@ -38,7 +36,8 @@ export default function Landing() {
     });
 
     myReq = requestAnimationFrame(animate);
-  });
+    //cancelAnimationFrame(myReq);
+  }, []);
 
   const animate = () => {
     if (xPercent < -100) {
@@ -53,7 +52,7 @@ export default function Landing() {
   };
 
   return (
-    <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
+    <motion.div variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
       <Image src="/images/background.jpg" fill={true} alt="background" />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
@@ -71,6 +70,6 @@ export default function Landing() {
         <p>Freelance</p>
         <p>Designer & Developer</p>
       </div>
-    </motion.main>
+    </motion.div>
   );
 }

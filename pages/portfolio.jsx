@@ -4,6 +4,7 @@ import styles from '../styles/sub.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 import { createElement, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import Curve from '@/components/Layout/index';
 
 export default function Portfolio() {
   // const datas = require('/public/data.json');
@@ -58,8 +59,8 @@ export default function Portfolio() {
 
   return (
     <>
-      <PageLoading />
-      <Layout>
+      {/* <PageLoading /> */}
+      <Curve>
         <div className={styles.container}>
           <h2 className={styles.subTit}>Creating next level digital products</h2>
           <div className={styles.portfolio_list} ref={portfolioList}></div>
@@ -69,7 +70,7 @@ export default function Portfolio() {
           <div className={styles.circle}></div>
           <div className={styles.circle}></div>
         </div>
-      </Layout>
+      </Curve>
     </>
   );
 }
