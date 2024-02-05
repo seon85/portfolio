@@ -8,18 +8,19 @@
   padding: 120px 35px 0;
 
   @media (width > 1000px) {
-    padding: 150px 5vw 0;
+    padding: 180px 6vw 150px;
   }
 }
 
 .subTit {
-  margin-bottom: 6vw;
-  line-height: 1.1;
+  margin-bottom: 9vw;
+  line-height: 1;
   //font-size: calc(clamp(3.25em, 7vw, 8em) * 0.875);
+  font-weight: 700;
   font-size: max(2rem, min(5.17152vw + 2.25667rem, 7.0625rem));
 
   @media (width > 1000px) {
-    margin-bottom: 120px;
+    margin-bottom: 140px;
     //padding: 0 5vw;
   }
 }
@@ -85,27 +86,85 @@
 
 // PORTFOLIO //
 .portfolio_list {
-  //display: flex;
-  @media (width > 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10vw;
 
+  .port {
+    flex: 1 1 100vw;
+  }
+
+  .port_link {
+    display: block;
+
+    &:hover img {
+      transform: scale(1.03);
+    }
+  }
+
+  .port_tit {
+  }
+
+  .port_image {
+    margin-bottom: 20px;
+    padding: 4vw;
+    background: #48494b;
+    img {
+      width: 100%;
+      border-radius: 5px;
+      transition: 0.5s ease;
+    }
+  }
+
+  .port_tit {
+    h2 {
+      font-weight: 700;
+      font-size: clamp(1.55em, 2.3vw, 2.5em);
+    }
+  }
+
+  .posi_date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(28, 29, 32, 0.18);
+    font-weight: 700;
+    font-size: 18px;
+    color: #222;
+  }
+
+  .l {
+    flex: 1 1 auto;
+    padding-right: 20px;
+  }
+
+  .r {
+    flex: 0 0 auto;
+  }
+
+  @media (width > 768px) {
+    gap: 3vw;
     .port {
       flex: 1 1 calc(50% - 3vw);
     }
 
     .port_link {
       display: block;
-    }
 
-    .port_tit {
+      &:hover img {
+        transform: scale(1.03);
+      }
     }
 
     .port_image {
-      img {
-        width: 100%;
-      }
+      margin-bottom: 40px;
+    }
+
+    .posi_date {
+      margin-top: 25px;
+      padding-top: 20px;
+      font-size: 20px;
     }
   }
 }
@@ -176,6 +235,7 @@
     pointer-events: none;
     left: 0;
     top: 0;
+    z-index: 100;
   }
   .background {
     background-color: black;
@@ -186,9 +246,10 @@
     left: 50%;
     top: 40%;
     color: white;
-    font-size: 46px;
-    z-index: 3;
+    font-size: 60px;
+    z-index: 110;
     transform: translateX(-50%);
     text-align: center;
+    font-weight: 400;
   }
 }
