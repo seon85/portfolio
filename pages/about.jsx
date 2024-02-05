@@ -90,7 +90,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Curve>
-        <motion.div className={styles.container} variants={slideUp} initial="initial" animate="enter">
+        <motion.div className={styles.container}>
           <h2 className={styles.subTit}>Helping brands thrive in the digital world</h2>
           {/* <div style={{ height: '500px' }}></div> */}
           <div className={styles.about}>
