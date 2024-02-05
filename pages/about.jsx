@@ -11,6 +11,16 @@ import Curve from '@/components/Layout/index';
 // import { slideUp } from './slideup';
 import { motion } from 'framer-motion';
 
+const slideUp = {
+  initial: {
+    y: 300,
+  },
+  enter: {
+    y: 0,
+    transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 0.5 },
+  },
+};
+
 export default function About() {
   const overImg = useRef(null);
   const aboutTxt = useRef(null);
@@ -90,7 +100,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Curve>
-        <motion.div className={styles.container}>
+        <motion.div className={styles.container} variants={slideUp} initial="initial" animate="enter">
           <h2 className={styles.subTit}>Helping brands thrive in the digital world</h2>
           {/* <div style={{ height: '500px' }}></div> */}
           <div className={styles.about}>

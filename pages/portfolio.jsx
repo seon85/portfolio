@@ -9,6 +9,16 @@ import Curve from '@/components/Layout/index';
 // import { slideUp } from './slideup';
 import { motion } from 'framer-motion';
 
+const slideUp = {
+  initial: {
+    y: 300,
+  },
+  enter: {
+    y: 0,
+    transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 0.5 },
+  },
+};
+
 export default function Portfolio() {
   // const datas = require('/public/data.json');
   const portfolioList = useRef(null);
@@ -67,7 +77,7 @@ export default function Portfolio() {
     <>
       {/* <PageLoading /> */}
       <Curve>
-        <motion.div className={styles.container}>
+        <motion.div className={styles.container} variants={slideUp} initial="initial" animate="enter">
           <h2 className={styles.subTit}>Creating next level digital products</h2>
           <div className={styles.portfolio_list} ref={portfolioList}></div>
         </motion.div>
