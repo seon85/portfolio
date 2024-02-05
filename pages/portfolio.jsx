@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { createElement, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import Curve from '@/components/Layout/index';
-import { slideUp } from './slideup';
+// import { slideUp } from './slideup';
 import { motion } from 'framer-motion';
 
 export default function Portfolio() {

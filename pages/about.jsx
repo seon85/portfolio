@@ -8,7 +8,7 @@ import PageLoading from '../components/pageLoading';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Curve from '@/components/Layout/index';
-import { slideUp } from './slideup';
+// import { slideUp } from './slideup';
 import { motion } from 'framer-motion';
 
 export default function About() {
