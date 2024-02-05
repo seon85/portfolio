@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { createElement, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import Curve from '@/components/Layout/index';
+import { slideUp } from './slideup';
+import { motion } from 'framer-motion';
 
 export default function Portfolio() {
   // const datas = require('/public/data.json');
@@ -27,8 +29,11 @@ export default function Portfolio() {
           result =>
             `<div class="${styles.port}">
               <a href="#" target="_blank" class="${styles.port_link}">
-                <div class="${styles.port_tit}">${result.title}</div>
                 <div class="${styles.port_image}"><img src="${result.image}" alt="${result.title}"></div>
+                <div class="${styles.port_tit}">${result.title}</div>
+                <div>
+                  <div>
+                </div>
               </a>
             </div>
           `,
@@ -61,10 +66,10 @@ export default function Portfolio() {
     <>
       {/* <PageLoading /> */}
       <Curve>
-        <div className={styles.container}>
+        <motion.div className={styles.container} variants={slideUp} initial="initial" animate="enter">
           <h2 className={styles.subTit}>Creating next level digital products</h2>
           <div className={styles.portfolio_list} ref={portfolioList}></div>
-        </div>
+        </motion.div>
         <div className={`${styles.loader} ${styles.hidden}`} ref={loader}>
           <div className={styles.circle}></div>
           <div className={styles.circle}></div>
