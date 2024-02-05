@@ -8,8 +8,6 @@ import PageLoading from '../components/pageLoading';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Curve from '@/components/Layout/index';
-import { slideUp } from './slideup';
-import { motion } from 'framer-motion';
 
 export default function About() {
   const overImg = useRef(null);
@@ -90,7 +88,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Curve>
-        <motion.div className={styles.container} variants={slideUp} initial="initial" animate="enter">
+        <div className={styles.container}>
           <h2 className={styles.subTit}>Helping brands thrive in the digital world</h2>
           {/* <div style={{ height: '500px' }}></div> */}
           <div className={styles.about}>
@@ -103,7 +101,7 @@ export default function About() {
             </div>
           </div>
           <div style={{ height: '1000px', background: 'yellow' }}>aaa</div>
-        </motion.div>
+        </div>
       </Curve>
     </>
   );
