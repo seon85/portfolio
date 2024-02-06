@@ -33,7 +33,9 @@ export default function Portfolio() {
   let total;
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 500);
 
     const handleRouteChange = (url, { shallow }) => {
       window.removeEventListener('scroll', scrollData);

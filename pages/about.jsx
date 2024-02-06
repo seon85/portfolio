@@ -28,7 +28,9 @@ export default function About() {
   let mm = gsap.matchMedia();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 500);
 
     const handleRouteChange = (url, { shallow }) => {
       setTimeout(() => {
