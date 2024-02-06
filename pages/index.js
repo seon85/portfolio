@@ -12,11 +12,13 @@ import Landing from '../components/Landing';
 import About from '../components/About';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
+import { useRouter } from 'next/router';
 
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Home() {
   const nameInput = useRef(null);
+  const router = useRouter();
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -28,6 +30,18 @@ export default function Home() {
         window.scrollTo(0, 0);
       }, 2000);
     })();
+
+    const handleRouteChange = (url, { shallow }) => {
+      document.body.classList.add('main_hidden');
+    };
+
+    router.events.on('routeChangeStart', handleRouteChange);
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
   }, []);
 
   // useLayoutEffect(() => {

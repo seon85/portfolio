@@ -12,6 +12,15 @@ export default function App({ Component, pageProps, router }) {
   //const router = useRouter();
 
   useEffect(() => {
+    //console.log(router.pathname);
+    if (router.pathname == '/') {
+      document.body.classList.add('main_hidden');
+    } else {
+      document.body.classList.remove('main_hidden');
+    }
+  });
+
+  useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
       const locomotiveScroll = new LocomotiveScroll();

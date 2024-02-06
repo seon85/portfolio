@@ -1,19 +1,10 @@
-"use client";
-import styles from "./style.module.scss";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { opacity, slideUp } from "./anime";
+'use client';
+import styles from './style.module.scss';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { opacity, slideUp } from './anime';
 
-const words = [
-  "Hello",
-  "Bonjour",
-  "Ciao",
-  "Olà",
-  "やあ",
-  "Hallå",
-  "Guten tag",
-  "Hallo",
-];
+const words = ['Hello', 'Bonjour', 'Ciao', 'Olà', 'やあ', 'Hallå', 'Guten tag', 'Hallo'];
 
 export default function Index() {
   const [index, setIndex] = useState(0);
@@ -29,18 +20,17 @@ export default function Index() {
       () => {
         setIndex(index + 1);
       },
-      index == 0 ? 1000 : 150
+      index == 0 ? 1000 : 150,
     );
+    document.body.classList.remove('main_hidden');
   }, [index]);
 
-  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
+  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${
+    dimension.height + 300
+  } 0 ${dimension.height}  L0 0`;
+  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${
     dimension.height
-  } Q${dimension.width / 2} ${dimension.height + 300} 0 ${
-    dimension.height
-  }  L0 0`;
-  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
-    dimension.height
-  } Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`;
+  } 0 ${dimension.height}  L0 0`;
 
   const curve = {
     initial: {
@@ -54,12 +44,7 @@ export default function Index() {
   };
 
   return (
-    <motion.div
-      variants={slideUp}
-      initial="initial"
-      exit="exit"
-      className={styles.introduction}
-    >
+    <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>
       {dimension.width > 0 && (
         <>
           <motion.p variants={opacity} initial="initial" animate="enter">
@@ -67,11 +52,7 @@ export default function Index() {
             {words[index]}
           </motion.p>
           <svg>
-            <motion.path
-              variants={curve}
-              initial="initial"
-              exit="exit"
-            ></motion.path>
+            <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
           </svg>
         </>
       )}
