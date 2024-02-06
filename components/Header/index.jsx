@@ -9,12 +9,14 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Rounded from '../../common/RoundedButton';
 import Magnetic from '../../common/Magnetic';
+import { useRouter } from 'next/router';
 
 export default function Header() {
   const header = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
   const button = useRef(null);
+  const router = useRouter();
 
   useEffect(() => {
     if (isActive) setIsActive(false);
@@ -50,7 +52,12 @@ export default function Header() {
   return (
     <>
       <div ref={header} className={styles.header}>
-        <Link href="/" className={styles.logo}>
+        <Link
+          href="/"
+          onClick={() => {
+            router.pathname == '/' && router.reload();
+          }}
+          className={styles.logo}>
           <p className={styles.copyright}>©</p>
           <div className={styles.name}>
             <p className={styles.codeBy}>Code by</p>
@@ -61,19 +68,37 @@ export default function Header() {
         <div className={styles.nav}>
           <Magnetic>
             <div className={styles.el}>
-              <Link href="/about">About</Link>
+              <Link
+                href="/about"
+                onClick={() => {
+                  router.pathname == '/about' && router.reload();
+                }}>
+                About
+              </Link>
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>
           <Magnetic>
             <div className={styles.el}>
-              <Link href="/portfolio">Portfolio</Link>
+              <Link
+                href="/portfolio"
+                onClick={() => {
+                  router.pathname == '/portfolio' && router.reload();
+                }}>
+                Portfolio
+              </Link>
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>
           <Magnetic>
             <div className={styles.el}>
-              <Link href="/contact">Contact</Link>
+              <Link
+                href="/contact"
+                onClick={() => {
+                  router.pathname == '/contact' && router.reload();
+                }}>
+                Contact
+              </Link>
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>

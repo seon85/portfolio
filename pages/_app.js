@@ -16,7 +16,7 @@ export default function App({ Component, pageProps, router }) {
     if (router.pathname == '/') {
       document.body.classList.add('main_hidden');
     } else {
-      document.body.classList.remove('main_hidden');
+      //document.body.classList.remove('main_hidden');
     }
   });
 
@@ -33,7 +33,7 @@ export default function App({ Component, pageProps, router }) {
       //   } shallow routing`
       // );
       //localStorage.removeItem('load');
-      ScrollTrigger.getAll().forEach(t => t.kill());
+      //ScrollTrigger.getAll().forEach(t => t.kill());
     };
 
     router.events.on('routeChangeStart', handleRouteChange);

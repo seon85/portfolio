@@ -8,6 +8,7 @@ import style from '@/styles/sub.module.scss';
 const routes = {
   '/about': 'ABOUT',
   '/portfolio': 'PORTFOLIO',
+  '/contact': 'CONTACT',
 };
 
 const anim = variants => {
