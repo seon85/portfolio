@@ -57,7 +57,8 @@ export default function Header() {
           onClick={() => {
             router.pathname == '/' && router.reload();
           }}
-          className={styles.logo}>
+          className={styles.logo}
+          scroll={false}>
           <p className={styles.copyright}>©</p>
           <div className={styles.name}>
             <p className={styles.codeBy}>Code by</p>
@@ -72,7 +73,8 @@ export default function Header() {
                 href="/about"
                 onClick={() => {
                   router.pathname == '/about' && router.reload();
-                }}>
+                }}
+                scroll={false}>
                 About
               </Link>
               <div className={styles.indicator}></div>
@@ -84,7 +86,8 @@ export default function Header() {
                 href="/portfolio"
                 onClick={() => {
                   router.pathname == '/portfolio' && router.reload();
-                }}>
+                }}
+                scroll={false}>
                 Portfolio
               </Link>
               <div className={styles.indicator}></div>
@@ -96,7 +99,8 @@ export default function Header() {
                 href="/contact"
                 onClick={() => {
                   router.pathname == '/contact' && router.reload();
-                }}>
+                }}
+                scroll={false}>
                 Contact
               </Link>
               <div className={styles.indicator}></div>
