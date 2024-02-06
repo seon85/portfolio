@@ -8,7 +8,7 @@
   padding: 120px 35px 0;
 
   @media (width > 1000px) {
-    padding: 180px 6vw 150px;
+    padding: 180px 8vw 150px;
   }
 }
 
@@ -92,6 +92,10 @@
 
   .port {
     flex: 1 1 100vw;
+
+    &:nth-child(even) .port_image {
+      background: #000;
+    }
   }
 
   .port_link {
@@ -100,9 +104,6 @@
     &:hover img {
       transform: scale(1.03);
     }
-  }
-
-  .port_tit {
   }
 
   .port_image {
