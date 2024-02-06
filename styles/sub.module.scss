@@ -5,7 +5,7 @@
 
 // Sub Layout //
 .container {
-  padding: 120px 35px 0;
+  padding: 120px 35px 90px;
 
   @media (width > 1000px) {
     padding: 180px 8vw 150px;
@@ -87,12 +87,13 @@
 
 // PORTFOLIO //
 .portfolio_list {
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
+  display: grid;
   gap: 10vw;
 
   .port {
-    flex: 1 1 100vw;
+    //flex: 1 1 100vw;
 
     &:nth-child(even) .port_image {
       background: #000;
@@ -109,7 +110,7 @@
 
   .port_image {
     margin-bottom: 20px;
-    padding: 4vw;
+    padding: 5vw;
     background: #48494b;
     img {
       width: 100%;
@@ -146,9 +147,10 @@
   }
 
   @media (width > 768px) {
-    gap: 3vw;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4vw 3vw;
     .port {
-      flex: 1 1 calc(50% - 3vw);
+      //flex: 1 1 calc(50% - 3vw);
     }
 
     .port_link {

@@ -2,9 +2,11 @@
 import Layout from './sub_layout';
 import PageLoading from '../components/pageLoading';
 import styles from '../styles/sub.module.scss';
+import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { createElement, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Curve from '@/components/Layout/index';
@@ -25,11 +27,19 @@ export default function Portfolio() {
   const portfolioList = useRef(null);
   const loader = useRef(null);
   const portTit = useRef(null);
+  const router = useRouter();
   let page = 0;
   let limit = 10;
   let total;
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
+    const handleRouteChange = (url, { shallow }) => {
+      window.removeEventListener('scroll', scrollData);
+    };
+    router.events.on('routeChangeStart', handleRouteChange);
+
     const getData = (skip, take) => {
       const datas = require('/public/data.json');
       drawCard(datas.slice(skip * take, take * (page + 1)), datas.length);
@@ -56,8 +66,7 @@ export default function Portfolio() {
       portfolioList.current.innerHTML += html;
     };
 
-    document.addEventListener('DOMContentLoaded', getData(0, 10));
-    window.addEventListener('scroll', () => {
+    const scrollData = () => {
       if (
         document.documentElement.scrollTop + document.documentElement.clientHeight + 100 >=
         document.documentElement.scrollHeight
@@ -73,12 +82,20 @@ export default function Portfolio() {
           return;
         }
       }
-    });
+    };
+
+    document.addEventListener('DOMContentLoaded', getData(0, 10));
+    window.addEventListener('scroll', scrollData);
   }, []);
 
   return (
     <>
       {/* <PageLoading /> */}
+      <Head>
+        <title>PORTFOLIO</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Curve>
         <motion.div className={styles.container} variants={slideUp} initial="initial" animate="enter">
           <h2 className={styles.subTit} ref={portTit}>
