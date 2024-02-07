@@ -10,6 +10,17 @@ import { AnimatePresence } from 'framer-motion';
 
 export default function App({ Component, pageProps, router }) {
   //const router = useRouter();
+  const handleReload = e => {
+    window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    window.addEventListener('beforeunload', handleReload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleReload);
+    };
+  }, []);
 
   useEffect(() => {
     const handleRouteComplete = (url, { shallow }) => {
