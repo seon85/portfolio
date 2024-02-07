@@ -17,6 +17,7 @@ export default function App({ Component, pageProps, router }) {
         window.scrollTo(0, 0);
       }, 500);
     };
+
     router.events.on('routeChangeComplete', handleRouteComplete);
     return () => {
       router.events.off('routeChangeComplete', handleRouteComplete);
@@ -35,8 +36,7 @@ export default function App({ Component, pageProps, router }) {
       //document.body.classList.remove('main_hidden');
     }
 
-    console.log('aa');
-    window.history.scrollRestoration = 'manual';
+    //window.history.scrollRestoration = 'manual'
 
     const handleRouteChange = (url, { shallow }) => {
       // console.log(
