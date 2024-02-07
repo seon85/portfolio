@@ -17,11 +17,7 @@ export default function App({ Component, pageProps, router }) {
         window.scrollTo(0, 0);
       }, 500);
     };
-
     router.events.on('routeChangeComplete', handleRouteComplete);
-
-    // If the component is unmounted, unsubscribe
-    // from the event with the `off` method:
     return () => {
       router.events.off('routeChangeComplete', handleRouteComplete);
     };
@@ -39,7 +35,7 @@ export default function App({ Component, pageProps, router }) {
       //document.body.classList.remove('main_hidden');
     }
 
-    //window.history.scrollRestoration = 'manual'
+    window.history.scrollRestoration = 'manual';
 
     const handleRouteChange = (url, { shallow }) => {
       // console.log(
