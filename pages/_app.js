@@ -35,6 +35,7 @@ export default function App({ Component, pageProps, router }) {
       //document.body.classList.remove('main_hidden');
     }
 
+    console.log('aa');
     window.history.scrollRestoration = 'manual';
 
     const handleRouteChange = (url, { shallow }) => {
