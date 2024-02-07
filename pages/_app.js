@@ -10,11 +10,21 @@ import { AnimatePresence } from 'framer-motion';
 
 export default function App({ Component, pageProps, router }) {
   //const router = useRouter();
+
+  useEffect(() => {
+    if (router.pathname == '/') {
+      console.log('/');
+      document.body.classList.add('main_hidden');
+    } else {
+      //document.body.classList.remove('main_hidden');
+    }
+  });
+
   useEffect(() => {
     const handleRouteComplete = (url, { shallow }) => {
       setTimeout(() => {
         window.scrollTo(0, 0);
-        console.log('comp');
+        // console.log('comp');
       }, 500);
     };
 
@@ -30,15 +40,9 @@ export default function App({ Component, pageProps, router }) {
       const locomotiveScroll = new LocomotiveScroll();
     })();
 
-    if (router.pathname == '/') {
-      document.body.classList.add('main_hidden');
-    } else {
-      //document.body.classList.remove('main_hidden');
-    }
-
     setTimeout(() => {
       window.history.scrollRestoration = 'manual';
-      console.log('top');
+      //console.log('top');
     }, 500);
 
     const handleRouteChange = (url, { shallow }) => {
