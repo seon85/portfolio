@@ -109,7 +109,8 @@ export default function Header() {
           onClick={() => {
             setIsActive(!isActive);
           }}
-          className={`${styles.button}`}>
+          className={`${styles.button}`}
+          role="button">
           <div className={`${styles.burger} ${isActive ? styles.burgerActive : ''}`}></div>
         </Rounded>
       </div>

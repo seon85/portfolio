@@ -239,7 +239,7 @@
     pointer-events: none;
     left: 0;
     top: 0;
-    z-index: 100;
+    z-index: 10000;
   }
   .background {
     background-color: #141516;
@@ -251,7 +251,7 @@
     top: 40%;
     color: white;
     font-size: 60px;
-    z-index: 110;
+    z-index: 20000;
     transform: translateX(-50%);
     text-align: center;
     font-weight: 400;
