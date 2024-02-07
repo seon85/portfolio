@@ -10,18 +10,6 @@ import { AnimatePresence } from 'framer-motion';
 
 export default function App({ Component, pageProps, router }) {
   //const router = useRouter();
-  const handleReload = e => {
-    window.scrollTo(0, 0);
-  };
-
-  useEffect(() => {
-    window.addEventListener('beforeunload', handleReload);
-
-    return () => {
-      window.removeEventListener('beforeunload', handleReload);
-    };
-  }, []);
-
   useEffect(() => {
     const handleRouteComplete = (url, { shallow }) => {
       setTimeout(() => {
@@ -48,7 +36,8 @@ export default function App({ Component, pageProps, router }) {
       //document.body.classList.remove('main_hidden');
     }
 
-    //window.history.scrollRestoration = 'manual'
+    window.history.scrollRestoration = 'manual';
+    console.log('aa');
 
     const handleRouteChange = (url, { shallow }) => {
       // console.log(
