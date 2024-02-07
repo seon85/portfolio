@@ -15,7 +15,8 @@ export default function App({ Component, pageProps, router }) {
     const handleRouteComplete = (url, { shallow }) => {
       setTimeout(() => {
         window.scrollTo(0, 0);
-      }, 500);
+        console.log('aaa');
+      }, 300);
     };
 
     router.events.on('routeChangeComplete', handleRouteComplete);
