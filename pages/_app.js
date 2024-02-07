@@ -52,6 +52,7 @@ export default function App({ Component, pageProps, router }) {
       //   } shallow routing`
       // );
       //localStorage.removeItem('load');
+
       ScrollTrigger.getAll().forEach(t => t.kill());
     };
 
