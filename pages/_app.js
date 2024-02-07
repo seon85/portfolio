@@ -26,7 +26,6 @@ export default function App({ Component, pageProps, router }) {
         window.scrollTo(0, 0);
         // console.log('comp');
       }, 500);
-      ScrollTrigger.getAll().forEach(t => t.kill());
     };
 
     router.events.on('routeChangeComplete', handleRouteComplete);
