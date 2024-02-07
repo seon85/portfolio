@@ -12,19 +12,34 @@ export default function App({ Component, pageProps, router }) {
   //const router = useRouter();
 
   useEffect(() => {
-    //console.log(router.pathname);
-    if (router.pathname == '/') {
-      document.body.classList.add('main_hidden');
-    } else {
-      //document.body.classList.remove('main_hidden');
-    }
-  });
+    const handleRouteComplete = (url, { shallow }) => {
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 500);
+    };
+
+    router.events.on('routeChangeComplete', handleRouteComplete);
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteComplete);
+    };
+  }, [router]);
 
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
       const locomotiveScroll = new LocomotiveScroll();
     })();
+
+    if (router.pathname == '/') {
+      document.body.classList.add('main_hidden');
+    } else {
+      //document.body.classList.remove('main_hidden');
+    }
+
+    //window.history.scrollRestoration = 'manual'
 
     const handleRouteChange = (url, { shallow }) => {
       // console.log(

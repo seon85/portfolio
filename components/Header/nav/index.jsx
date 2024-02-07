@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import styles from './style.module.scss';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
@@ -9,55 +9,51 @@ import Footer from './Footer';
 
 const navItems = [
   {
-    title: "Home",
-    href: "/",
+    title: 'Home',
+    href: '/',
   },
   {
-    title: "About",
-    href: "/about",
+    title: 'About',
+    href: '/about',
   },
   {
-    title: "Portfolio",
-    href: "/portfolio",
+    title: 'Portfolio',
+    href: '/portfolio',
   },
   {
-    title: "Contact",
-    href: "/contact",
+    title: 'Contact',
+    href: '/contact',
   },
-]
+];
 
 export default function Index() {
-
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
   return (
-    <motion.div 
-      variants={menuSlide} 
-      initial="initial" 
-      animate="enter" 
-      exit="exit" 
-      className={styles.menu}
-      >
-       <div className={styles.body}>
-            <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className={styles.nav}>
-                    <div className={styles.header}>
-                        <p>Navigation</p>
-                    </div>
-                    {
-                      navItems.map( (data, index) => {
-                        return <Link 
-                        key={index} 
-                        data={{...data, index}} 
-                        isActive={selectedIndicator == data.href} 
-                        setSelectedIndicator={setSelectedIndicator}>
-                        </Link>
-                      })
-                    }
-            </div>
-            <Footer />
+    <motion.div variants={menuSlide} initial="initial" animate="enter" exit="exit" className={styles.menu}>
+      <div className={styles.body}>
+        <div
+          onMouseLeave={() => {
+            setSelectedIndicator(pathname);
+          }}
+          className={styles.nav}>
+          <div className={styles.header}>
+            <p>Navigation</p>
+          </div>
+          {navItems.map((data, index) => {
+            return (
+              <Link
+                key={index}
+                data={{ ...data, index }}
+                isActive={selectedIndicator == data.href}
+                setSelectedIndicator={setSelectedIndicator}></Link>
+            );
+          })}
         </div>
-        <Curve />
+        {/* <Footer /> */}
+      </div>
+      <Curve />
     </motion.div>
-  )
+  );
 }
