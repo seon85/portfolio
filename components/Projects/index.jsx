@@ -1,16 +1,178 @@
-"use client";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import styles from "./style.module.scss";
-import { gsap } from "gsap";
-import { AnimatePresence } from "framer-motion";
+'use client';
+import styles from '@/styles/main.module.scss';
+import { useState, useEffect, useRef } from 'react';
+import Project from './components/project';
+import { motion } from 'framer-motion';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Image from 'next/image';
+import Link from 'next/link';
+import Rounded from '../../common/RoundedButton';
 
-export default function Projects() {
+const projects = [
+  {
+    title: '한국건설기술인협회',
+    src: 'c2montreal.png',
+    color: '#000000',
+    href: '#n',
+  },
+  {
+    title: '지역신문발전위원회',
+    src: 'officestudio.png',
+    color: '#8C8C8C',
+    href: '#n',
+  },
+  {
+    title: 'Locomotive',
+    src: 'locomotive.png',
+    color: '#EFE8D3',
+    href: '#n',
+  },
+  {
+    title: 'Silencio',
+    src: 'silencio.png',
+    color: '#706D63',
+    href: '#n',
+  },
+];
+
+const scaleAnimation = {
+  initial: { scale: 0, x: '-50%', y: '-50%' },
+  enter: { scale: 1, x: '-50%', y: '-50%', transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] } },
+  closed: { scale: 0, x: '-50%', y: '-50%', transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] } },
+};
+
+export default function Home() {
+  const [modal, setModal] = useState({ active: false, index: 0 });
+  const { active, index } = modal;
+  const modalContainer = useRef(null);
+  const cursor = useRef(null);
+  const cursorLabel = useRef(null);
+
+  const project = useRef(null);
+  const projectTit = useRef(null);
+  const projectList = useRef(null);
+
+  let xMoveContainer = useRef(null);
+  let yMoveContainer = useRef(null);
+  let xMoveCursor = useRef(null);
+  let yMoveCursor = useRef(null);
+  let xMoveCursorLabel = useRef(null);
+  let yMoveCursorLabel = useRef(null);
+
+  useEffect(() => {
+    //Move Container
+    xMoveContainer.current = gsap.quickTo(modalContainer.current, 'left', { duration: 0.8, ease: 'power3' });
+    yMoveContainer.current = gsap.quickTo(modalContainer.current, 'top', { duration: 0.8, ease: 'power3' });
+    //Move cursor
+    xMoveCursor.current = gsap.quickTo(cursor.current, 'left', { duration: 0.5, ease: 'power3' });
+    yMoveCursor.current = gsap.quickTo(cursor.current, 'top', { duration: 0.5, ease: 'power3' });
+    //Move cursor label
+    xMoveCursorLabel.current = gsap.quickTo(cursorLabel.current, 'left', { duration: 0.45, ease: 'power3' });
+    yMoveCursorLabel.current = gsap.quickTo(cursorLabel.current, 'top', { duration: 0.45, ease: 'power3' });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(projectTit.current, {
+      y: 0,
+      opacity: 1,
+      ease: 'power3.inOut',
+      scrollTrigger: {
+        trigger: project.current,
+        //scrub: 1,
+        start: '10% 100%',
+        end: '17% 60%',
+        pin: false,
+        //markers: true,
+      },
+    });
+
+    gsap.to(projectList.current, {
+      y: 0,
+      opacity: 1,
+      // autoAlpha: 0,
+      // rotateX: 360,
+      // scale: 0.2,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: project.current,
+        //scrub: 0.5,
+        start: '15% 70%',
+        end: '30% 30%',
+        pin: false,
+        //markers: true,
+      },
+    });
+  }, []);
+
+  const moveItems = (x, y) => {
+    xMoveContainer.current(x);
+    yMoveContainer.current(y);
+    xMoveCursor.current(x);
+    yMoveCursor.current(y);
+    xMoveCursorLabel.current(x);
+    yMoveCursorLabel.current(y);
+  };
+  const manageModal = (active, index, x, y) => {
+    moveItems(x, y);
+    setModal({ active, index });
+  };
+
   return (
-    <>
-      <div className={styles.projects}>프로젝트 영역</div>
-    </>
+    <div
+      onMouseMove={e => {
+        moveItems(e.clientX, e.clientY);
+      }}
+      className={styles.projects}
+      ref={project}>
+      <div className={styles.inner}>
+        <div className={styles.tit} ref={projectTit}>
+          <h3>PORTFOLIO</h3>
+          <p>Some of my most recent projects</p>
+        </div>
+        <div className={styles.body} ref={projectList}>
+          {projects.map((project, index) => {
+            return <Project index={index} title={project.title} manageModal={manageModal} key={index} />;
+          })}
+        </div>
+        <Rounded>
+          <Link href="/portfolio" className={styles.moreAbout}>
+            Go More Portfolio Page 👉
+          </Link>
+        </Rounded>
+        <>
+          <motion.div
+            ref={modalContainer}
+            variants={scaleAnimation}
+            initial="initial"
+            animate={active ? 'enter' : 'closed'}
+            className={styles.modalContainer}>
+            <div style={{ top: index * -100 + '%' }} className={styles.modalSlider}>
+              {projects.map((project, index) => {
+                const { src, color } = project;
+                return (
+                  <div className={styles.modal} style={{ backgroundColor: color }} key={`modal_${index}`}>
+                    <Image src={`/images/${src}`} width={300} height={0} alt="image" />
+                  </div>
+                );
+              })}
+            </div>
+          </motion.div>
+          <motion.div
+            ref={cursor}
+            className={styles.cursor}
+            variants={scaleAnimation}
+            initial="initial"
+            animate={active ? 'enter' : 'closed'}></motion.div>
+          <motion.div
+            ref={cursorLabel}
+            className={styles.cursorLabel}
+            variants={scaleAnimation}
+            initial="initial"
+            animate={active ? 'enter' : 'closed'}>
+            View
+          </motion.div>
+        </>
+      </div>
+    </div>
   );
 }

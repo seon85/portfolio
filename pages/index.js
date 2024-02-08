@@ -11,6 +11,7 @@ import Preloader from '../components/Preloader';
 import Landing from '../components/Landing';
 import About from '../components/About';
 import Projects from '../components/Projects';
+import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
 import { useRouter } from 'next/router';
 
@@ -77,6 +78,7 @@ export default function Home() {
       <Landing />
       <About />
       <Projects />
+      <SlidingImages />
       <Contact />
     </>
   );
