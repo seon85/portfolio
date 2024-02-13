@@ -15,8 +15,21 @@
   }
 
   &:hover {
-    border-color: #f5df4e;
+    border-color: #455ce9;
     p {
+      color: white;
+    }
+  }
+
+  a {
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s linear;
+  }
+
+  &:hover {
+    border-color: #455ce9;
+    a {
       color: white;
     }
   }

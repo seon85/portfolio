@@ -15,6 +15,7 @@ export default function Index() {
   }, []);
 
   useEffect(() => {
+    document.body.classList.remove('main_hidden');
     if (index == words.length - 1) return;
     setTimeout(
       () => {
@@ -22,7 +23,6 @@ export default function Index() {
       },
       index == 0 ? 1000 : 150,
     );
-    document.body.classList.remove('main_hidden');
   }, [index]);
 
   const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${

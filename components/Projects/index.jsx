@@ -11,28 +11,34 @@ import Rounded from '../../common/RoundedButton';
 
 const projects = [
   {
-    title: '한국건설기술인협회',
+    title: '우체국금융 차세대 채널파트 UI/UX 부분 (퍼블리싱)',
     src: 'c2montreal.png',
     color: '#000000',
-    href: '#n',
+    href: 'https:www.naver.com',
   },
   {
     title: '지역신문발전위원회',
     src: 'officestudio.png',
     color: '#8C8C8C',
-    href: '#n',
+    href: 'https:www.daum.net',
   },
   {
-    title: 'Locomotive',
+    title: '정부인증 가사서비스 가사랑',
     src: 'locomotive.png',
     color: '#EFE8D3',
-    href: '#n',
+    href: 'https:www.naver.com',
   },
   {
-    title: 'Silencio',
+    title: '경기도평생교육진흥원',
     src: 'silencio.png',
     color: '#706D63',
-    href: '#n',
+    href: 'https:www.naver.com',
+  },
+  {
+    title: '언론진흥재단 뉴스토어',
+    src: 'silencio.png',
+    color: '#706D63',
+    href: 'https:www.naver.com',
   },
 ];
 
@@ -96,7 +102,7 @@ export default function Home() {
       scrollTrigger: {
         trigger: project.current,
         //scrub: 0.5,
-        start: '15% 70%',
+        start: '20% 70%',
         end: '30% 30%',
         pin: false,
         //markers: true,
@@ -131,7 +137,9 @@ export default function Home() {
         </div>
         <div className={styles.body} ref={projectList}>
           {projects.map((project, index) => {
-            return <Project index={index} title={project.title} manageModal={manageModal} key={index} />;
+            return (
+              <Project index={index} href={project.href} title={project.title} manageModal={manageModal} key={index} />
+            );
           })}
         </div>
         <Rounded>
