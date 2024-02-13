@@ -34,10 +34,9 @@ export default function Home() {
 
     const handleRouteChange = (url, { shallow }) => {
       document.body.classList.add('main_hidden');
-      document.body.classList.remove('main_hidden');
-      // setTimeout(() => {
-      //   document.body.classList.remove('main_hidden');
-      // }, 0.3);
+      setTimeout(() => {
+        document.body.classList.remove('main_hidden');
+      }, 500);
     };
 
     router.events.on('routeChangeStart', handleRouteChange);
