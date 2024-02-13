@@ -21,7 +21,7 @@
   text-align: center;
   h3 {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 10px 30px;
     border-radius: 30px;
     background: #f5df4e;
@@ -49,8 +49,8 @@
   font-size: 27px;
   span {
     display: inline-block;
-    padding-bottom: 5px;
-    border-bottom: 3px solid #455ce9;
+    // padding-bottom: 5px;
+    // border-bottom: 3px solid #f5df4e;
     line-height: 1;
     font-weight: 600;
   }
@@ -248,7 +248,8 @@
   }
 
   .modal img {
-    height: auto;
+    //height: auto;
+    height: 11vw;
   }
 
   .cursor,
@@ -419,7 +420,7 @@
       .button {
         width: 130px;
         height: 130px;
-        background-color: #455ce9;
+        background-color: #f5df4e;
         color: white;
         border-radius: 50%;
         position: absolute;
@@ -428,11 +429,12 @@
         justify-content: center;
         cursor: pointer;
         p {
-          margin: 0px;
+          margin: 0;
           font-size: 16px;
-          font-weight: 300;
+          font-weight: 400;
           z-index: 2;
           position: relative;
+          color: #000;
         }
       }
     }

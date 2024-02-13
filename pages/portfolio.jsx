@@ -54,7 +54,7 @@ export default function Portfolio() {
           result =>
             `<div class="${styles.port}">
               <a href="${result.url}" target="_blank" class="${styles.port_link}" title="새창으로 열림">
-                <div class="${styles.port_image}"><img src="${result.image}" alt="${result.title}"></div>
+                <div class="${styles.port_image}"><img src="/images/${result.image}" alt="${result.title}"></div>
                 <div class="${styles.port_tit}"><h2>${result.title}</h2></div>
                 <div class="${styles.posi_date}">
                   <div class="${styles.l}">${result.position}</div>

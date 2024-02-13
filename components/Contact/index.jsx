@@ -25,8 +25,8 @@ export default function Index() {
             </div>
             <h2>Let's work</h2>
           </span> */}
-          <p>나는 새로운 프로젝트와 디자인 과제에 대해 토론하는 것을 즐깁니다.</p>
-          <p>첫 번째 후속 조치를 최대한 활용할 수 있도록 최대한 많은 정보를 공유해 주세요.</p>
+          <p>소통 능력 및 내재된 가능성이 있는 창의적인 인재를 찾고 계시나요?</p>
+          <p>메일을 보내주시면 1~2일 내로 연락드리겠습니다.</p>
           {/* <h2>together</h2> */}
           <motion.div style={{ x }} className={styles.buttonContainer}>
             <Rounded backgroundColor={'#334BD3'} className={styles.button}>
@@ -48,10 +48,10 @@ export default function Index() {
         </div>
         <div className={styles.nav}>
           <Rounded>
-            <Link href="mailto:wleks85@gmail.com">wleks85@gmail.com</Link>
+            <Link href="mailto:wleks85@gmail.com">📩 wleks85@gmail.com</Link>
           </Rounded>
           <Rounded>
-            <Link href="tel:01050424129">010 - 5042 - 4129</Link>
+            <Link href="tel:01050424129">📞 010 - 5042 - 4129</Link>
           </Rounded>
         </div>
         {/* <div className={styles.info}>

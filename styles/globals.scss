@@ -13,6 +13,11 @@
   color: inherit;
 }
 
+::selection {
+  color: #000;
+  background: #f5df4e;
+}
+
 html {
   -webkit-text-size-adjust: none;
 }
@@ -90,4 +95,8 @@ a:visited {
   font-weight: 400;
   font-size: 16px;
   color: #fff;
+}
+
+.highlight {
+  background: linear-gradient(to top, #f5df4e 40%, transparent 40%);
 }

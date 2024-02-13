@@ -46,7 +46,7 @@ export default function About() {
         trigger: about.current,
         //scrub: 1.5,
         //scrub: 0.5,
-        start: '40% 70%',
+        start: '30% 70%',
         end: '80% 80%',
         pin: false,
         //markers: true,
@@ -102,7 +102,7 @@ export default function About() {
           </div>
           <div ref={secp} className={styles.txt}>
             <p>
-              안녕하세요, Web Publisher <span> 선종혁입니다.</span>
+              안녕하세요🖐, Web Publisher <span className="highlight">선종혁입니다.</span>
             </p>
             <p>저는 웹 디자인에 대한 열정을 가진 디자이너이자 개발자입니다.</p>
             <p>

@@ -12,13 +12,13 @@ import Rounded from '../../common/RoundedButton';
 const projects = [
   {
     title: '우체국금융 차세대 채널파트 UI/UX 부분 (퍼블리싱)',
-    src: 'c2montreal.png',
+    src: 'img_port1.webp',
     color: '#000000',
     href: 'https:www.naver.com',
   },
   {
     title: '지역신문발전위원회',
-    src: 'officestudio.png',
+    src: 'img_port2.webp',
     color: '#8C8C8C',
     href: 'https:www.daum.net',
   },
