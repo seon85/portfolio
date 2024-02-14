@@ -524,3 +524,120 @@
     }
   }
 }
+
+.icon-holder {
+  width: 80px;
+  display: inline-block;
+  margin: 10px;
+}
+.icon-holder.tiny {
+  width: 30px;
+}
+.icon-holder.small {
+  width: 60px;
+}
+.icon-holder.large {
+  width: 100px;
+}
+.icon-holder.xlarge {
+  width: 130px;
+}
+.icon-holder.xxlarge {
+  width: 160px;
+}
+.icon-holder.orange [class*='cls-1'] {
+  stroke: #f75f00;
+}
+.icon-holder.orange [class*='cls-2'] {
+  stroke: #512c62;
+}
+.icon-holder.violet [class*='cls-1'] {
+  stroke: #ce2e6c;
+}
+.icon-holder.violet [class*='cls-2'] {
+  stroke: #504658;
+}
+.icon-holder.blue [class*='cls-1'] {
+  stroke: #1089ff;
+}
+.icon-holder.blue [class*='cls-2'] {
+  stroke: #23374d;
+}
+.icon-holder.beige [class*='cls-1'] {
+  stroke: #fec771;
+}
+.icon-holder.beige [class*='cls-2'] {
+  stroke: #eb7070;
+}
+.icon-holder.green [class*='cls-1'] {
+  stroke: #43ab92;
+}
+.icon-holder.green [class*='cls-2'] {
+  stroke: #c886e5;
+}
+.icon-holder.red [class*='cls-1'] {
+  stroke: #ef4b4b;
+}
+.icon-holder.red [class*='cls-2'] {
+  stroke: #7ecfc0;
+}
+
+.badge {
+  font-size: 75%;
+  background-color: #f2eee0;
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.btn_cont {
+  display: block;
+  text-align: center;
+
+  p {
+    transition: 0.3s ease;
+  }
+
+  &:hover {
+    p {
+      color: #fff !important;
+    }
+
+    .tap_cls_1 {
+      stroke: #fff;
+    }
+  }
+}
+
+.tap_cls_2 {
+  animation: p_fadeOutTop 1s ease-out 0s infinite;
+}
+
+.tap_cls_1 {
+  stroke: #1a1a1a;
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+.tap_cls_2 {
+  stroke: #f12323;
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+@keyframes p_fadeOutTop {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10%,
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+}

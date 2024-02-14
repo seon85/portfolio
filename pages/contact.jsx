@@ -91,78 +91,122 @@ export default function Contact() {
       </Head>
       <Curve>
         <motion.div className={styles.container} variants={slideUp} initial="initial" animate="enter">
-          <Container>
-            <Heading>Contact</Heading>
-            {error && (
-              <Text color="red.300" my={4} fontSize="xl">
-                {error}
-              </Text>
-            )}
+          <h2 className={styles.subTit}>Let's start a project together</h2>
+          <div className={styles.cont_wrap}>
+            <div className={styles.cont_mail}>
+              <Container className={styles.contact_form}>
+                {error && (
+                  <Text color="red.300" my={4} fontSize="xl">
+                    {error}
+                  </Text>
+                )}
 
-            <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
-              <FormLabel>이름</FormLabel>
-              <Input
-                type="text"
-                name="name"
-                errorBorderColor="red.300"
-                value={values.name}
-                onChange={handleChange}
-                onBlur={onBlur}
-              />
-              <FormErrorMessage>Required</FormErrorMessage>
-            </FormControl>
+                <FormControl isRequired isInvalid={touched.name && !values.name}>
+                  <div className="l">01</div>
+                  <div className="r">
+                    <FormLabel>이름</FormLabel>
+                    <Input
+                      type="text"
+                      name="name"
+                      errorBorderColor="red.300"
+                      value={values.name}
+                      onChange={handleChange}
+                      onBlur={onBlur}
+                      placeholder="이름을 입력해주세요."
+                    />
+                  </div>
+                  <FormErrorMessage>이름을 입력해주세요.</FormErrorMessage>
+                </FormControl>
 
-            <FormControl isRequired isInvalid={touched.email && !values.email} mb={5}>
-              <FormLabel>이메일 주소</FormLabel>
-              <Input
-                type="email"
-                name="email"
-                errorBorderColor="red.300"
-                value={values.email}
-                onChange={handleChange}
-                onBlur={onBlur}
-              />
-              <FormErrorMessage>Required</FormErrorMessage>
-            </FormControl>
+                <FormControl isRequired isInvalid={touched.email && !values.email}>
+                  <div className="l">02</div>
+                  <div className="r">
+                    <FormLabel>이메일 주소</FormLabel>
+                    <Input
+                      type="email"
+                      name="email"
+                      errorBorderColor="red.300"
+                      value={values.email}
+                      onChange={handleChange}
+                      onBlur={onBlur}
+                      placeholder="이메일 주소를 입력해주세요."
+                    />
+                  </div>
+                  <FormErrorMessage>이메일 주소를 입력해주세요.</FormErrorMessage>
+                </FormControl>
 
-            <FormControl mb={5} isRequired isInvalid={touched.subject && !values.subject}>
-              <FormLabel>제목</FormLabel>
-              <Input
-                type="text"
-                name="subject"
-                errorBorderColor="red.300"
-                value={values.subject}
-                onChange={handleChange}
-                onBlur={onBlur}
-              />
-              <FormErrorMessage>Required</FormErrorMessage>
-            </FormControl>
+                <FormControl isRequired isInvalid={touched.subject && !values.subject}>
+                  <div className="l">03</div>
+                  <div className="r">
+                    <FormLabel>제목</FormLabel>
+                    <Input
+                      type="text"
+                      name="subject"
+                      errorBorderColor="red.300"
+                      value={values.subject}
+                      onChange={handleChange}
+                      onBlur={onBlur}
+                      placeholder="제목을 입력해주세요."
+                    />
+                  </div>
+                  <FormErrorMessage>제목을 입력해주세요.</FormErrorMessage>
+                </FormControl>
 
-            <FormControl isRequired isInvalid={touched.message && !values.message} mb={5}>
-              <FormLabel>내용</FormLabel>
-              <Textarea
-                type="text"
-                name="message"
-                rows={4}
-                errorBorderColor="red.300"
-                value={values.message}
-                onChange={handleChange}
-                onBlur={onBlur}
-              />
-              <FormErrorMessage>Required</FormErrorMessage>
-            </FormControl>
+                <FormControl isRequired isInvalid={touched.message && !values.message}>
+                  <div className="l">04</div>
+                  <div className="r">
+                    <FormLabel>내용</FormLabel>
+                    <Textarea
+                      type="text"
+                      name="message"
+                      rows={4}
+                      errorBorderColor="red.300"
+                      value={values.message}
+                      onChange={handleChange}
+                      onBlur={onBlur}
+                      placeholder="내용을 입력해주세요."
+                    />
+                  </div>
+                  <FormErrorMessage>내용을 입력해주세요.</FormErrorMessage>
+                </FormControl>
 
-            <Button
-              variant="outline"
-              colorScheme="blue"
-              isLoading={isLoading}
-              disabled={!values.name || !values.email || !values.subject || !values.message}
-              onClick={onSubmit}>
-              Submit
-            </Button>
-          </Container>
+                <div className={styles.btn_submit}>
+                  <Button
+                    variant="outline"
+                    colorScheme="blue"
+                    isLoading={isLoading}
+                    disabled={!values.name || !values.email || !values.subject || !values.message}
+                    onClick={onSubmit}>
+                    메일 보내기
+                  </Button>
+                </div>
+              </Container>
+            </div>
+            <div className={styles.cont_info}>
+              <h3>Contact Details</h3>
+              <ul>
+                <li>
+                  <a href="mailto:wleks85@gmail.com">Our Email : wleks85@gmail.com</a>
+                </li>
+                <li>Our Address : 경기도 의왕시</li>
+              </ul>
+            </div>
+          </div>
         </motion.div>
       </Curve>
+      <style jsx global>{`
+        body {
+          background: #1c1d20;
+        }
+        header {
+          & a {
+            color: #fff !important;
+          }
+        }
+        h2 {
+          color: #fff;
+        }
+      `}</style>
     </>
   );
 }

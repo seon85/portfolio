@@ -33,7 +33,8 @@ export default function Header() {
         //scrub: 1,
         trigger: document.documentElement,
         start: 0,
-        end: window.innerHeight,
+        //end: window.innerHeight,
+        end: '+=60%',
         markers: false,
         onLeave: () => {
           gsap.to(button.current, {
@@ -51,7 +52,7 @@ export default function Header() {
 
   return (
     <>
-      <div ref={header} className={styles.header}>
+      <header ref={header} className={styles.header}>
         <Link
           href="/"
           onClick={() => {
@@ -103,7 +104,7 @@ export default function Header() {
             </div>
           </Magnetic>
         </div>
-      </div>
+      </header>
       <div ref={button} className={styles.headerButtonContainer}>
         <Rounded
           onClick={() => {

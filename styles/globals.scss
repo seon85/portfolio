@@ -67,6 +67,51 @@ a:visited {
   text-decoration: none;
 }
 
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 0;
+  border: 0;
+  font-size: 17px;
+  color: #636466;
+}
+
+textarea {
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border: 0;
+  font-size: 17px;
+  font-family: inherit;
+  color: #636466;
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-weight: 500;
+  font-size: 17px;
+  color: #636466;
+}
+
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #000;
+  text-fill-color: #000;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
 #__next-build-watcher {
   display: none;
 }
@@ -99,4 +144,56 @@ a:visited {
 
 .highlight {
   background: linear-gradient(to top, #f5df4e 40%, transparent 40%);
+}
+
+.chakra-form-control {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  padding: 26px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  .l {
+    //flex: none;
+    padding: 0 20px 0 10px;
+    color: #fff;
+  }
+
+  .r {
+    //flex: 1;
+
+    & + div {
+      grid-column: 1 / -1;
+      margin-top: 5px;
+      padding-left: 45px;
+      font-weight: 500;
+      color: #f5df4e;
+    }
+  }
+
+  .chakra-form__label {
+    margin-bottom: 17px;
+    line-height: 1;
+    font-weight: 400;
+    font-size: 25px;
+    color: #fff;
+  }
+  .chakra-input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+  }
+  .chakra-input[aria-invalid='true'],
+  .chakra-textarea[aria-invalid='true'] {
+    border: 2px solid #f5df4e;
+    border-radius: 5px;
+  }
+
+  textarea {
+    height: 200px;
+    background: transparent;
+  }
+
+  @media (width > 768px) {
+    padding: 40px 0;
+  }
 }
