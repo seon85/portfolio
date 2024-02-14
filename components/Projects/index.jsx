@@ -14,19 +14,19 @@ const projects = [
     title: '우체국금융 차세대 채널파트 UI/UX 부분 (퍼블리싱)',
     src: 'img_port1.webp',
     color: '#000000',
-    href: 'https:www.naver.com',
+    href: 'https://www.epostbank.go.kr/',
   },
   {
     title: '지역신문발전위원회',
     src: 'img_port2.webp',
     color: '#8C8C8C',
-    href: 'https:www.daum.net',
+    href: 'https://www.cln.or.kr/cln/index.do',
   },
   {
     title: '정부인증 가사서비스 가사랑',
     src: 'locomotive.png',
     color: '#EFE8D3',
-    href: 'https:www.naver.com',
+    href: 'https://www.gasarang.go.kr/hpgsMain.do',
   },
   {
     title: '경기도평생교육진흥원',

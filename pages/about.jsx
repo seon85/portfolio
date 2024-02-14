@@ -108,8 +108,13 @@ export default function About() {
           {/* <div style={{ height: '500px' }}></div> */}
           <div className={styles.about}>
             <div className={styles.aboutTxt} ref={aboutTxt}>
-              I help companies from all over the world with tailor-made solutions. With each project, I push my work to
-              new horizons, always putting quality first.
+              <p>협력적인 소통능력</p>
+              <p>열정과 내재된 가능성</p>
+              <p>능독적인 업무자세</p>
+              <p>사고적 유연성</p>
+
+              {/* I help companies from all over the world with tailor-made solutions. With each project, I push my work to
+              new horizons, always putting quality first. */}
             </div>
             <div className={styles.overWrap}>
               <div className={styles.over} ref={overImg}></div>
