@@ -91,7 +91,7 @@ export default function Contact() {
       </Head>
       <Curve>
         <motion.div className={styles.container} variants={slideUp} initial="initial" animate="enter">
-          <h2 className={styles.subTit}>Let's start a project together</h2>
+          <h2 className={styles.subTit}>start a project together</h2>
           <div className={styles.cont_wrap}>
             <div className={styles.cont_mail}>
               <Container className={styles.contact_form}>
