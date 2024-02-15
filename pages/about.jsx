@@ -156,7 +156,7 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="웹 퍼블리셔 선종혁의 포트폴리오 사이트입니다. 저희 소개와 그동안 진행했던 프로젝트를 확인하실 수 있습니다."
+          content="웹 퍼블리셔 선종혁의 포트폴리오 사이트입니다. 저의 소개와 그동안 진행했던 프로젝트를 확인하실 수 있습니다."
         />
         <meta
           name="keywords"
@@ -167,7 +167,7 @@ export default function About() {
         <meta name="og:title" content="웹 퍼블리셔 선종혁의 포트폴리오" />
         <meta
           name="og:description"
-          content="웹 퍼블리셔 선종혁의 포트폴리오 사이트입니다. 저희 소개와 그동안 진행했던 프로젝트를 확인하실 수 있습니다."
+          content="웹 퍼블리셔 선종혁의 포트폴리오 사이트입니다. 저의 소개와 그동안 진행했던 프로젝트를 확인하실 수 있습니다."
         />
         <meta name="og:type" content="website" />
         <meta name="og:url" content="" />
@@ -175,7 +175,7 @@ export default function About() {
         <meta name="twitter:title" content="웹 퍼블리셔 선종혁의 포트폴리오" />
         <meta
           name="twitter:description"
-          content="웹 퍼블리셔 선종혁의 포트폴리오 사이트입니다. 저희 소개와 그동안 진행했던 프로젝트를 확인하실 수 있습니다."
+          content="웹 퍼블리셔 선종혁의 포트폴리오 사이트입니다. 저의 소개와 그동안 진행했던 프로젝트를 확인하실 수 있습니다."
         />
         <meta name="twitter:image" content="" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
@@ -215,41 +215,55 @@ export default function About() {
             </div>
           </div>
           <div className={styles.abt_me}>
+            <h3>
+              선종혁이란 사람은
+              <span className={styles.q_mark1}>?</span>
+              <span className={styles.q_mark2}>?</span>
+              <span className={styles.q_mark3}>?</span>
+            </h3>
             <p>
               저는 세련되고 현대적인 웹사이트, 웹 서비스, 온라인 상점 제작을 전문으로 하며 모든 규모의 고객을 위한
               서비스를 디자인하고 개발합니다.
             </p>
             <p>나의 열정은 대담한 인터페이스와 의미 있는 상호 작용을 통해 디지털 사용자 경험을 디자인하는 것입니다.</p>
-            <p>내 포트폴리오를 확인하세요</p>
+            <p>저의 포트폴리오 사이트에서 그동안 진행했던 프로젝트를 확인하실 수 있습니다.</p>
             <ul className={styles.abt_me_info}>
               <li>
                 <span className={styles.me_t1}>이름은?</span>
-                <span className={styles.me_t2}>선종혁</span>
+                <span className={styles.me_t2}>선종혁입니다.</span>
               </li>
               <li>
                 <span className={styles.me_t1}>생년월일은?</span>
-                <span className={styles.me_t2}>1985.07.01.</span>
+                <span className={styles.me_t2}>1985.07.01. 더운날에 태어났습니다.</span>
               </li>
               <li>
                 <span className={styles.me_t1}>나이는?</span>
-                <span className={styles.me_t2}>38세</span>
+                <span className={styles.me_t2}>38세입니다.</span>
+              </li>
+              <li>
+                <span className={styles.me_t1}>MBTI?</span>
+                <span className={styles.me_t2}>ISFJ</span>
               </li>
               <li>
                 <span className={styles.me_t1}>현재 살고 있는 곳은?</span>
-                <span className={styles.me_t2}>경기도 의왕시</span>
+                <span className={styles.me_t2}>경기도 의왕시에서 거주하고 있습니다.</span>
+              </li>
+              <li>
+                <span className={styles.me_t1}>성격은?</span>
+                <span className={styles.me_t2}>경기도있습니다.</span>
               </li>
               <li>
                 <span className={styles.me_t1}>이메일 주소는?</span>
                 <span className={styles.me_t2}>wleks85@gmail.com</span>
               </li>
               <li>
-                <span className={styles.me_t1}>Phone</span>
+                <span className={styles.me_t1}>연락처는?</span>
                 <span className={styles.me_t2}>010</span>
               </li>
             </ul>
           </div>
           <div className={styles.exp} ref={expe}>
-            <h3 ref={expeTit}>내가 도와드릴 수 있어요</h3>
+            <h3 ref={expeTit}>제가 도와드릴 수 있어요!!!</h3>
             <div className={styles.exp_list}>
               <div className={styles.exp_box}>
                 <h4>

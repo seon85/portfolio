@@ -90,7 +90,7 @@ export default function Contact() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="웹 퍼블리셔 선종혁의 포트폴리오 사이트입니다. 저희 소개와 그동안 진행했던 프로젝트를 확인하실 수 있습니다."
+          content="웹 퍼블리셔 선종혁의 포트폴리오 사이트입니다. 저의 소개와 그동안 진행했던 프로젝트를 확인하실 수 있습니다."
         />
         <meta
           name="keywords"
@@ -101,7 +101,7 @@ export default function Contact() {
         <meta name="og:title" content="웹 퍼블리셔 선종혁의 포트폴리오" />
         <meta
           name="og:description"
-          content="웹 퍼블리셔 선종혁의 포트폴리오 사이트입니다. 저희 소개와 그동안 진행했던 프로젝트를 확인하실 수 있습니다."
+          content="웹 퍼블리셔 선종혁의 포트폴리오 사이트입니다. 저의 소개와 그동안 진행했던 프로젝트를 확인하실 수 있습니다."
         />
         <meta name="og:type" content="website" />
         <meta name="og:url" content="" />
@@ -109,7 +109,7 @@ export default function Contact() {
         <meta name="twitter:title" content="웹 퍼블리셔 선종혁의 포트폴리오" />
         <meta
           name="twitter:description"
-          content="웹 퍼블리셔 선종혁의 포트폴리오 사이트입니다. 저희 소개와 그동안 진행했던 프로젝트를 확인하실 수 있습니다."
+          content="웹 퍼블리셔 선종혁의 포트폴리오 사이트입니다. 저의 소개와 그동안 진행했던 프로젝트를 확인하실 수 있습니다."
         />
         <meta name="twitter:image" content="" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
