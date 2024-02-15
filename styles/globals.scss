@@ -146,11 +146,15 @@ button {
   background: linear-gradient(to top, #f5df4e 40%, transparent 40%);
 }
 
+.chakra-container {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .chakra-form-control {
   display: grid;
   grid-template-columns: 45px 1fr;
   padding: 26px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
   .l {
     //flex: none;
