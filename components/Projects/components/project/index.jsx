@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import styles from '@/styles/main.module.scss';
+import styles from '@/styles/style.module.scss';
 import Link from 'next/link';
 
 export default function index({ index, title, href, manageModal }) {
