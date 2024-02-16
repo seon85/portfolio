@@ -143,7 +143,7 @@ export default function Home() {
           })}
         </div>
         <Rounded>
-          <Link href="/portfolio" className={styles.moreAbout}>
+          <Link href="/portfolio" scroll={false} className={styles.moreAbout}>
             Go More Portfolio Page 👉
           </Link>
         </Rounded>

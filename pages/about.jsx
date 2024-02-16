@@ -44,15 +44,6 @@ export default function About() {
 
     const sectionContent = document.querySelectorAll(`.` + styles.exp_box);
 
-    const handleRouteChange = (url, { shallow }) => {
-      setTimeout(() => {
-        mm.kill();
-      }, 500);
-      document.querySelector('body').style = '';
-      ScrollTrigger.getAll().forEach(t => t.kill());
-    };
-    router.events.on('routeChangeStart', handleRouteChange);
-
     gsap.registerPlugin(ScrollTrigger);
 
     // gsap.to(expe.current, {
@@ -154,6 +145,18 @@ export default function About() {
       clearTimeout(timeOutFunctionId);
       timeOutFunctionId = setTimeout(workAfterResizeIsDone, 200);
     });
+
+    const handleRouteChange = (url, { shallow }) => {
+      setTimeout(() => {
+        mm.kill();
+      }, 500);
+      document.querySelector('body').style = '';
+      ScrollTrigger.getAll().forEach(t => t.kill());
+    };
+    router.events.on('routeChangeStart', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
   }, []);
   return (
     <>
