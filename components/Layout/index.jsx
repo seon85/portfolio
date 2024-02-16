@@ -6,6 +6,7 @@ import { text, curve, translate } from './anim';
 //import style from '@/styles/sub.module.scss';
 
 const routes = {
+  //'/': `JONGHYUK'S PORTFOLIO`,
   '/': 'MAIN',
   '/about': 'ABOUT',
   '/portfolio': 'PORTFOLIO',
@@ -47,6 +48,7 @@ export default function Curve({ children, backgroundColor }) {
       <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className="background" />
       <motion.p className="route" {...anim(text)}>
         {routes[router.route]}
+        {/* {router.pathname == '/' ? `JONGHYUK'S PORTFOLIO` : routes[router.route]} */}
       </motion.p>
       {dimensions.width != null && <SVG {...dimensions} />}
       {children}
