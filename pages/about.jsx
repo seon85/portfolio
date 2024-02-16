@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import '@/styles/main.module.scss';
 import styles from '../styles/sub.module.scss';
 import Layout from './sub_layout';
 import { useRouter } from 'next/router';

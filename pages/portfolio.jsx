@@ -2,6 +2,7 @@
 import Layout from './sub_layout';
 import PageLoading from '../components/pageLoading';
 import styles from '../styles/sub.module.scss';
+import '@/styles/main.module.scss';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
