@@ -18,11 +18,6 @@ export default function Landing() {
   let myReq;
 
   useEffect(() => {
-    const handleRouteChange = (url, { shallow }) => {
-      cancelAnimationFrame(myReq);
-    };
-    router.events.on('routeChangeStart', handleRouteChange);
-
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(slider.current, {
       scrollTrigger: {
@@ -37,6 +32,15 @@ export default function Landing() {
 
     myReq = requestAnimationFrame(animate);
     //cancelAnimationFrame(myReq);
+
+    const handleRouteChange = (url, { shallow }) => {
+      cancelAnimationFrame(myReq);
+    };
+
+    router.events.on('routeChangeStart', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
   }, []);
 
   const animate = () => {
@@ -56,8 +60,8 @@ export default function Landing() {
       <Image src="/images/visual1.webp" fill={true} alt="background" />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
-          <p ref={firstText}>Web Publisher - Web Publisher -</p>
-          <p ref={secondText}>Web Publisher - Web Publisher -</p>
+          <p ref={firstText}>Web Publisher -</p>
+          <p ref={secondText}>Web Publisher -</p>
         </div>
       </div>
       <div data-scroll data-scroll-speed={0.1} className={styles.description}>

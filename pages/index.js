@@ -1,21 +1,33 @@
 'use client';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { AnimatePresence } from 'framer-motion';
-import Header from '../components/Header';
-import Preloader from '../components/Preloader';
+// import Image from 'next/image';
+// import Link from 'next/link';
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+// import { AnimatePresence } from 'framer-motion';
+// import Header from '../components/Header';
+// import Preloader from '../components/Preloader';
 import Landing from '../components/Landing';
 import About from '../components/About';
 import Projects from '../components/Projects';
 import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
 import { useRouter } from 'next/router';
+import Curve from '@/components/Layout/index';
+// import { motion } from 'framer-motion';
 
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// const slideUp = {
+//   initial: {
+//     y: 500,
+//   },
+//   enter: {
+//     y: 0,
+//     transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 0.5 },
+//   },
+// };
 
 export default function Home() {
   const nameInput = useRef(null);
@@ -24,28 +36,25 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    (async () => {
-      setTimeout(() => {
-        setIsLoading(false);
-        //document.body.style.cursor = 'default';
-        window.scrollTo(0, 0);
-      }, 2000);
-    })();
-
-    const handleRouteChange = (url, { shallow }) => {
-      document.body.classList.add('main_hidden');
-      setTimeout(() => {
-        document.body.classList.remove('main_hidden');
-      }, 500);
-    };
-
-    router.events.on('routeChangeStart', handleRouteChange);
-
-    // If the component is unmounted, unsubscribe
-    // from the event with the `off` method:
-    return () => {
-      router.events.off('routeChangeStart', handleRouteChange);
-    };
+    // (async () => {
+    //   setTimeout(() => {
+    //     setIsLoading(false);
+    //     //document.body.style.cursor = 'default';
+    //     window.scrollTo(0, 0);
+    //   }, 2000);
+    // })();
+    // const handleRouteChange = (url, { shallow }) => {
+    //   document.body.classList.add('main_hidden');
+    //   setTimeout(() => {
+    //     document.body.classList.remove('main_hidden');
+    //   }, 500);
+    // };
+    // router.events.on('routeChangeStart', handleRouteChange);
+    // // If the component is unmounted, unsubscribe
+    // // from the event with the `off` method:
+    // return () => {
+    //   router.events.off('routeChangeStart', handleRouteChange);
+    // };
   }, []);
 
   // useLayoutEffect(() => {
@@ -68,7 +77,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>선종혁의 웹 포트폴리오</title>
+        {/* <title>선종혁의 웹 포트폴리오</title> */}
+        <title>메인</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
@@ -112,13 +122,15 @@ export default function Home() {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence>
+      {/* <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence> */}
       {/* <Header /> */}
-      <Landing />
-      <About />
-      <Projects />
-      <SlidingImages />
-      <Contact />
+      <Curve>
+        <Landing />
+        <About />
+        <Projects />
+        <SlidingImages />
+        <Contact />
+      </Curve>
     </>
   );
 }

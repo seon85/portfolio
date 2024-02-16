@@ -31,7 +31,7 @@ const initState = { isLoading: false, error: '', values: initValues };
 
 const slideUp = {
   initial: {
-    y: 300,
+    y: 500,
   },
   enter: {
     y: 0,

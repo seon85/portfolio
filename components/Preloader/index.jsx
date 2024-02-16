@@ -15,7 +15,7 @@ export default function Index() {
   }, []);
 
   useEffect(() => {
-    document.body.classList.remove('main_hidden');
+    //document.body.classList.remove('main_hidden');
     if (index == words.length - 1) return;
     setTimeout(
       () => {

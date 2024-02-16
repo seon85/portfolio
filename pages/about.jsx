@@ -13,7 +13,7 @@ import { motion } from 'framer-motion';
 
 const slideUp = {
   initial: {
-    y: 300,
+    y: 500,
   },
   enter: {
     y: 0,
@@ -34,7 +34,13 @@ export default function About() {
     //   window.scrollTo(0, 0);
     // }, 500);
 
-    document.querySelector('body').style.background = 'rgb(255, 255, 255)';
+    //document.querySelector('body').style.background = 'rgb(255, 255, 255)';
+
+    //document.querySelector('.' + styles.container).getBoundingClientRect();
+
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 1000);
 
     const sectionContent = document.querySelectorAll(`.` + styles.exp_box);
 
@@ -42,31 +48,33 @@ export default function About() {
       setTimeout(() => {
         mm.kill();
       }, 500);
+      document.querySelector('body').style = '';
+      ScrollTrigger.getAll().forEach(t => t.kill());
     };
     router.events.on('routeChangeStart', handleRouteChange);
 
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(expe.current, {
-      scrollTrigger: {
-        trigger: expe.current,
-        scrub: 0.1,
-        start: '-30% 50%',
-        end: window.innerHeight,
-        //end: '+=30%',
-        //markers: true,
-        onLeave: () => {
-          gsap.to(document.querySelector('body'), {
-            backgroundColor: '#e9eaeb',
-          });
-        },
-        onEnterBack: () => {
-          gsap.to(document.querySelector('body'), {
-            backgroundColor: '#fff',
-          });
-        },
-      },
-    });
+    // gsap.to(expe.current, {
+    //   scrollTrigger: {
+    //     trigger: expe.current,
+    //     scrub: 0.1,
+    //     start: '-30% 50%',
+    //     end: window.innerHeight,
+    //     //end: '+=30%',
+    //     //markers: true,
+    //     onLeave: () => {
+    //       gsap.to(document.querySelector('body'), {
+    //         backgroundColor: '#e9eaeb',
+    //       });
+    //     },
+    //     onEnterBack: () => {
+    //       gsap.to(document.querySelector('body'), {
+    //         backgroundColor: '#fff',
+    //       });
+    //     },
+    //   },
+    // });
 
     gsap.to(expeTit.current, {
       opacity: 1,

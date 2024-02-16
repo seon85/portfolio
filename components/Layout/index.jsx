@@ -3,9 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { text, curve, translate } from './anim';
-import style from '@/styles/sub.module.scss';
+//import style from '@/styles/sub.module.scss';
 
 const routes = {
+  '/': 'MAIN',
   '/about': 'ABOUT',
   '/portfolio': 'PORTFOLIO',
   '/contact': 'CONTACT',
@@ -42,9 +43,9 @@ export default function Curve({ children, backgroundColor }) {
   }, []);
 
   return (
-    <div className={style.curve} style={{ backgroundColor }}>
-      <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className={style.background} />
-      <motion.p className={style.route} {...anim(text)}>
+    <div className="curve" style={{ backgroundColor }}>
+      <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className="background" />
+      <motion.p className="route" {...anim(text)}>
         {routes[router.route]}
       </motion.p>
       {dimensions.width != null && <SVG {...dimensions} />}

@@ -4,28 +4,26 @@ import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 //import { useRouter } from "next/router"
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { AnimatePresence } from 'framer-motion';
 
 export default function App({ Component, pageProps, router }) {
   //const router = useRouter();
 
-  useEffect(() => {
-    if (router.pathname == '/') {
-      console.log('/');
-      document.body.classList.add('main_hidden');
-    } else {
-      //document.body.classList.remove('main_hidden');
-    }
-  });
+  // useEffect(() => {
+  //   if (router.pathname == '/') {
+  //     console.log('/');
+  //     document.body.classList.add('main_hidden');
+  //   } else {
+  //     //document.body.classList.remove('main_hidden');
+  //   }
+  // });
 
   useEffect(() => {
     const handleRouteComplete = (url, { shallow }) => {
       setTimeout(() => {
         window.scrollTo(0, 0);
         // console.log('comp');
-      }, 500);
+      }, 1000);
     };
 
     router.events.on('routeChangeComplete', handleRouteComplete);
@@ -43,7 +41,7 @@ export default function App({ Component, pageProps, router }) {
     setTimeout(() => {
       window.history.scrollRestoration = 'manual';
       //console.log('top');
-    }, 500);
+    }, 1000);
 
     const handleRouteChange = (url, { shallow }) => {
       // console.log(

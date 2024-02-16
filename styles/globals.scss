@@ -201,3 +201,31 @@ button {
     padding: 40px 0;
   }
 }
+
+.curve {
+  > svg,
+  .background {
+    position: fixed;
+    height: calc(100vh + 600px);
+    width: 100vw;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+  }
+  .background {
+    background-color: #141516;
+    transition: opacity 0s linear 0.1s;
+  }
+  .route {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    color: white;
+    font-size: 60px;
+    z-index: 20000;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: 400;
+  }
+}

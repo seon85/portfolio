@@ -30,7 +30,7 @@ export default function Index() {
           {/* <h2>together</h2> */}
           <motion.div style={{ x }} className={styles.buttonContainer}>
             <Rounded backgroundColor={'#334BD3'} className={styles.button}>
-              <Link href="/contact" className={styles.btn_cont}>
+              <Link href="/contact" scroll={false} className={styles.btn_cont}>
                 <p>
                   Get in touch
                   <svg xmlns="http://www.w3.org/2000/svg" width="70" height="50" viewBox="0 -20 42 90">
