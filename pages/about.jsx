@@ -211,7 +211,7 @@ export default function About() {
         <motion.div className={styles.container} variants={slideUp} initial="initial" animate="enter">
           <h2 className={styles.subTit}>Helping brands thrive in the digital world</h2>
           {/* <div style={{ height: '500px' }}></div> */}
-          <div className={styles.about}>
+          <div className={styles.sub_about}>
             <div className={styles.aboutTxt} ref={aboutTxt}>
               <p>협력적인 소통능력</p>
               <p>열정과 내재된 가능성</p>
