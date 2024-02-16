@@ -1,6 +1,5 @@
 'use client';
-import styles from '@/styles/sub.module.scss';
-import '@/styles/main.module.scss';
+import styles from '@/styles/style.module.scss';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';

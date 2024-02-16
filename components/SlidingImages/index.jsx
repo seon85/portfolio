@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
-import styles from '@/styles/main.module.scss';
+import styles from '@/styles/style.module.scss';
 import Image from 'next/image';
 
 const slider1 = [
@@ -77,7 +77,7 @@ export default function Index() {
         })}
       </motion.div>
       <motion.div style={{ height }} className={styles.circleContainer}>
-        <div className={styles.circle}></div>
+        <div className={styles.round_circle}></div>
       </motion.div>
     </div>
   );

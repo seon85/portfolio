@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import '@/styles/main.module.scss';
-import styles from '../styles/sub.module.scss';
+import styles from '@/styles/style.module.scss';
 import Layout from './sub_layout';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -84,7 +83,7 @@ export default function About() {
         trigger: expe.current,
         start: '10% 80%',
         end: '50% 90%',
-        //markers: true,
+        // markers: true,
         //end: window.innerHeight,
         //scrub: 2,
       },
@@ -271,7 +270,7 @@ export default function About() {
               </li>
             </ul>
           </div>
-          <div className={styles.exp} ref={expe}>
+          <div className={styles.expe} ref={expe}>
             <h3 ref={expeTit}>제가 도와드릴 수 있어요!!!</h3>
             <div className={styles.exp_list}>
               <div className={styles.exp_box}>

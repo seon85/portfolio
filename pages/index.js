@@ -1,14 +1,13 @@
 'use client';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import '@/styles/sub.module.scss';
 import Head from 'next/head';
 // import Image from 'next/image';
 // import Link from 'next/link';
 // import { gsap } from 'gsap';
 // import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-// import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 // import Header from '../components/Header';
-// import Preloader from '../components/Preloader';
+import Preloader from '../components/Preloader';
 import Landing from '../components/Landing';
 import About from '../components/About';
 import Projects from '../components/Projects';
@@ -37,13 +36,13 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // (async () => {
-    //   setTimeout(() => {
-    //     setIsLoading(false);
-    //     //document.body.style.cursor = 'default';
-    //     window.scrollTo(0, 0);
-    //   }, 2000);
-    // })();
+    (async () => {
+      setTimeout(() => {
+        setIsLoading(false);
+        //document.body.style.cursor = 'default';
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
     // const handleRouteChange = (url, { shallow }) => {
     //   document.body.classList.add('main_hidden');
     //   setTimeout(() => {
@@ -123,9 +122,9 @@ export default function Home() {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      {/* <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence> */}
-      {/* <Header /> */}
       <Curve>
+        {/* <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence> */}
+        {/* <Header /> */}
         <Landing />
         <About />
         <Projects />

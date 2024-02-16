@@ -1,4 +1,4 @@
-import styles from '@/styles/main.module.scss';
+import styles from '@/styles/style.module.scss';
 import Image from 'next/image';
 import Rounded from '../../common/RoundedButton';
 import { useRef } from 'react';
