@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import '@/styles/sub.module.scss';
 import Head from 'next/head';
 // import Image from 'next/image';
 // import Link from 'next/link';
