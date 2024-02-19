@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  padding: 4vw 0 0 8vw;
+  padding: 4vw 8vw 0 8vw;
   overflow: hidden;
   background: #ececec;
   p {
@@ -12,12 +12,14 @@
     transform: translateY(50%);
     line-height: 1;
     font-weight: 500;
-    font-size: 18vh;
+    font-family: 'Archivo';
+    font-size: 10.111111vw;
   }
 
   .in_ico,
   .apc,
-  .apm {
+  .apm,
+  .t_circle {
     display: inline-block;
   }
 
@@ -27,6 +29,36 @@
 
   .in_ico {
     position: relative;
+  }
+
+  .cir {
+    width: 6vw;
+  }
+
+  .apo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+  .t_circle {
+    //width: 30vw;
+    width: 100%;
+    height: 6.5vw;
+    border: 0.7vw solid #222;
+    border-radius: 100px;
+  }
+
+  @media (width > 768px) {
+    p {
+      font-size: 9.111111vw;
+    }
+  }
+
+  @media (height < 900px) {
+    height: auto;
+    padding: 9vw 8vw 5vw 8vw;
   }
 }
 // .landing {

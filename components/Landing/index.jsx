@@ -17,12 +17,21 @@ export default function Landing() {
   const apc = useRef(null);
   const apm = useRef(null);
   const apr = useRef(null);
+  const apo = useRef(null);
   const moon = useRef(null);
   const code = useRef(null);
+  const cir = useRef(null);
   const router = useRouter();
   let xPercent = 0;
   let direction = -1;
   let myReq;
+
+  let gs1 = null,
+    gs2 = null,
+    gs3 = null,
+    gs4 = null,
+    gs5 = null,
+    gs6 = null;
 
   useEffect(() => {
     // gsap.registerPlugin(ScrollTrigger);
@@ -49,7 +58,7 @@ export default function Landing() {
     const sectionContent = document.querySelectorAll(`.` + styles.landing + `>p`);
 
     const start1 = () => {
-      gsap.from(apm.current, {
+      gs2 = gsap.from(apm.current, {
         delay: 1.3,
         //opacity: 1,
         autoAlpha: 1,
@@ -63,7 +72,7 @@ export default function Landing() {
     };
 
     const start2 = () => {
-      gsap.from(moon.current, {
+      gs3 = gsap.from(moon.current, {
         delay: 1.3,
         autoAlpha: 0,
         // repeat: -1,
@@ -76,7 +85,7 @@ export default function Landing() {
     };
 
     const start3 = () => {
-      gsap.from(apr.current, {
+      gs4 = gsap.from(apr.current, {
         delay: 2,
         //opacity: 1,
         autoAlpha: 1,
@@ -90,7 +99,7 @@ export default function Landing() {
     };
 
     const start4 = () => {
-      gsap.from(code.current, {
+      gs5 = gsap.from(code.current, {
         delay: 2,
         autoAlpha: 0,
         // repeat: -1,
@@ -98,6 +107,27 @@ export default function Landing() {
         // yoyo: true,
         onComplete: () => {
           start4();
+        },
+      });
+    };
+
+    const start5 = () => {
+      gs6 = gsap.to(cir.current, {
+        delay: 2,
+        width: '25vw',
+        repeat: 1,
+        yoyo: true,
+        duration: 1,
+        onStart: () => {
+          // gsap.to(apo.current, {
+          //   autoAlpha: 0,
+          //   repeat: 1,
+          //   yoyo: true,
+          //   duration: 0.5,
+          // });
+        },
+        onComplete: () => {
+          start5();
         },
       });
     };
@@ -112,7 +142,7 @@ export default function Landing() {
       stagger: 0.2,
       //duration: 4,
       onStart: () => {
-        gsap.to(apc.current, {
+        gs1 = gsap.to(apc.current, {
           delay: 1,
           rotateX: 360,
           repeat: -1,
@@ -123,6 +153,7 @@ export default function Landing() {
         start2();
         start3();
         start4();
+        start5();
 
         //setInterval(start1, 1000);
         // gsap.to(moon.current, {
@@ -148,6 +179,23 @@ export default function Landing() {
         // });
       },
     });
+
+    const handleRouteChange = (url, { shallow }) => {
+      setTimeout(() => {
+        //gsap.kill();
+        //gsap.getAll().forEach(t => t.kill());
+        gs1.kill();
+        gs2.kill();
+        gs3.kill();
+        gs4.kill();
+        gs5.kill();
+        gs6.kill();
+      }, 500);
+    };
+    router.events.on('routeChangeStart', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
   }, []);
 
   // const animate = () => {
@@ -180,22 +228,29 @@ export default function Landing() {
         Passionate
       </p>
       <p>
-        DEVELOPE
-        <span className={styles.in_ico}>
-          <span className={styles.apm} ref={apr}>
-            R
-          </span>
-          <span className="material-symbols-outlined" ref={code}>
-            code
-          </span>
-        </span>
-      </p>
-      <p>
         EXPERIEN
         <span className={styles.apc} ref={apc}>
           C
         </span>
         ES
+      </p>
+      <p>
+        DEVEL
+        <span className={`${styles.in_ico} ${styles.cir}`} ref={cir}>
+          <span className={styles.apo} ref={apo}>
+            O
+          </span>
+          <span className={styles.t_circle}></span>
+        </span>
+        PE
+        <span className={styles.in_ico}>
+          <span className={styles.apm} ref={apr}>
+            R
+          </span>
+          <span className="material-symbols-outlined" ref={code}>
+            code_blocks
+          </span>
+        </span>
       </p>
       {/* <Image src="/images/visual1.webp" fill={true} alt="background" />
       <div className={styles.sliderContainer}>
