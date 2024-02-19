@@ -5,6 +5,7 @@
 //@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 * {
   box-sizing: border-box;
@@ -228,4 +229,14 @@ button {
     text-align: center;
     font-weight: 500;
   }
+}
+
+.material-symbols-outlined {
+  display: inline-block;
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 18vh;
+  // color: #f5df4e;
 }
