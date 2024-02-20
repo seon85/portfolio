@@ -36,10 +36,10 @@ export const translate = {
     top: '-300px',
   },
   enter: {
-    top: '-100vh',
+    top: '-100%',
     transition: { duration: 0.75, delay: 0.35, ease: [0.76, 0, 0.24, 1] },
     transitionEnd: {
-      top: '100vh',
+      top: '100%',
     },
   },
   exit: {

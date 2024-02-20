@@ -114,7 +114,7 @@ export default function Landing() {
     const start5 = () => {
       gs6 = gsap.to(cir.current, {
         delay: 2,
-        width: '25vw',
+        width: '35%',
         repeat: 1,
         yoyo: true,
         duration: 1,
@@ -220,7 +220,7 @@ export default function Landing() {
             <span className={styles.apm} ref={apm}>
               m
             </span>
-            <span className="material-symbols-outlined" ref={moon}>
+            <span className="material-symbols-outlined moon-bg" ref={moon}>
               nightlight
             </span>
           </span>
@@ -235,22 +235,22 @@ export default function Landing() {
         ES
       </p>
       <p>
-        DEVEL
+        <span className={styles.in_ico}>
+          <span className={styles.apm} ref={apr}>
+            D
+          </span>
+          <span className="material-symbols-outlined ico-code-block" ref={code}>
+            code
+          </span>
+        </span>
+        EVEL
         <span className={`${styles.in_ico} ${styles.cir}`} ref={cir}>
           <span className={styles.apo} ref={apo}>
             O
           </span>
           <span className={styles.t_circle}></span>
         </span>
-        PE
-        <span className={styles.in_ico}>
-          <span className={styles.apm} ref={apr}>
-            R
-          </span>
-          <span className="material-symbols-outlined" ref={code}>
-            code_blocks
-          </span>
-        </span>
+        PER
       </p>
       {/* <Image src="/images/visual1.webp" fill={true} alt="background" />
       <div className={styles.sliderContainer}>

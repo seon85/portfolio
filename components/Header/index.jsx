@@ -74,7 +74,7 @@ export default function Header() {
                 onClick={() => {
                   router.pathname == '/about' && router.reload();
                 }}>
-                About
+                ABOUT
               </Link>
               <div className={styles.indicator}></div>
             </div>
@@ -86,7 +86,7 @@ export default function Header() {
                 onClick={() => {
                   router.pathname == '/portfolio' && router.reload();
                 }}>
-                Portfolio
+                PORTFOLIO
               </Link>
               <div className={styles.indicator}></div>
             </div>
@@ -98,7 +98,7 @@ export default function Header() {
                 onClick={() => {
                   router.pathname == '/contact' && router.reload();
                 }}>
-                Contact
+                CONTACT
               </Link>
               <div className={styles.indicator}></div>
             </div>
