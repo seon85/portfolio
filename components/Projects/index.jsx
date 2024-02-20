@@ -144,7 +144,7 @@ export default function Home() {
         </div>
         <Rounded>
           <Link href="/portfolio" scroll={false} className={styles.moreAbout}>
-            Go More Portfolio Page 👉
+            More Work 👉
           </Link>
         </Rounded>
         <>

@@ -122,7 +122,7 @@ export default function About() {
           <div className={styles.btm} ref={btnAbout}>
             <Rounded>
               <Link href="/about" scroll={false} className={styles.moreAbout}>
-                Go More About Me Page 👉
+                About Me 👉
               </Link>
             </Rounded>
           </div>

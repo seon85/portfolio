@@ -789,14 +789,14 @@
   //padding: 120px 35px 90px;
   padding: 100px 35px 90px;
 
-  @media (width > 1000px) {
+  @media (width > 768px) {
     padding: 180px 8vw 150px;
   }
 }
 
 .subTit {
   margin-bottom: 9vw;
-  line-height: 1.2;
+  line-height: 1.1;
   //font-size: calc(clamp(3.25em, 7vw, 8em) * 0.875);
   letter-spacing: -3px;
   font-weight: 700;
@@ -804,6 +804,7 @@
 
   @media (width > 1000px) {
     margin-bottom: 140px;
+    text-align: center;
     //padding: 0 5vw;
   }
 }
@@ -900,25 +901,52 @@
 }
 
 .abt_me_info {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 30px;
-  gap: 20px 0;
+  // display: flex;
+  // flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(289px, auto));
+  gap: 40px 35px;
+  margin-top: 50px;
+  padding: 4vw;
+  //border: 1px solid #c7c7c7;
+  border-radius: 20px;
+  background: #f5f5f5;
 
   > li {
-    flex: 1 1 calc(100% / 4);
+    //flex: 1 1 calc(100% / 4);
+  }
+
+  span {
+    display: block;
   }
 
   .me_t1 {
-    display: block;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
+    padding: 0 0 10px 10px;
+    border-bottom: 1px solid #6c757d;
     font-weight: 500;
     font-size: clamp(1.5rem, 1vw, 2.1rem);
     color: #6c757d;
+
+    &::before {
+      display: inline-block;
+      content: '';
+      width: 6px;
+      height: 6px;
+      margin-right: 7px;
+      border-radius: 100%;
+      background: #6c757d;
+      vertical-align: middle;
+    }
   }
 
   .me_t2 {
+    padding-left: 20px;
+    font-weight: 400;
     font-size: clamp(1.2rem, 1vw, 2.1rem);
+  }
+  @media (width > 1000px) {
+    padding: 2vw;
   }
 }
 
@@ -1225,13 +1253,23 @@
 .btn_submit {
   margin-top: 40px;
   text-align: center;
-  > button {
+  > div {
     width: 200px;
-    height: 45px;
+    height: 60px;
+    margin: 0 auto;
     border-radius: 30px;
-    background: #f5df4e;
+
+    &:hover button {
+      color: #222;
+    }
+  }
+  button {
+    position: relative;
+    z-index: 1;
+    transition: 0.5s ease-in;
     font-weight: 500;
     font-size: 18px;
+    color: #fff;
   }
 
   @media (width > 768px) {

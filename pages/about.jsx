@@ -209,7 +209,7 @@ export default function About() {
       </Head>
       <Curve>
         <motion.div className={styles.container} variants={slideUp} initial="initial" animate="enter">
-          <h2 className={styles.subTit}>Helping brands thrive in the digital world</h2>
+          <h2 className={styles.subTit}>Know Me More</h2>
           {/* <div style={{ height: '500px' }}></div> */}
           <div className={styles.sub_about}>
             <div className={styles.aboutTxt} ref={aboutTxt}>
@@ -217,9 +217,6 @@ export default function About() {
               <p>열정과 내재된 가능성</p>
               <p>능독적인 업무자세</p>
               <p>사고적 유연성</p>
-
-              {/* I help companies from all over the world with tailor-made solutions. With each project, I push my work to
-              new horizons, always putting quality first. */}
             </div>
             <div className={styles.overWrap}>
               <div className={styles.over} ref={overImg}></div>
@@ -227,10 +224,10 @@ export default function About() {
           </div>
           <div className={styles.abt_me}>
             <h3>
-              선종혁이란 사람은
-              <span className={styles.q_mark1}>?</span>
-              <span className={styles.q_mark2}>?</span>
-              <span className={styles.q_mark3}>?</span>
+              안녕하세요
+              <span className={styles.q_mark1}>!</span>
+              <span className={styles.q_mark2}>!</span>
+              <span className={styles.q_mark3}>!</span>
             </h3>
             <p>
               저는 세련되고 현대적인 웹사이트, 웹 서비스, 온라인 상점 제작을 전문으로 하며 모든 규모의 고객을 위한
@@ -240,41 +237,46 @@ export default function About() {
             <p>저의 포트폴리오 사이트에서 그동안 진행했던 프로젝트를 확인하실 수 있습니다.</p>
             <ul className={styles.abt_me_info}>
               <li>
-                <span className={styles.me_t1}>이름은?</span>
-                <span className={styles.me_t2}>선종혁입니다.</span>
+                <span className={styles.me_t1}>이름</span>
+                <span className={styles.me_t2}>선종혁</span>
               </li>
               <li>
-                <span className={styles.me_t1}>생년월일은?</span>
-                <span className={styles.me_t2}>1985.07.01. 더운날에 태어났습니다.</span>
+                <span className={styles.me_t1}>생년월일</span>
+                <span className={styles.me_t2}>1985.07.01.</span>
               </li>
               <li>
-                <span className={styles.me_t1}>나이는?</span>
-                <span className={styles.me_t2}>38세입니다.</span>
+                <span className={styles.me_t1}>나이</span>
+                <span className={styles.me_t2}>38세</span>
               </li>
               <li>
-                <span className={styles.me_t1}>MBTI?</span>
+                <span className={styles.me_t1}>경력</span>
+                <span className={styles.me_t2}>13년</span>
+              </li>
+              <li>
+                <span className={styles.me_t1}>거주지</span>
+                <span className={styles.me_t2}>경기도 의왕시</span>
+              </li>
+              <li>
+                <span className={styles.me_t1}>MBTI</span>
                 <span className={styles.me_t2}>ISFJ</span>
               </li>
               <li>
-                <span className={styles.me_t1}>현재 살고 있는 곳은?</span>
-                <span className={styles.me_t2}>경기도 의왕시에서 거주하고 있습니다.</span>
-              </li>
-              <li>
-                <span className={styles.me_t1}>성격은?</span>
-                <span className={styles.me_t2}>경기도있습니다.</span>
-              </li>
-              <li>
-                <span className={styles.me_t1}>이메일 주소는?</span>
+                <span className={styles.me_t1}>이메일 주소</span>
                 <span className={styles.me_t2}>wleks85@gmail.com</span>
               </li>
               <li>
-                <span className={styles.me_t1}>연락처는?</span>
-                <span className={styles.me_t2}>010</span>
+                <span className={styles.me_t1}>연락처</span>
+                <span className={styles.me_t2}>010 - 0000 - 0000</span>
               </li>
             </ul>
           </div>
           <div className={styles.expe} ref={expe}>
-            <h3 ref={expeTit}>제가 도와드릴 수 있어요!!!</h3>
+            <h3 ref={expeTit}>
+              제가 도와드릴 수 있어요
+              <span className={styles.q_mark1}>!</span>
+              <span className={styles.q_mark2}>!</span>
+              <span className={styles.q_mark3}>!</span>
+            </h3>
             <div className={styles.exp_list}>
               <div className={styles.exp_box}>
                 <h4>

@@ -212,7 +212,12 @@ export default function Landing() {
 
   return (
     <motion.div variants={slideUp} initial="initial" animate="enter" className={styles.landing} ref={landing}>
-      <p>Hello there...</p>
+      <p>
+        Hello there
+        <span className={styles.q_mark1}>.</span>
+        <span className={styles.q_mark2}>.</span>
+        <span className={styles.q_mark3}>.</span>
+      </p>
       <p>
         <span className={styles.ap_create}>
           I A

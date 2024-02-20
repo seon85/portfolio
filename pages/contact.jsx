@@ -9,6 +9,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Curve from '@/components/Layout/index';
 import { motion } from 'framer-motion';
+import Rounded from '../common/RoundedButton';
 // import { ChakraProvider } from '@chakra-ui/react';
 // import theme from '../config/theme';
 import {
@@ -212,14 +213,16 @@ export default function Contact() {
                 </FormControl>
 
                 <div className={styles.btn_submit}>
-                  <Button
-                    variant="outline"
-                    colorScheme="blue"
-                    isLoading={isLoading}
-                    disabled={!values.name || !values.email || !values.subject || !values.message}
-                    onClick={onSubmit}>
-                    메일 보내기
-                  </Button>
+                  <Rounded>
+                    <Button
+                      variant="outline"
+                      colorScheme="blue"
+                      isLoading={isLoading}
+                      disabled={!values.name || !values.email || !values.subject || !values.message}
+                      onClick={onSubmit}>
+                      메일 보내기
+                    </Button>
+                  </Rounded>
                 </div>
               </Container>
             </div>
