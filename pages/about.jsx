@@ -26,6 +26,11 @@ export default function About() {
   const aboutTxt = useRef(null);
   const expe = useRef(null);
   const expeTit = useRef(null);
+  const abtMe = useRef(null);
+  const meTit = useRef(null);
+  const meTxt = useRef(null);
+  const meInfo = useRef(null);
+
   const router = useRouter();
   let mm = gsap.matchMedia();
 
@@ -66,6 +71,39 @@ export default function About() {
     //     },
     //   },
     // });
+
+    gsap.to(meTit.current, {
+      opacity: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: abtMe.current,
+        start: '10% 80%',
+        end: '50% 90%',
+        // markers: true,
+        //end: window.innerHeight,
+        //scrub: 2,
+      },
+    });
+
+    gsap.to(meTxt.current, {
+      opacity: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: abtMe.current,
+        start: '10% 70%',
+        end: '50% 90%',
+      },
+    });
+
+    gsap.to(meInfo.current, {
+      opacity: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: abtMe.current,
+        start: '30% 70%',
+        end: '50% 90%',
+      },
+    });
 
     gsap.to(expeTit.current, {
       opacity: 1,
@@ -222,20 +260,24 @@ export default function About() {
               <div className={styles.over} ref={overImg}></div>
             </div>
           </div>
-          <div className={styles.abt_me}>
-            <h3>
+          <div className={styles.abt_me} ref={abtMe}>
+            <h3 ref={meTit}>
               안녕하세요
               <span className={styles.q_mark1}>!</span>
               <span className={styles.q_mark2}>!</span>
               <span className={styles.q_mark3}>!</span>
             </h3>
-            <p>
-              저는 세련되고 현대적인 웹사이트, 웹 서비스, 온라인 상점 제작을 전문으로 하며 모든 규모의 고객을 위한
-              서비스를 디자인하고 개발합니다.
-            </p>
-            <p>나의 열정은 대담한 인터페이스와 의미 있는 상호 작용을 통해 디지털 사용자 경험을 디자인하는 것입니다.</p>
-            <p>저의 포트폴리오 사이트에서 그동안 진행했던 프로젝트를 확인하실 수 있습니다.</p>
-            <ul className={styles.abt_me_info}>
+            <div ref={meTxt} className={styles.me_txt}>
+              <p>
+                저는 세련되고 현대적인 웹사이트, 웹 서비스, 온라인 상점 제작을 전문으로 하며 모든 규모의 고객을 위한
+                서비스를 디자인하고 개발합니다.
+              </p>
+              <p>
+                나의 열정은 대담한 인터페이스와 의미 있는 상호 작용을 통해 디지털 사용자 경험을 디자인하는 것입니다.
+              </p>
+              <p>저의 포트폴리오 사이트에서 그동안 진행했던 프로젝트를 확인하실 수 있습니다.</p>
+            </div>
+            <ul className={styles.abt_me_info} ref={meInfo}>
               <li>
                 <span className={styles.me_t1}>이름</span>
                 <span className={styles.me_t2}>선종혁</span>
@@ -272,10 +314,13 @@ export default function About() {
           </div>
           <div className={styles.expe} ref={expe}>
             <h3 ref={expeTit}>
-              제가 도와드릴 수 있어요
-              <span className={styles.q_mark1}>!</span>
-              <span className={styles.q_mark2}>!</span>
-              <span className={styles.q_mark3}>!</span>
+              제가 이런 걸 좀{' '}
+              <span className={styles.m_br}>
+                할 줄 압니다.
+                <span className={`${styles.q_mark1} ${styles.mr}`}>👍</span>
+                <span className={`${styles.q_mark2} ${styles.mr}`}>👍</span>
+                <span className={`${styles.q_mark3} ${styles.mr}`}>✌</span>
+              </span>
             </h3>
             <div className={styles.exp_list}>
               <div className={styles.exp_box}>
@@ -284,8 +329,9 @@ export default function About() {
                   Design
                 </h4>
                 <p>
-                  저는 웹사이트와 앱 디자인 분야에서 탄탄한 경력을 바탕으로 강력하고 사용자 친화적인 디지털 디자인을
-                  제공합니다. 견고한 회사 브랜딩은 성공적인 웹사이트의 기초입니다.
+                  디자이너의 의도를 보다 정확하게 파악하면서 마크업을 진행하는게 중요하다고 생각하며 디자이너가 원하는
+                  디테일을 고려하여 웹사이트를 마크업 합니다. 또한 Photoshop / Adobe XD / Figma 활용하여 편집 작업을 할
+                  수 있습니다.
                 </p>
               </div>
               <div className={styles.exp_box}>
@@ -294,18 +340,22 @@ export default function About() {
                   Development
                 </h4>
                 <p>
-                  디자인에 완벽하게 어울리는 확장 가능한 웹사이트를 처음부터 구축합니다. 저는 마이크로 애니메이션, 전환
-                  및 상호 작용에 중점을 두고 있습니다. 콘텐츠 관리에는 Kirby CMS를 사용합니다.
+                  Semantic Tag를 이해하며 명시적이면서 직관적인 구조의 설계를 지향하며, 웹 접근성과 SEO를 고려하여
+                  마크업을 하고 있습니다. 또한 SCSS 사용하여 코드의 재활용성을 올리고, 유지보수를 용이하게 하며
+                  JavaScript / JQuery / GSAP를 이용한 UI 구현 및 애니메이션 모션 효과를 주어 역동적인 웹사이트를
+                  구축합니다. 또한 Git / SVN을 사용하여 파일 형상관리를 했습니다.
                 </p>
               </div>
               <div className={styles.exp_box}>
                 <h4>
                   <div className={styles.num}>03</div>
-                  The full package
+                  Communication
                 </h4>
                 <p>
-                  개념부터 구현까지 완벽한 웹사이트가 바로 저를 돋보이게 만드는 요소입니다. 디자인에 대한 저의 뛰어난
-                  감각과 개발 능력 덕분에 멋진 프로젝트를 만들 수 있었습니다.
+                  커뮤니케이션은 팀워크가 작동하도록 하는 윤활유와 같다고 생각합니다. 팀원들이 능력을 최대한 발휘하고,
+                  역량을 넓히고, 경력을 개발하는 일을 도울 수 있습니다. 또한 부서 간 협업 참여자에게 업무를 원활하게
+                  진행하는 데 매우 중요합니다. 협력하고 커뮤니케이션할 수 있는 명확한 방법이 없다면 팀이 고립되고 업무가
+                  누락될 수 있기 때문에 커뮤니케이션이 원할하다면 어떤 일이든 해낼 수 있습니다.
                 </p>
               </div>
             </div>

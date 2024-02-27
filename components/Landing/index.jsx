@@ -211,7 +211,7 @@ export default function Landing() {
   // };
 
   return (
-    <motion.div variants={slideUp} initial="initial" animate="enter" className={styles.landing} ref={landing}>
+    <motion.div className={styles.landing} ref={landing}>
       <p>
         Hello there
         <span className={styles.q_mark1}>.</span>
