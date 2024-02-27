@@ -343,7 +343,7 @@ export default function About() {
                   Semantic Tag를 이해하며 명시적이면서 직관적인 구조의 설계를 지향하며, 웹 접근성과 SEO를 고려하여
                   마크업을 하고 있습니다. 또한 SCSS 사용하여 코드의 재활용성을 올리고, 유지보수를 용이하게 하며
                   JavaScript / JQuery / GSAP를 이용한 UI 구현 및 애니메이션 모션 효과를 주어 역동적인 웹사이트를
-                  구축합니다. 또한 Git / SVN을 사용하여 파일 형상관리를 했습니다.
+                  구축합니다. 또한 Git / SVN을 사용하여 파일 형상관리를 하였습니다.
                 </p>
               </div>
               <div className={styles.exp_box}>

@@ -44,6 +44,10 @@ export default function Contact() {
   // const toast = useToast();
   const [state, setState] = useState(initState);
   const [touched, setTouched] = useState({});
+  const conName = useRef(null);
+  const conEmail = useRef(null);
+  const conTit = useRef(null);
+  const conTxt = useRef(null);
 
   const { values, isLoading, error } = state;
 
@@ -73,13 +77,53 @@ export default function Contact() {
       //   duration: 2000,
       //   position: 'top',
       // });
-      alert('정상적으로 메세지가 전송되었습니다.');
+      alert('정상적으로 메일이 전송되었습니다.');
     } catch (error) {
-      setState(prev => ({
-        ...prev,
-        isLoading: false,
-        error: error.message,
-      }));
+      if (conName.current.value == '') {
+        alert('이름을 입력해주세요.');
+        conName.current.focus();
+        setState(prev => ({
+          ...prev,
+          isLoading: false,
+          error: error.message,
+        }));
+        return false;
+      }
+      if (conEmail.current.value == '') {
+        alert('이메일 주소를 입력해주세요.');
+        conEmail.current.focus();
+        setState(prev => ({
+          ...prev,
+          isLoading: false,
+          error: error.message,
+        }));
+        return false;
+      }
+      if (conTit.current.value == '') {
+        alert('제목을 입력해주세요.');
+        conTit.current.focus();
+        setState(prev => ({
+          ...prev,
+          isLoading: false,
+          error: error.message,
+        }));
+        return false;
+      }
+      if (conTxt.current.value == '') {
+        alert('내용을 입력해주세요.');
+        conTxt.current.focus();
+        setState(prev => ({
+          ...prev,
+          isLoading: false,
+          error: error.message,
+        }));
+        return false;
+      }
+      // setState(prev => ({
+      //   ...prev,
+      //   isLoading: false,
+      //   error: error.message,
+      // }));
     }
   };
   return (
@@ -136,13 +180,12 @@ export default function Contact() {
           <h2 className={styles.subTit}>start a project together</h2>
           <div className={styles.cont_wrap}>
             <div className={styles.cont_mail}>
+              {error && (
+                <Text color="red.300" my={4} fontSize="xl">
+                  {error}
+                </Text>
+              )}
               <Container className={styles.contact_form}>
-                {error && (
-                  <Text color="red.300" my={4} fontSize="xl">
-                    {error}
-                  </Text>
-                )}
-
                 <FormControl isRequired isInvalid={touched.name && !values.name}>
                   <div className="l">01</div>
                   <div className="r">
@@ -155,6 +198,7 @@ export default function Contact() {
                       onChange={handleChange}
                       onBlur={onBlur}
                       placeholder="이름을 입력해주세요."
+                      ref={conName}
                     />
                   </div>
                   <FormErrorMessage>이름을 입력해주세요.</FormErrorMessage>
@@ -172,6 +216,7 @@ export default function Contact() {
                       onChange={handleChange}
                       onBlur={onBlur}
                       placeholder="이메일 주소를 입력해주세요."
+                      ref={conEmail}
                     />
                   </div>
                   <FormErrorMessage>이메일 주소를 입력해주세요.</FormErrorMessage>
@@ -189,6 +234,7 @@ export default function Contact() {
                       onChange={handleChange}
                       onBlur={onBlur}
                       placeholder="제목을 입력해주세요."
+                      ref={conTit}
                     />
                   </div>
                   <FormErrorMessage>제목을 입력해주세요.</FormErrorMessage>
@@ -207,6 +253,7 @@ export default function Contact() {
                       onChange={handleChange}
                       onBlur={onBlur}
                       placeholder="내용을 입력해주세요."
+                      ref={conTxt}
                     />
                   </div>
                   <FormErrorMessage>내용을 입력해주세요.</FormErrorMessage>
