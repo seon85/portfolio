@@ -23,7 +23,7 @@ export default function App({ Component, pageProps, router }) {
       setTimeout(() => {
         window.scrollTo(0, 0);
         // console.log('comp');
-      }, 100);
+      }, 500);
     };
 
     router.events.on('routeChangeComplete', handleRouteComplete);
