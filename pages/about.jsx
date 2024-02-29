@@ -262,20 +262,19 @@ export default function About() {
           </div>
           <div className={styles.abt_me} ref={abtMe}>
             <h3 ref={meTit}>
-              안녕하세요
+              안녕하세요. 선종혁입니다
               <span className={styles.q_mark1}>!</span>
               <span className={styles.q_mark2}>!</span>
               <span className={styles.q_mark3}>!</span>
             </h3>
             <div ref={meTxt} className={styles.me_txt}>
               <p>
-                저는 세련되고 현대적인 웹사이트, 웹 서비스, 온라인 상점 제작을 전문으로 하며 모든 규모의 고객을 위한
-                서비스를 디자인하고 개발합니다.
+                저는 세련되고 현대적인 웹사이트, 웹 서비스에 관심이 많으며 하루하루 변화하는 최신 동향과 기술을
+                지속적으로 학습하고 관심을 가지고 있습니다. 이를 바탕으로 자기개발의 힘쓰고 있으며,
+                <strong className="highlight"> &lsquo;최고의 퍼포먼스 개발자&rsquo;</strong> 로 성장하고자 노력하고
+                있습니다.
               </p>
-              <p>
-                나의 열정은 대담한 인터페이스와 의미 있는 상호 작용을 통해 디지털 사용자 경험을 디자인하는 것입니다.
-              </p>
-              <p>저의 포트폴리오 사이트에서 그동안 진행했던 프로젝트를 확인하실 수 있습니다.</p>
+              <p>웹 포트폴리오에서 그동안 진행했던 프로젝트를 확인하실 수 있습니다.</p>
             </div>
             <ul className={styles.abt_me_info} ref={meInfo}>
               <li>
@@ -326,7 +325,7 @@ export default function About() {
               <div className={styles.exp_box}>
                 <h4>
                   <div className={styles.num}>01</div>
-                  Design
+                  <span className="highlight">Design</span>
                 </h4>
                 <p>
                   디자이너의 의도를 보다 정확하게 파악하면서 마크업을 진행하는게 중요하다고 생각하며 디자이너가 원하는
@@ -337,19 +336,19 @@ export default function About() {
               <div className={styles.exp_box}>
                 <h4>
                   <div className={styles.num}>02</div>
-                  Development
+                  <span className="highlight">Development</span>
                 </h4>
                 <p>
                   Semantic Tag를 이해하며 명시적이면서 직관적인 구조의 설계를 지향하며, 웹 접근성과 SEO를 고려하여
                   마크업을 하고 있습니다. 또한 SCSS 사용하여 코드의 재활용성을 올리고, 유지보수를 용이하게 하며
                   JavaScript / JQuery / GSAP를 이용한 UI 구현 및 애니메이션 모션 효과를 주어 역동적인 웹사이트를
-                  구축합니다. 또한 Git / SVN을 사용하여 파일 형상관리를 하였습니다.
+                  구축했습니다. 또한 Git / SVN을 사용하여 파일 형상관리를 하였습니다.
                 </p>
               </div>
               <div className={styles.exp_box}>
                 <h4>
                   <div className={styles.num}>03</div>
-                  Communication
+                  <span className="highlight">Communication</span>
                 </h4>
                 <p>
                   커뮤니케이션은 팀워크가 작동하도록 하는 윤활유와 같다고 생각합니다. 팀원들이 능력을 최대한 발휘하고,
