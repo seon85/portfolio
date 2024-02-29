@@ -1,5 +1,5 @@
 import '@/styles/globals.scss';
-import { useEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
 import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -17,6 +17,10 @@ export default function App({ Component, pageProps, router }) {
   //     //document.body.classList.remove('main_hidden');
   //   }
   // });
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   useEffect(() => {
     const handleRouteComplete = (url, { shallow }) => {
@@ -39,7 +43,7 @@ export default function App({ Component, pageProps, router }) {
     })();
 
     setTimeout(() => {
-      window.history.scrollRestoration = 'manual';
+      //window.history.scrollRestoration = 'manual';
       //console.log('top');
     }, 500);
 
