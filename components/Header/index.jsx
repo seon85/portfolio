@@ -73,7 +73,8 @@ export default function Header() {
                 href="/about"
                 onClick={() => {
                   router.pathname == '/about' && router.reload();
-                }}>
+                }}
+                className={`${router.pathname == '/about' ? 'gnb_on' : ''}`}>
                 ABOUT
               </Link>
               <div className={styles.indicator}></div>
@@ -85,7 +86,8 @@ export default function Header() {
                 href="/portfolio"
                 onClick={() => {
                   router.pathname == '/portfolio' && router.reload();
-                }}>
+                }}
+                className={`${router.pathname == '/portfolio' ? 'gnb_on' : ''}`}>
                 PORTFOLIO
               </Link>
               <div className={styles.indicator}></div>
@@ -97,7 +99,8 @@ export default function Header() {
                 href="/contact"
                 onClick={() => {
                   router.pathname == '/contact' && router.reload();
-                }}>
+                }}
+                className={`${router.pathname == '/contact' ? 'gnb_on' : ''}`}>
                 CONTACT
               </Link>
               <div className={styles.indicator}></div>
