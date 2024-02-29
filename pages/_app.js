@@ -18,10 +18,6 @@ export default function App({ Component, pageProps, router }) {
   //   }
   // });
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  });
-
   useEffect(() => {
     const handleRouteComplete = (url, { shallow }) => {
       setTimeout(() => {
@@ -43,8 +39,8 @@ export default function App({ Component, pageProps, router }) {
     })();
 
     setTimeout(() => {
-      //window.history.scrollRestoration = 'manual';
-      //console.log('top');
+      window.history.scrollRestoration = 'manual';
+      console.log('top');
     }, 500);
 
     const handleRouteChange = (url, { shallow }) => {
