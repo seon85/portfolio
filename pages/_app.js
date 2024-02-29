@@ -42,7 +42,7 @@ export default function App({ Component, pageProps, router }) {
       //window.history.scrollRestoration = 'manual';
       window.scrollTo(0, 0);
       //console.log('top');
-    }, 100);
+    }, 500);
 
     const handleRouteChange = (url, { shallow }) => {
       // console.log(
