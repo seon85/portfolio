@@ -262,7 +262,7 @@ export default function About() {
           </div>
           <div className={styles.abt_me} ref={abtMe}>
             <h3 ref={meTit}>
-              안녕하세요. 선종혁입니다
+              안녕하세요
               <span className={styles.q_mark1}>!</span>
               <span className={styles.q_mark2}>!</span>
               <span className={styles.q_mark3}>!</span>
@@ -328,9 +328,8 @@ export default function About() {
                   <span className="highlight">Design</span>
                 </h4>
                 <p>
-                  디자이너의 의도를 보다 정확하게 파악하면서 마크업을 진행하는게 중요하다고 생각하며 디자이너가 원하는
-                  디테일을 고려하여 웹사이트를 마크업 합니다. 또한 Photoshop / Adobe XD / Figma 활용하여 편집 작업을 할
-                  수 있습니다.
+                  디자인의 의도를 보다 정확하게 파악하는 부분이 중요하다고 생각하며 디자이너가 원하는 디테일을 고려하여
+                  웹사이트를 마크업 합니다. 또한 Photoshop / Adobe XD / Figma 활용하여 편집 작업을 할 수 있습니다.
                 </p>
               </div>
               <div className={styles.exp_box}>
@@ -354,7 +353,7 @@ export default function About() {
                   커뮤니케이션은 팀워크가 작동하도록 하는 윤활유와 같다고 생각합니다. 팀원들이 능력을 최대한 발휘하고,
                   역량을 넓히고, 경력을 개발하는 일을 도울 수 있습니다. 또한 부서 간 협업 참여자에게 업무를 원활하게
                   진행하는 데 매우 중요합니다. 협력하고 커뮤니케이션할 수 있는 명확한 방법이 없다면 팀이 고립되고 업무가
-                  누락될 수 있기 때문에 커뮤니케이션이 원할하다면 어떤 일이든 해낼 수 있습니다.
+                  누락될 수 있기 때문에 커뮤니케이션이 원할하다면 어떤 일이든 해낼 수 있다고 생각합니다.
                 </p>
               </div>
             </div>
