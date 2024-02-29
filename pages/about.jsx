@@ -274,7 +274,7 @@ export default function About() {
                 <strong className="highlight"> &lsquo;최고의 퍼포먼스 개발자&rsquo;</strong> 로 성장하고자 노력하고
                 있습니다.
               </p>
-              <p>웹 포트폴리오에서 그동안 진행했던 프로젝트를 확인하실 수 있습니다.</p>
+              <p>웹 포트폴리오에서 그동안 제가 진행했던 프로젝트를 확인하실 수 있습니다.</p>
             </div>
             <ul className={styles.abt_me_info} ref={meInfo}>
               <li>
@@ -313,7 +313,7 @@ export default function About() {
           </div>
           <div className={styles.expe} ref={expe}>
             <h3 ref={expeTit}>
-              제가 이런 걸 좀{' '}
+              제가 이런 걸 좀
               <span className={styles.m_br}>
                 할 줄 압니다.
                 <span className={`${styles.q_mark1} ${styles.mr}`}>👍</span>

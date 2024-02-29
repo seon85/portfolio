@@ -298,6 +298,10 @@ export default function Contact() {
         h2 {
           color: #fff;
         }
+
+        .gnb_on + div {
+          background-color: #fff !important;
+        }
       `}</style>
     </>
   );

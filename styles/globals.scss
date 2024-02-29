@@ -249,3 +249,10 @@ button {
 .moon-bg {
   color: #cfc165;
 }
+
+.gnb_on {
+  & + div {
+    //background: #000 !important;
+    transform: scale(1) !important;
+  }
+}
