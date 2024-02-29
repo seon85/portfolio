@@ -39,9 +39,8 @@ export default function App({ Component, pageProps, router }) {
     })();
 
     setTimeout(() => {
-      //window.history.scrollRestoration = 'manual';
-      window.scrollTo(0, 0);
-      console.log('top');
+      window.history.scrollRestoration = 'manual';
+      //console.log('top');
     }, 10);
 
     const handleRouteChange = (url, { shallow }) => {
