@@ -20,8 +20,10 @@ export default function App({ Component, pageProps, router }) {
 
   useLayoutEffect(() => {
     const top = document.querySelector('body').getBoundingClientRect().top;
-    window.scrollTo(0, top);
-    console.log('comp');
+    //window.scrollTo(0, top);
+    window.scrollTo(0, 0);
+    console.log('a');
+
     const handleRouteComplete = (url, { shallow }) => {
       setTimeout(() => {
         window.scrollTo(0, 0);
