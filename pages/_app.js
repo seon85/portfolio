@@ -20,10 +20,11 @@ export default function App({ Component, pageProps, router }) {
 
   useEffect(() => {
     const handleRouteComplete = (url, { shallow }) => {
+      window.history.scrollRestoration = 'manual';
       setTimeout(() => {
-        window.scrollTo(0, 0);
-        // console.log('comp');
-      }, 500);
+        // window.scrollTo(0, 0);
+        console.log('comp');
+      }, 1500);
     };
 
     router.events.on('routeChangeComplete', handleRouteComplete);
@@ -38,12 +39,15 @@ export default function App({ Component, pageProps, router }) {
       const locomotiveScroll = new LocomotiveScroll();
     })();
 
+    const top = document.querySelector('body').getBoundingClientRect().top;
+    window.scrollTo(0, top);
+
+    console.log('top');
+
     setTimeout(() => {
       //window.history.scrollRestoration = 'manual';
-      const top = document.querySelector('body').getBoundingClientRect().top;
-      window.scrollTo(0, top);
       //console.log('top');
-    }, 500);
+    }, 1200);
 
     const handleRouteChange = (url, { shallow }) => {
       // console.log(
