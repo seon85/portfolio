@@ -19,7 +19,7 @@ export default function App({ Component, pageProps, router }) {
   // });
 
   useLayoutEffect(() => {
-    const top = document.querySelector('body').getBoundingClientRect().top;
+    //const top = document.querySelector('body').getBoundingClientRect().top;
     //window.scrollTo(0, top);
     window.scrollTo(0, 0);
     console.log('a');
@@ -56,10 +56,13 @@ export default function App({ Component, pageProps, router }) {
       const locomotiveScroll = new LocomotiveScroll();
     })();
 
+    window.scrollTo(0, 0);
+
     setTimeout(() => {
       //  window.history.scrollRestoration = 'manual';
-      const top = document.querySelector('body').getBoundingClientRect().top;
-      window.scrollTo(0, top);
+      //const top = document.querySelector('body').getBoundingClientRect().top;
+      //window.scrollTo(0, top);
+      window.scrollTo(0, 0);
       console.log('top');
     }, 20);
 
