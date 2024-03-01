@@ -850,7 +850,7 @@
   .over {
     flex: 1;
     //background: url(https://dennissnellenberg.com/assets/img/DSC07312-2.jpg) center center no-repeat;
-    background: url(../public/images/about2.webp) 50% 50% no-repeat;
+    background: url(../public/images/about2_.webp) 50% 50% no-repeat;
     background-size: cover;
     top: -20vh;
     position: absolute;
@@ -909,7 +909,7 @@
   @media (width > 1000px) {
     h3 {
       //margin-bottom: 30px;
-      margin-bottom: 1vw;
+      margin-bottom: 3vw;
     }
     p {
       font-size: calc(clamp(2.35rem, 5vw, 1.5rem) * 0.75);
@@ -925,7 +925,7 @@
   gap: 25px 35px;
   transform: translateY(50%);
   opacity: 0;
-  margin-top: 30px;
+  //margin-top: 30px;
   padding: 5vw;
   //border: 1px solid #c7c7c7;
   border-radius: 7px;
@@ -967,8 +967,53 @@
   }
   @media (width > 1000px) {
     gap: 40px 35px;
-    margin-top: 50px;
+    //margin-top: 50px;
     padding: 2vw;
+  }
+}
+
+.career {
+  padding: 10vw 0 0;
+
+  h3 {
+    margin-bottom: 3vw;
+    font-size: calc(clamp(2.25rem, 5vw, 3.5rem) * 0.75);
+    font-weight: 500;
+  }
+
+  @media (width > 1000px) {
+    padding: 7vw 0 0;
+    h3 {
+    }
+
+    p {
+      font-size: clamp(1.2rem, 1vw, 1.1rem);
+    }
+  }
+}
+
+.car_list {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  h4 {
+  }
+
+  @media (width > 768px) {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      flex: 0 1 15vw;
+    }
+
+    p {
+      flex: 1;
+    }
   }
 }
 

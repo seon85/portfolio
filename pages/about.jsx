@@ -85,22 +85,22 @@ export default function About() {
       },
     });
 
-    gsap.to(meTxt.current, {
-      opacity: 1,
-      y: 0,
-      scrollTrigger: {
-        trigger: abtMe.current,
-        start: '10% 70%',
-        end: '50% 90%',
-      },
-    });
+    // gsap.to(meTxt.current, {
+    //   opacity: 1,
+    //   y: 0,
+    //   scrollTrigger: {
+    //     trigger: abtMe.current,
+    //     start: '10% 70%',
+    //     end: '50% 90%',
+    //   },
+    // });
 
     gsap.to(meInfo.current, {
       opacity: 1,
       y: 0,
       scrollTrigger: {
         trigger: abtMe.current,
-        start: '30% 70%',
+        start: '10% 70%',
         end: '50% 90%',
       },
     });
@@ -262,19 +262,19 @@ export default function About() {
           </div>
           <div className={styles.abt_me} ref={abtMe}>
             <h3 ref={meTit}>
-              안녕하세요
+              간단한 제 소개
               <span className={styles.q_mark1}>!</span>
               <span className={styles.q_mark2}>!</span>
               <span className={styles.q_mark3}>!</span>
             </h3>
             <div ref={meTxt} className={styles.me_txt}>
-              <p>
+              {/* <p>
                 저는 세련되고 현대적인 웹사이트, 웹 서비스에 관심이 많으며 하루하루 변화하는 최신 동향과 기술을
                 지속적으로 학습하고 관심을 가지고 있습니다. 이를 바탕으로 자기개발의 힘쓰고 있으며,
                 <strong className="highlight"> &lsquo;최고의 퍼포먼스 개발자&rsquo;</strong> 로 성장하고자 노력하고
                 있습니다.
               </p>
-              <p>웹 포트폴리오에서 그동안 제가 진행했던 프로젝트를 확인하실 수 있습니다.</p>
+              <p>웹 포트폴리오에서 그동안 제가 진행했던 프로젝트를 확인하실 수 있습니다.</p> */}
             </div>
             <ul className={styles.abt_me_info} ref={meInfo}>
               <li>
@@ -310,6 +310,41 @@ export default function About() {
                 <span className={styles.me_t2}>010 - 0000 - 0000</span>
               </li>
             </ul>
+          </div>
+          <div className={styles.career}>
+            <h3>경력은 이렇습니다!!</h3>
+            <div className={styles.car_list}>
+              <h4>짙은</h4>
+              <p>
+                카카오워크에 종속된 웹 기반 프로덕트인 워크보드의 마크업 개발을 담당했습니다. React/TypeScript 환경에서
+                FE와 긴밀하게 협업하여 소스코드 유실을 최소화했습니다. 컴포넌트 단위의 프로토타입 개발을 통해 UI/UX 팀과
+                함께 검토하며 사용성을 개선해나갑니다. 마케팅에 필요한 이메일 마크업 개발도 함께 담당하고 있습니다.
+              </p>
+            </div>
+            <div className={styles.car_list}>
+              <h4>비야</h4>
+              <p>
+                카카오워크에 종속된 웹 기반 프로덕트인 워크보드의 마크업 개발을 담당했습니다. React/TypeScript 환경에서
+                FE와 긴밀하게 협업하여 소스코드 유실을 최소화했습니다. 컴포넌트 단위의 프로토타입 개발을 통해 UI/UX 팀과
+                함께 검토하며 사용성을 개선해나갑니다. 마케팅에 필요한 이메일 마크업 개발도 함께 담당하고 있습니다.
+              </p>
+            </div>
+            <div className={styles.car_list}>
+              <h4>아이티굿</h4>
+              <p>
+                카카오워크에 종속된 웹 기반 프로덕트인 워크보드의 마크업 개발을 담당했습니다. React/TypeScript 환경에서
+                FE와 긴밀하게 협업하여 소스코드 유실을 최소화했습니다. 컴포넌트 단위의 프로토타입 개발을 통해 UI/UX 팀과
+                함께 검토하며 사용성을 개선해나갑니다. 마케팅에 필요한 이메일 마크업 개발도 함께 담당하고 있습니다.
+              </p>
+            </div>
+            <div className={styles.car_list}>
+              <h4>Adqua</h4>
+              <p>
+                네이버, 다음, 구글 등 주요 디지털 미디어에 가장 활발하게 D.A & S.A를 집행하고 있는 에이전시입니다.
+                웹사이트에서부터 모바일 사이트, 디지털 인스톨레이션에 이르기까지 새로운 기술을 활용한 전략적인 디지털
+                플랫폼을 만듭니다.
+              </p>
+            </div>
           </div>
           <div className={styles.expe} ref={expe}>
             <h3 ref={expeTit}>
