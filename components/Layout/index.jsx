@@ -7,7 +7,7 @@ import { text, curve, translate } from './anim';
 
 const routes = {
   //'/': `JONGHYUK'S PORTFOLIO`,
-  '/': 'MAIN',
+  '/': `JONGHYUK'S PORTFOLIO`,
   '/about': 'ABOUT',
   '/portfolio': 'PORTFOLIO',
   '/contact': 'CONTACT',
