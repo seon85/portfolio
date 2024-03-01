@@ -54,6 +54,9 @@ export default function App({ Component, pageProps, router }) {
       const locomotiveScroll = new LocomotiveScroll();
     })();
 
+    const top = document.querySelector('body').getBoundingClientRect().top;
+    window.scrollTo(0, top);
+
     // setTimeout(() => {
     //   window.history.scrollRestoration = 'manual';
     //   console.log('top');
