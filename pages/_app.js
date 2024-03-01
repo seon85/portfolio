@@ -18,9 +18,13 @@ export default function App({ Component, pageProps, router }) {
   //   }
   // });
 
+  useLayoutEffect(() => {
+    const top = document.querySelector('body').getBoundingClientRect().top;
+    window.scrollTo(0, top);
+  });
+
   useEffect(() => {
     const handleRouteComplete = (url, { shallow }) => {
-      window.history.scrollRestoration = 'manual';
       setTimeout(() => {
         // window.scrollTo(0, 0);
         console.log('comp');
@@ -38,9 +42,6 @@ export default function App({ Component, pageProps, router }) {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
       const locomotiveScroll = new LocomotiveScroll();
     })();
-
-    const top = document.querySelector('body').getBoundingClientRect().top;
-    window.scrollTo(0, top);
 
     console.log('top');
 
