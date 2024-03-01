@@ -55,14 +55,13 @@ export default function App({ Component, pageProps, router }) {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
       const locomotiveScroll = new LocomotiveScroll();
     })();
-    window.history.scrollRestoration = 'manual';
-    const top = document.querySelector('body').getBoundingClientRect().top;
-    window.scrollTo(0, top);
 
-    // setTimeout(() => {
-    //   window.history.scrollRestoration = 'manual';
-    //   console.log('top');
-    // }, 1200);
+    setTimeout(() => {
+      //  window.history.scrollRestoration = 'manual';
+      const top = document.querySelector('body').getBoundingClientRect().top;
+      window.scrollTo(0, top);
+      console.log('top');
+    }, 20);
 
     const handleRouteChange = (url, { shallow }) => {
       // console.log(
