@@ -220,11 +220,11 @@ button {
     z-index: 10000;
   }
   .background {
-    background-color: #141516;
+    background-color: #000;
     transition: opacity 0s linear 0.1s;
   }
   .route {
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 40%;
     color: white;

@@ -23,7 +23,7 @@ export default function App({ Component, pageProps, router }) {
       setTimeout(() => {
         window.scrollTo(0, 0);
         // console.log('comp');
-      }, 10);
+      }, 500);
     };
 
     router.events.on('routeChangeComplete', handleRouteComplete);
@@ -39,9 +39,11 @@ export default function App({ Component, pageProps, router }) {
     })();
 
     setTimeout(() => {
-      window.history.scrollRestoration = 'manual';
+      //window.history.scrollRestoration = 'manual';
+      const top = document.querySelector('body').getBoundingClientRect().top;
+      window.scrollTo(0, top);
       //console.log('top');
-    }, 10);
+    }, 500);
 
     const handleRouteChange = (url, { shallow }) => {
       // console.log(
