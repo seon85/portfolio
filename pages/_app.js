@@ -19,17 +19,13 @@ export default function App({ Component, pageProps, router }) {
   // });
 
   useLayoutEffect(() => {
-    // const top = document.querySelector('body').getBoundingClientRect().top;
-    // window.scrollTo(0, top);
-    window.scrollTo(0, 0);
-  });
-
-  useEffect(() => {
+    const top = document.querySelector('body').getBoundingClientRect().top;
+    window.scrollTo(0, top);
     const handleRouteComplete = (url, { shallow }) => {
       setTimeout(() => {
         window.scrollTo(0, 0);
         //console.log('comp');
-      }, 1500);
+      }, 1000);
     };
 
     router.events.on('routeChangeComplete', handleRouteComplete);
@@ -39,15 +35,28 @@ export default function App({ Component, pageProps, router }) {
   }, [router]);
 
   useEffect(() => {
+    // const handleRouteComplete = (url, { shallow }) => {
+    //   setTimeout(() => {
+    //     window.scrollTo(0, 0);
+    //     //console.log('comp');
+    //   }, 1500);
+    // };
+    // router.events.on('routeChangeComplete', handleRouteComplete);
+    // return () => {
+    //   router.events.off('routeChangeComplete', handleRouteComplete);
+    // };
+  }, [router]);
+
+  useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
       const locomotiveScroll = new LocomotiveScroll();
     })();
 
-    setTimeout(() => {
-      //window.history.scrollRestoration = 'manual';
-      //console.log('top');
-    }, 1200);
+    // setTimeout(() => {
+    //   window.history.scrollRestoration = 'manual';
+    //   console.log('top');
+    // }, 1200);
 
     const handleRouteChange = (url, { shallow }) => {
       // console.log(
