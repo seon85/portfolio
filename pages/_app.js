@@ -5,6 +5,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 //import { useRouter } from "next/router"
 import { AnimatePresence } from 'framer-motion';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 export default function App({ Component, pageProps, router }) {
   //const router = useRouter();
@@ -28,7 +30,7 @@ export default function App({ Component, pageProps, router }) {
       setTimeout(() => {
         window.scrollTo(0, 0);
         //console.log('comp');
-      }, 1000);
+      }, 600);
     };
 
     router.events.on('routeChangeComplete', handleRouteComplete);
@@ -73,7 +75,7 @@ export default function App({ Component, pageProps, router }) {
       //   } shallow routing`
       // );
       //localStorage.removeItem('load');
-      //ScrollTrigger.getAll().forEach(t => t.kill());
+      ScrollTrigger.getAll().forEach(t => t.kill());
     };
 
     router.events.on('routeChangeStart', handleRouteChange);

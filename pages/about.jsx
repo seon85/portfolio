@@ -31,6 +31,9 @@ export default function About() {
   const meTxt = useRef(null);
   const meInfo = useRef(null);
 
+  const career = useRef(null);
+  const careerTit = useRef(null);
+
   const router = useRouter();
   let mm = gsap.matchMedia();
 
@@ -44,10 +47,12 @@ export default function About() {
     //document.querySelector('.' + styles.container).getBoundingClientRect();
 
     setTimeout(() => {
+      console.log(ScrollTrigger.getAll());
       ScrollTrigger.refresh();
     }, 1000);
 
     const sectionContent = document.querySelectorAll(`.` + styles.exp_box);
+    const careerList = document.querySelectorAll(`.` + styles.car_list);
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -105,6 +110,32 @@ export default function About() {
       },
     });
 
+    gsap.to(careerTit.current, {
+      opacity: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: career.current,
+        start: '20% 80%',
+        end: '50% 90%',
+        // markers: true,
+        //end: window.innerHeight,
+        //scrub: 2,
+      },
+    });
+
+    gsap.to(careerList, {
+      stagger: 0.2,
+      opacity: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: career.current,
+        start: '30% 80%',
+        end: '70% 90%',
+        //end: window.innerHeight,
+        //scrub: 2,
+      },
+    });
+
     gsap.to(expeTit.current, {
       opacity: 1,
       y: 0,
@@ -139,7 +170,7 @@ export default function About() {
           start: 0,
           //end: '+=100%',
         },
-        y: '200px',
+        y: '300px',
       });
 
       gsap.to(overImg.current, {
@@ -188,8 +219,8 @@ export default function About() {
       setTimeout(() => {
         mm.kill();
       }, 500);
-      document.querySelector('body').style = '';
-      ScrollTrigger.getAll().forEach(t => t.kill());
+      //document.querySelector('body').style = '';
+      //ScrollTrigger.getAll().forEach(t => t.kill());
     };
     router.events.on('routeChangeStart', handleRouteChange);
     return () => {
@@ -262,7 +293,7 @@ export default function About() {
           </div>
           <div className={styles.abt_me} ref={abtMe}>
             <h3 ref={meTit}>
-              간단한 제 소개
+              간단한 저의 소개
               <span className={styles.q_mark1}>!</span>
               <span className={styles.q_mark2}>!</span>
               <span className={styles.q_mark3}>!</span>
@@ -311,39 +342,56 @@ export default function About() {
               </li>
             </ul>
           </div>
-          <div className={styles.career}>
-            <h3>경력은 이렇습니다!!</h3>
-            <div className={styles.car_list}>
-              <h4>짙은</h4>
-              <p>
-                카카오워크에 종속된 웹 기반 프로덕트인 워크보드의 마크업 개발을 담당했습니다. React/TypeScript 환경에서
-                FE와 긴밀하게 협업하여 소스코드 유실을 최소화했습니다. 컴포넌트 단위의 프로토타입 개발을 통해 UI/UX 팀과
-                함께 검토하며 사용성을 개선해나갑니다. 마케팅에 필요한 이메일 마크업 개발도 함께 담당하고 있습니다.
-              </p>
-            </div>
-            <div className={styles.car_list}>
-              <h4>비야</h4>
-              <p>
-                카카오워크에 종속된 웹 기반 프로덕트인 워크보드의 마크업 개발을 담당했습니다. React/TypeScript 환경에서
-                FE와 긴밀하게 협업하여 소스코드 유실을 최소화했습니다. 컴포넌트 단위의 프로토타입 개발을 통해 UI/UX 팀과
-                함께 검토하며 사용성을 개선해나갑니다. 마케팅에 필요한 이메일 마크업 개발도 함께 담당하고 있습니다.
-              </p>
-            </div>
-            <div className={styles.car_list}>
-              <h4>아이티굿</h4>
-              <p>
-                카카오워크에 종속된 웹 기반 프로덕트인 워크보드의 마크업 개발을 담당했습니다. React/TypeScript 환경에서
-                FE와 긴밀하게 협업하여 소스코드 유실을 최소화했습니다. 컴포넌트 단위의 프로토타입 개발을 통해 UI/UX 팀과
-                함께 검토하며 사용성을 개선해나갑니다. 마케팅에 필요한 이메일 마크업 개발도 함께 담당하고 있습니다.
-              </p>
-            </div>
-            <div className={styles.car_list}>
-              <h4>Adqua</h4>
-              <p>
-                네이버, 다음, 구글 등 주요 디지털 미디어에 가장 활발하게 D.A & S.A를 집행하고 있는 에이전시입니다.
-                웹사이트에서부터 모바일 사이트, 디지털 인스톨레이션에 이르기까지 새로운 기술을 활용한 전략적인 디지털
-                플랫폼을 만듭니다.
-              </p>
+          <div className={styles.career} ref={career}>
+            <h3 ref={careerTit}>
+              저의 경력은요
+              <span className={styles.q_mark1}>?</span>
+              <span className={styles.q_mark2}>?</span>
+              <span className={styles.q_mark3}>?</span>
+            </h3>
+            <div className={styles.car_list_wrap}>
+              <div className={styles.car_list}>
+                <h4>
+                  짙은
+                  <span>2015.07. ~ 2024.03.</span>
+                </h4>
+                <p>
+                  공공기관, 기업, 대학교 등 SI 프로젝트를 수행하였으며, 고객사에 요청에 따라 파견지에 투입되어 업무를
+                  수행을 하는 경우도 있었습니다. 웹표준 및 웹접근성 웹사이트 마크업 및 유지보수 업무를 담당하였습니다.
+                </p>
+              </div>
+              <div className={styles.car_list}>
+                <h4>
+                  비야
+                  <span>2014.10. ~ 2015.05.</span>
+                </h4>
+                <p>
+                  카카오워크에 종속된 웹 기반 프로덕트인 워크보드의 마크업 개발을 담당했습니다. React/TypeScript
+                  환경에서 FE와 긴밀하게 협업하여 소스코드 유실을 최소화했습니다. 컴포넌트 단위의 프로토타입 개발을 통해
+                  UI/UX 팀과 함께 검토하며 사용성을 개선해나갑니다. 마케팅에 필요한 이메일 마크업 개발도 함께 담당하고
+                  있습니다.
+                </p>
+              </div>
+              <div className={styles.car_list}>
+                <h4>
+                  아이티굿
+                  <span>2011.11. ~ 2014.05.</span>
+                </h4>
+                <p>
+                  공공기관, 기업등의 SI 프로젝트를 수행하였으며, 웹표준 및 웹접근성 웹사이트 마크업 및 유지보수 업무를
+                  담당하였습니다.
+                </p>
+              </div>
+              <div className={styles.car_list}>
+                <h4>
+                  Adqua
+                  <span>2010.07. ~ 2011.03.</span>
+                </h4>
+                <p>
+                  네이버, 다음, 구글 등 주요 포털사이트에 광고 페이지 및 대기업 프로모션 웹사이트 마크업 및 유지보수
+                  업무를 담당하였습니다.
+                </p>
+              </div>
             </div>
           </div>
           <div className={styles.expe} ref={expe}>
@@ -351,9 +399,8 @@ export default function About() {
               제가 이런 걸 좀
               <span className={styles.m_br}>
                 할 줄 압니다.
-                <span className={`${styles.q_mark1} ${styles.mr}`}>👍</span>
-                <span className={`${styles.q_mark2} ${styles.mr}`}>👍</span>
-                <span className={`${styles.q_mark3} ${styles.mr}`}>✌</span>
+                <span className={`${styles.q_mark1} ${styles.mr} ${styles.emogi}`}>👍</span>
+                <span className={`${styles.q_mark2} ${styles.mr} ${styles.emogi}`}>✌</span>
               </span>
             </h3>
             <div className={styles.exp_list}>
