@@ -218,7 +218,7 @@ button {
     pointer-events: none;
     left: 0;
     top: 0;
-    z-index: 10000;
+    z-index: 20000;
   }
   .background {
     background-color: #000;
@@ -230,10 +230,15 @@ button {
     top: 40%;
     color: white;
     font-size: 60px;
-    z-index: 20000;
+    z-index: 21000;
     transform: translateX(-50%);
     text-align: center;
     font-weight: 500;
+  }
+  @media (width < 768px) {
+    .route {
+      font-size: 40px;
+    }
   }
 }
 

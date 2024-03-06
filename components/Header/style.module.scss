@@ -112,7 +112,7 @@
   transform: scale(0);
   position: fixed;
   right: 0px;
-  z-index: 40000;
+  z-index: 11000;
 
   .button {
     position: relative;
@@ -175,6 +175,11 @@
   }
 
   @media (width < 768px) {
-    //transform: scale(1) !important;
+    transform: scale(1) !important;
+
+    .button {
+      width: 60px;
+      height: 60px;
+    }
   }
 }

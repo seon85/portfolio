@@ -44,17 +44,21 @@ export default function Portfolio() {
 
     const getData = (skip, take) => {
       const datas = require('/public/data.json');
-      drawCard(datas.slice(skip * take, take * (page + 1)), datas.length);
+      if (skip < 1) {
+        drawCard(datas.slice(skip * take, take * (page + 1)), datas.length, '');
+      } else {
+        drawCard(datas.slice(skip * take, take * (page + 1)), datas.length, 'y');
+      }
     };
 
-    const drawCard = (results, length) => {
+    const drawCard = (results, length, c) => {
       total = length;
       const html = results
         .map(
           result =>
-            `<div class="${styles.port}">
+            `<div class="${styles.port} ${c ? `${styles.on}` : ''}">
               <a href="${result.url}" target="_blank" class="${styles.port_link}" title="새창으로 열림">
-                <div class="${styles.port_image}"><img src="/images/${result.image}" alt="${result.title}"></div>
+                <div class="${styles.port_image}"><img src="/images/${result.image}.webp" alt="${result.title}"></div>
                 <div class="${styles.port_tit}"><h2>${result.title}</h2></div>
                 <div class="${styles.posi_date}">
                   <div class="${styles.l}">${result.position}</div>
@@ -70,15 +74,20 @@ export default function Portfolio() {
 
     const scrollData = () => {
       if (
-        document.documentElement.scrollTop + document.documentElement.clientHeight + 100 >=
+        document.documentElement.scrollTop + document.documentElement.clientHeight + 300 >=
         document.documentElement.scrollHeight
       ) {
         if (page + 1 < total / limit) {
           page++;
-          loader.current.classList.remove(`${styles.hidden}`);
+          //loader.current.classList.remove(`${styles.hidden}`);
           getData(page, limit);
           setTimeout(() => {
-            loader.current.classList.add(`${styles.hidden}`);
+            //loader.current.classList.add(`${styles.hidden}`);
+            let data = Array.from(document.querySelectorAll(`.` + styles.on));
+
+            for (let i = 0; i < data.length; i++) {
+              data[i].classList.remove(`${styles.on}`);
+            }
           }, 500);
         } else {
           return;
