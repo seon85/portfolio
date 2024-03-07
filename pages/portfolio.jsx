@@ -151,7 +151,7 @@ export default function Portfolio() {
       <Curve>
         <motion.div className={styles.container} variants={slideUp} initial="initial" animate="enter">
           <h2 className={styles.subTit} ref={portTit}>
-            Some of my most recent projects
+            Work Experience
           </h2>
           <div className={styles.portfolio_list} ref={portfolioList}></div>
         </motion.div>

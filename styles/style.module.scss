@@ -1218,7 +1218,7 @@
     transition: 0.5s ease;
 
     &:nth-child(even) .port_image {
-      background: #adc6d7;
+      //background: #ededed;
     }
 
     &.on {
@@ -1229,20 +1229,22 @@
   .port_link {
     display: block;
 
-    &:hover img {
-      transform: scale(1.03);
+    &:hover .port_image img {
+      transform: scale(1.02);
+      //object-position: bottom;
     }
   }
 
   .port_image {
     margin-bottom: 20px;
-    padding: 3vw;
-    background: #d9cfb3;
+    padding: 1.5vw;
+    background: #ced8e7;
+
     img {
       width: 100%;
       height: 48vw;
       transition: 0.5s ease;
-      object-fit: contain;
+      object-fit: cover;
       object-position: top;
     }
   }
@@ -1277,7 +1279,7 @@
     flex: 0 0 auto;
   }
 
-  @media (width > 768px) {
+  @media (width > 1000px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 4vw 3vw;
     .port {
@@ -1286,10 +1288,6 @@
 
     .port_link {
       display: block;
-
-      &:hover img {
-        transform: scale(1.03);
-      }
     }
 
     .port_image {

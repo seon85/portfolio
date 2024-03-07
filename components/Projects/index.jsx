@@ -12,33 +12,33 @@ import Rounded from '../../common/RoundedButton';
 const projects = [
   {
     title: '우체국금융 차세대 채널파트 UI/UX 부분 (퍼블리싱)',
-    src: 'img_port1.webp',
+    src: 'img_rec_pj1.webp',
     color: '#000000',
     href: 'https://www.epostbank.go.kr/',
   },
   {
     title: '지역신문발전위원회',
-    src: 'img_port2.webp',
+    src: 'img_rec_pj2.webp',
     color: '#8C8C8C',
     href: 'https://www.cln.or.kr/cln/index.do',
   },
   {
     title: '정부인증 가사서비스 가사랑',
-    src: 'locomotive.png',
+    src: 'img_rec_pj3.webp',
     color: '#EFE8D3',
     href: 'https://www.gasarang.go.kr/hpgsMain.do',
   },
   {
     title: '경기도평생교육진흥원',
-    src: 'silencio.png',
+    src: 'img_rec_pj4.webp',
     color: '#706D63',
-    href: 'https:www.naver.com',
+    href: 'https://www.gill.or.kr/gill/index.do',
   },
   {
     title: '언론진흥재단 뉴스토어',
-    src: 'silencio.png',
+    src: 'img_rec_pj5.webp',
     color: '#706D63',
-    href: 'https:www.naver.com',
+    href: 'https://www.newstore.or.kr/store/main.do',
   },
 ];
 
