@@ -27,6 +27,10 @@
     opacity: 0;
   }
 
+  .moon {
+    margin-right: 23px;
+  }
+
   .in_ico {
     position: relative;
   }
@@ -431,7 +435,7 @@
   }
 
   &:hover {
-    opacity: 0.5;
+    //opacity: 0.5;
 
     h2 {
       transform: translateX(-10px);
@@ -470,7 +474,13 @@
         width: 80%;
         height: 80%;
         img {
+          transition: 0.5s ease;
           object-fit: cover;
+          object-position: top;
+
+          &:hover {
+            object-position: bottom;
+          }
         }
       }
     }
@@ -1237,7 +1247,9 @@
 
   .port_image {
     margin-bottom: 20px;
-    padding: 1.5vw;
+    //padding: 1.5vw;
+    padding: 23px;
+    border-radius: 5px;
     background: #ced8e7;
 
     img {

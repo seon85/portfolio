@@ -47,7 +47,7 @@ export default function About() {
     //document.querySelector('.' + styles.container).getBoundingClientRect();
 
     setTimeout(() => {
-      console.log(ScrollTrigger.getAll());
+      //console.log(ScrollTrigger.getAll());
       ScrollTrigger.refresh();
     }, 1000);
 
@@ -356,8 +356,8 @@ export default function About() {
                   <span>2015.07. ~ 2024.03.</span>
                 </h4>
                 <p>
-                  공공기관, 기업, 대학교 등 SI 프로젝트를 수행하였으며, 고객사에 요청에 따라 파견지에 투입되어 업무를
-                  수행을 하는 경우도 있었습니다. 웹표준 및 웹접근성 웹사이트 마크업 및 유지보수 업무를 담당하였습니다.
+                  공공기관, 기업, 대학교 등 SI 프로젝트를 수행하였으며, 웹표준 및 웹접근성 웹사이트 마크업 및 유지보수
+                  업무를 담당하였습니다.
                 </p>
               </div>
               <div className={styles.car_list}>
@@ -399,7 +399,7 @@ export default function About() {
               제가 이런 걸 좀
               <span className={styles.m_br}>
                 할 줄 압니다.
-                <span className={`${styles.q_mark1} ${styles.mr} ${styles.emogi}`}>👍</span>
+                <span className={`${styles.q_mark1} ${styles.mr} ${styles.emogi}`}>✌</span>
                 <span className={`${styles.q_mark2} ${styles.mr} ${styles.emogi}`}>✌</span>
               </span>
             </h3>

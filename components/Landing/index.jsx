@@ -21,6 +21,8 @@ export default function Landing() {
   const moon = useRef(null);
   const code = useRef(null);
   const cir = useRef(null);
+  const aph = useRef(null);
+  const sun = useRef(null);
   const router = useRouter();
   let xPercent = 0;
   let direction = -1;
@@ -31,7 +33,9 @@ export default function Landing() {
     gs3 = null,
     gs4 = null,
     gs5 = null,
-    gs6 = null;
+    gs6 = null,
+    gs7 = null,
+    gs8 = null;
 
   useEffect(() => {
     // gsap.registerPlugin(ScrollTrigger);
@@ -86,11 +90,12 @@ export default function Landing() {
 
     const start3 = () => {
       gs4 = gsap.from(apr.current, {
-        delay: 2,
+        delay: 1,
         //opacity: 1,
-        autoAlpha: 1,
+        //autoAlpha: 1,
         //repeat: -1,
         //yoyo: true,
+        rotateY: 360,
         duration: 0.5,
         onComplete: () => {
           start3();
@@ -98,18 +103,18 @@ export default function Landing() {
       });
     };
 
-    const start4 = () => {
-      gs5 = gsap.from(code.current, {
-        delay: 2,
-        autoAlpha: 0,
-        // repeat: -1,
-        duration: 0.5,
-        // yoyo: true,
-        onComplete: () => {
-          start4();
-        },
-      });
-    };
+    // const start4 = () => {
+    //   gs5 = gsap.from(code.current, {
+    //     delay: 2,
+    //     autoAlpha: 0,
+    //     // repeat: -1,
+    //     duration: 0.5,
+    //     // yoyo: true,
+    //     onComplete: () => {
+    //       start4();
+    //     },
+    //   });
+    // };
 
     const start5 = () => {
       gs6 = gsap.to(cir.current, {
@@ -128,6 +133,33 @@ export default function Landing() {
         },
         onComplete: () => {
           start5();
+        },
+      });
+    };
+
+    const start7 = () => {
+      gs7 = gsap.from(aph.current, {
+        delay: 2,
+        //opacity: 1,
+        autoAlpha: 1,
+        //repeat: -1,
+        //yoyo: true,
+        duration: 0.5,
+        onComplete: () => {
+          start7();
+        },
+      });
+    };
+
+    const start8 = () => {
+      gs8 = gsap.from(sun.current, {
+        delay: 2,
+        autoAlpha: 0,
+        // repeat: -1,
+        duration: 0.5,
+        // yoyo: true,
+        onComplete: () => {
+          start8();
         },
       });
     };
@@ -152,8 +184,10 @@ export default function Landing() {
         start1();
         start2();
         start3();
-        start4();
+        //start4();
         start5();
+        start7();
+        start8();
 
         //setInterval(start1, 1000);
         // gsap.to(moon.current, {
@@ -188,8 +222,10 @@ export default function Landing() {
         gs2.kill();
         gs3.kill();
         gs4.kill();
-        gs5.kill();
+        //gs5.kill();
         gs6.kill();
+        gs7.kill();
+        gs8.kill();
       }, 500);
     };
     router.events.on('routeChangeStart', handleRouteChange);
@@ -213,7 +249,15 @@ export default function Landing() {
   return (
     <motion.div className={styles.landing} ref={landing}>
       <p>
-        Hello there
+        <span className={styles.in_ico}>
+          <span className={styles.apm} ref={aph}>
+            H
+          </span>
+          <span className="material-symbols-outlined sun" ref={sun} style={{ left: '-2vw' }}>
+            light_mode
+          </span>
+        </span>
+        ello there
         <span className={styles.q_mark1}>.</span>
         <span className={styles.q_mark2}>.</span>
         <span className={styles.q_mark3}>.</span>
@@ -221,7 +265,7 @@ export default function Landing() {
       <p>
         <span className={styles.ap_create}>
           I A
-          <span className={styles.in_ico}>
+          <span className={`${styles.in_ico} ${styles.moon}`}>
             <span className={styles.apm} ref={apm}>
               m
             </span>
@@ -241,12 +285,12 @@ export default function Landing() {
       </p>
       <p>
         <span className={styles.in_ico}>
-          <span className={styles.apm} ref={apr}>
+          <span className={styles.apc} ref={apr}>
             D
           </span>
-          <span className="material-symbols-outlined ico-code-block" ref={code}>
+          {/* <span className="material-symbols-outlined ico-code-block" ref={code}>
             code
-          </span>
+          </span> */}
         </span>
         EVEL
         <span className={`${styles.in_ico} ${styles.cir}`} ref={cir}>
