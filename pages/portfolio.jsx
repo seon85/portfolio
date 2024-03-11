@@ -79,10 +79,10 @@ export default function Portfolio() {
       ) {
         if (page + 1 < total / limit) {
           page++;
-          //loader.current.classList.remove(`${styles.hidden}`);
+          loader.current.classList.remove(`${styles.hidden}`);
           getData(page, limit);
           setTimeout(() => {
-            //loader.current.classList.add(`${styles.hidden}`);
+            loader.current.classList.add(`${styles.hidden}`);
             let data = Array.from(document.querySelectorAll(`.` + styles.on));
 
             for (let i = 0; i < data.length; i++) {
@@ -154,12 +154,13 @@ export default function Portfolio() {
             Work Experience
           </h2>
           <div className={styles.portfolio_list} ref={portfolioList}></div>
+          <div className={`${styles.loader} ${styles.hidden}`} ref={loader}></div>
         </motion.div>
-        <div className={`${styles.loader} ${styles.hidden}`} ref={loader}>
+        {/* <div className={`${styles.loader} ${styles.hidden}`} ref={loader}>
           <div className={styles.circle}></div>
           <div className={styles.circle}></div>
           <div className={styles.circle}></div>
-        </div>
+        </div> */}
       </Curve>
     </>
   );
