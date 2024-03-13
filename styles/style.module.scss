@@ -897,7 +897,9 @@
 }
 
 .abt_me {
+  position: relative;
   padding: 7vw 0 0;
+
   h3 {
     transform: translateY(50%);
     opacity: 0;
@@ -953,8 +955,9 @@
 
   .me_t1 {
     margin-bottom: 13px;
-    padding: 0 0 10px 10px;
-    border-bottom: 1px solid #c3c3c3;
+    padding: 0 0 25px 10px;
+    //border-bottom: 1px solid #c3c3c3;
+    background: url(../public/images/curve_line.svg) no-repeat 0 100% / 100%;
     font-weight: 500;
     font-size: clamp(1.3rem, 1vw, 2.1rem);
     color: #2e2e2e;
@@ -988,6 +991,7 @@
 }
 
 .career {
+  position: relative;
   padding: 10vw 0 0;
 
   h3 {
@@ -1025,10 +1029,11 @@
   }
 
   h4 {
-    font-size: clamp(1.4rem, 1vw, 1.1rem);
+    font-size: clamp(1.7rem, 1vw, 1.1rem);
     font-weight: 500;
     > span {
       display: block;
+      margin-top: 10px;
       font-size: clamp(1rem, 1vw, 1rem);
       font-weight: 300;
     }
@@ -1242,12 +1247,38 @@
     display: block;
 
     &:hover .port_image img {
-      transform: scale(1.02);
+      //transform: scale(1.02);
       //object-position: bottom;
+    }
+
+    &:hover {
+      .port_image {
+        &::before {
+          background: linear-gradient(to right, fade_out(#fff, 1) 0%, fade_out(#fff, 0.7) 100%);
+          content: '';
+          display: block;
+          height: 100%;
+          left: -75%;
+          position: absolute;
+          top: 0;
+          transform: skewX(-25deg);
+          width: 50%;
+          z-index: 2;
+          animation: shine 1.5s;
+        }
+      }
+    }
+
+    @keyframes shine {
+      100% {
+        left: 125%;
+      }
     }
   }
 
   .port_image {
+    position: relative;
+    overflow: hidden;
     margin-bottom: 20px;
     //padding: 1.5vw;
     padding: 23px;
