@@ -271,6 +271,7 @@ export default function About() {
         />
         <meta name="og:type" content="website" />
         <meta name="og:url" content="" />
+        <meta property="og:image" content="/images/og_img.jpg" />
         <meta name="twitter:card" content="card" />
         <meta name="twitter:title" content="웹 퍼블리셔 선종혁의 포트폴리오" />
         <meta

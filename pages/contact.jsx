@@ -150,6 +150,7 @@ export default function Contact() {
         />
         <meta name="og:type" content="website" />
         <meta name="og:url" content="" />
+        <meta name="og:url" content="/images/og_img.jpg" />
         <meta name="twitter:card" content="card" />
         <meta name="twitter:title" content="웹 퍼블리셔 선종혁의 포트폴리오" />
         <meta
