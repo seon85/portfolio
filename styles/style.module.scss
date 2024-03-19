@@ -1696,3 +1696,11 @@
     }
   }
 }
+
+@media (width < 1230px) {
+  .career svg,
+  .expe svg,
+  .abt_me svg {
+    display: none;
+  }
+}
