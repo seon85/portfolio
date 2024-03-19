@@ -57,7 +57,9 @@ export default function Portfolio() {
         .map(
           result =>
             `<div class="${styles.port} ${c ? `${styles.on}` : ''}">
-              <a href="${result.url}" target="_blank" class="${styles.port_link}" title="새창으로 열림">
+              <a href="${result.url}" target="_blank" class="${styles.port_link} ${
+              result.pointer == 'none' ? `${styles.point_none}` : ''
+            }" title="새창으로 열림">
                 <div class="${styles.port_image}"><img src="/images/${result.image}.webp" alt="${result.title}"></div>
                 <div class="${styles.port_tit}"><h2>${result.title}</h2></div>
                 <div class="${styles.posi_date}">

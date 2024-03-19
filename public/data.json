@@ -5,7 +5,8 @@
     "image": "img_kocea",
     "position": "<img src='/images/visual-studio.webp' alt='VSCode' style='width: 35px'> <img src='/images/html.webp' alt='HTML' style='width: 35px'> <img src='/images/css.webp' alt='CSS' style='width: 35px'> <img src='/images/js-file.webp' alt='JS' style='width: 35px'>",
     "date": "2023.07 ~ 2024.01.",
-    "url": "https://homenet.kocea.or.kr:1443/kocea/koc-kr/index.do"
+    "url": "https://homenet.kocea.or.kr:1443/kocea/koc-kr/index.do",
+    "pointer": ""
   },
   {
     "id": 55,
@@ -13,7 +14,8 @@
     "image": "img_gsr",
     "position": "<img src='/images/visual-studio.webp' alt='VSCode' style='width: 35px'> <img src='/images/html.webp' alt='HTML' style='width: 35px'> <img src='/images/css.webp' alt='CSS' style='width: 35px'> <img src='/images/js-file.webp' alt='JS' style='width: 35px'>",
     "date": "2023.05 ~ 2023.12.",
-    "url": "https://www.gasarang.go.kr/hpgsMain.do"
+    "url": "https://www.gasarang.go.kr/hpgsMain.do",
+    "pointer": ""
   },
   {
     "id": 54,
@@ -21,7 +23,8 @@
     "image": "img_tempo",
     "position": "<img src='/images/visual-studio.webp' alt='VSCode' style='width: 35px'> <img src='/images/html.webp' alt='HTML' style='width: 35px'> <img src='/images/css.webp' alt='CSS' style='width: 35px'> <img src='/images/js-file.webp' alt='JS' style='width: 35px'>",
     "date": "2023.03 ~ 2023.04.",
-    "url": "http://tempocoffee.co.kr/"
+    "url": "http://tempocoffee.co.kr/",
+    "pointer": ""
   },
   {
     "id": 53,
@@ -29,7 +32,8 @@
     "image": "img_gill",
     "position": "Publising",
     "date": "2022.11 ~ 2023.07.",
-    "url": "https://www.gill.or.kr/gill/index.do"
+    "url": "https://www.gill.or.kr/gill/index.do",
+    "pointer": ""
   },
   {
     "id": 52,
@@ -37,7 +41,8 @@
     "image": "img_ksure",
     "position": "Publising",
     "date": "2022.06 ~ 2022.12.",
-    "url": "https://www.ksure.or.kr/rh-kr/index.do"
+    "url": "https://www.ksure.or.kr/rh-kr/index.do",
+    "pointer": ""
   },
   {
     "id": 51,
@@ -45,7 +50,8 @@
     "image": "img_fipa",
     "position": "Publising",
     "date": "2022.06 ~ 2022.11.",
-    "url": "https://fipa.or.kr/fipa/index.do"
+    "url": "https://fipa.or.kr/fipa/index.do",
+    "pointer": ""
   },
   {
     "id": 50,
@@ -53,7 +59,8 @@
     "image": "img_ns",
     "position": "Publising",
     "date": "2021.07 ~ 2021.12.",
-    "url": "https://www.newstore.or.kr/store/main.do"
+    "url": "https://www.newstore.or.kr/store/main.do",
+    "pointer": ""
   },
   {
     "id": 49,
@@ -61,7 +68,8 @@
     "image": "img_epost",
     "position": "Publising",
     "date": "2021.06 ~ 2021.12.",
-    "url": "https://www.epostbank.go.kr/"
+    "url": "https://www.epostbank.go.kr/",
+    "pointer": ""
   },
   {
     "id": 48,
@@ -69,7 +77,8 @@
     "image": "img_omb",
     "position": "Publising",
     "date": "2021.06 ~ 2021.10.",
-    "url": "https://ombudsman.kotra.or.kr/ob-kr/index.do"
+    "url": "https://ombudsman.kotra.or.kr/ob-kr/index.do",
+    "pointer": ""
   },
   {
     "id": 47,
@@ -77,7 +86,8 @@
     "image": "img_arts",
     "position": "Publising",
     "date": "2021.03 ~ 2021.09.",
-    "url": "https://www.seoularts.ac.kr/web/main/mainPage.do"
+    "url": "https://www.seoularts.ac.kr/web/main/mainPage.do",
+    "pointer": ""
   },
   {
     "id": 46,
@@ -85,7 +95,8 @@
     "image": "img-daekyo",
     "position": "Publising",
     "date": "2020.12 ~ 2021.02.",
-    "url": "#n"
+    "url": "#n",
+    "pointer": "none"
   },
   {
     "id": 45,
@@ -93,7 +104,8 @@
     "image": "img-yongin",
     "position": "Publising",
     "date": "2020.08 ~ 2021.02.",
-    "url": "https://lll.yongin.go.kr/giheung/index.do"
+    "url": "https://lll.yongin.go.kr/giheung/index.do",
+    "pointer": ""
   },
   {
     "id": 44,
@@ -101,7 +113,8 @@
     "image": "img-kotra",
     "position": "Publising",
     "date": "2020.08 ~ 2021.02.",
-    "url": "https://www.investkorea.org/ik-kr/index.do"
+    "url": "https://www.investkorea.org/ik-kr/index.do",
+    "pointer": ""
   },
   {
     "id": 43,
@@ -109,7 +122,8 @@
     "image": "img-kuk",
     "position": "Publising",
     "date": "2020.02 ~ 2020.06.",
-    "url": "https://www.kuksiwon.or.kr/index.do"
+    "url": "https://www.kuksiwon.or.kr/index.do",
+    "pointer": ""
   },
   {
     "id": 42,
@@ -117,7 +131,8 @@
     "image": "img-daekyo",
     "position": "Publising",
     "date": "2019.12 ~ 2020.01.",
-    "url": "#n"
+    "url": "#n",
+    "pointer": "none"
   },
   {
     "id": 41,
@@ -125,7 +140,8 @@
     "image": "img-kbs",
     "position": "Publising",
     "date": "2019.09 ~ 2019.09.",
-    "url": "#n"
+    "url": "#n",
+    "pointer": "none"
   },
   {
     "id": 40,
@@ -133,7 +149,8 @@
     "image": "img-daekyo",
     "position": "Publising",
     "date": "2019.05 ~ 2019.05.",
-    "url": "#n"
+    "url": "#n",
+    "pointer": "none"
   },
   {
     "id": 39,
@@ -141,7 +158,8 @@
     "image": "img_gc",
     "position": "Publising",
     "date": "2019.04 ~ 2019.05.",
-    "url": "https://vcshop.gcoop.com/kr"
+    "url": "https://vcshop.gcoop.com/kr",
+    "pointer": ""
   },
   {
     "id": 38,
@@ -149,7 +167,8 @@
     "image": "img-daekyo",
     "position": "Publising",
     "date": "2018.08 ~ 2018.08.",
-    "url": "#n"
+    "url": "#n",
+    "pointer": "none"
   },
   {
     "id": 37,
@@ -157,7 +176,8 @@
     "image": "img-cwm",
     "position": "Publising",
     "date": "2018.04 ~ 2018.05.",
-    "url": "https://www.cw.or.kr/index.do"
+    "url": "https://www.cw.or.kr/index.do",
+    "pointer": ""
   },
   {
     "id": 36,
@@ -165,7 +185,8 @@
     "image": "img-song",
     "position": "Publising",
     "date": "2018.03 ~ 2018.03.",
-    "url": "https://www.songpagongdan.or.kr/main.asp"
+    "url": "https://www.songpagongdan.or.kr/main.asp",
+    "pointer": ""
   },
   {
     "id": 35,
@@ -173,7 +194,8 @@
     "image": "img_traum",
     "position": "Publising",
     "date": "2017.09 ~ 2017.09.",
-    "url": "https://traumwelt.daekyo.com/index.do"
+    "url": "https://traumwelt.daekyo.com/index.do",
+    "pointer": ""
   },
   {
     "id": 33,
@@ -181,7 +203,8 @@
     "image": "img_agro",
     "position": "Publising",
     "date": "2017.07 ~ 2017.12.",
-    "url": "https://www.at.or.kr/home/apko000000/index.action"
+    "url": "https://www.at.or.kr/home/apko000000/index.action",
+    "pointer": ""
   },
   {
     "id": 32,
@@ -189,7 +212,8 @@
     "image": "img_kis",
     "position": "Publising",
     "date": "2017.03 ~ 2017.09.",
-    "url": "https://www.kalis.or.kr/index.do"
+    "url": "https://www.kalis.or.kr/index.do",
+    "pointer": ""
   },
   {
     "id": 31,
@@ -197,7 +221,8 @@
     "image": "img_hnt",
     "position": "Publising",
     "date": "2017.03 ~ 2017.08.",
-    "url": "#n"
+    "url": "#n",
+    "pointer": "none"
   },
   {
     "id": 30,
@@ -205,7 +230,8 @@
     "image": "img_sos",
     "position": "Publising",
     "date": "2016.12 ~ 2017.03.",
-    "url": "https://www.sos1379.go.kr/"
+    "url": "https://www.sos1379.go.kr/",
+    "pointer": ""
   },
   {
     "id": 29,
@@ -213,7 +239,8 @@
     "image": "img_ssc",
     "position": "Publising",
     "date": "2016.10 ~ 2016.10.",
-    "url": "https://www.ssc.go.kr/home/kor/main.do"
+    "url": "https://www.ssc.go.kr/home/kor/main.do",
+    "pointer": ""
   },
   {
     "id": 28,
@@ -221,7 +248,8 @@
     "image": "img_koelsa",
     "position": "Publising",
     "date": "2016.07 ~ 2017.02.",
-    "url": "https://www.koelsa.or.kr/"
+    "url": "https://www.koelsa.or.kr/",
+    "pointer": ""
   },
   {
     "id": 27,
@@ -229,7 +257,8 @@
     "image": "img_ksure",
     "position": "Publising",
     "date": "2016.01 ~ 2016.03.",
-    "url": "https://www.ksure.or.kr/"
+    "url": "https://www.ksure.or.kr/",
+    "pointer": ""
   },
   {
     "id": 26,
@@ -237,15 +266,17 @@
     "image": "img_make",
     "position": "Publising",
     "date": "2015.07 ~ 2015.09.",
-    "url": "https://makeall.com/home/kor/main.do"
+    "url": "https://makeall.com/home/kor/main.do",
+    "pointer": ""
   },
   {
     "id": 23,
     "title": "영주 U-city",
-    "image": "img_port1",
+    "image": "no_img",
     "position": "Publising",
     "date": "2014.05 ~ 2014.06.",
-    "url": "#n"
+    "url": "#n",
+    "pointer": "none"
   },
   {
     "id": 22,
@@ -253,7 +284,8 @@
     "image": "img_ayventure",
     "position": "Publising",
     "date": "2013.11 ~ 2013.12.",
-    "url": "https://www.ayventure.net/"
+    "url": "https://www.ayventure.net/",
+    "pointer": ""
   },
   {
     "id": 21,
@@ -261,15 +293,17 @@
     "image": "img_ggeea",
     "position": "Publising",
     "date": "2013.11 ~ 2013.12.",
-    "url": "https://ggeea.or.kr/"
+    "url": "https://ggeea.or.kr/",
+    "pointer": ""
   },
   {
     "id": 20,
     "title": "Infocess 장애인 접근성 모바일웹",
-    "image": "img_port1",
+    "image": "no_img",
     "position": "Publising",
     "date": "2013.09 ~ 2014.06.",
-    "url": "#n"
+    "url": "#n",
+    "pointer": "none"
   },
   {
     "id": 19,
@@ -277,7 +311,8 @@
     "image": "img_kohom",
     "position": "Publising",
     "date": "2013.07 ~ 2013.09.",
-    "url": "https://www.kohom.or.kr/web/main/index.do"
+    "url": "https://www.kohom.or.kr/web/main/index.do",
+    "pointer": ""
   },
   {
     "id": 18,
@@ -285,7 +320,8 @@
     "image": "img_auc",
     "position": "Publising",
     "date": "2013.07 ~ 2013.07.",
-    "url": "https://www.auc.or.kr/base/main/view"
+    "url": "https://www.auc.or.kr/base/main/view",
+    "pointer": ""
   },
   {
     "id": 17,
@@ -293,7 +329,8 @@
     "image": "img_gsic",
     "position": "Publising",
     "date": "2013.06 ~ 2013.06.",
-    "url": "https://gsic.or.kr/home/kor/main.do"
+    "url": "https://gsic.or.kr/home/kor/main.do",
+    "pointer": ""
   },
   {
     "id": 16,
@@ -301,15 +338,17 @@
     "image": "img_grandpark",
     "position": "Publising",
     "date": "2013.06 ~ 2013.06.",
-    "url": "https://grandpark.seoul.go.kr/main/ko.do"
+    "url": "https://grandpark.seoul.go.kr/main/ko.do",
+    "pointer": ""
   },
   {
     "id": 15,
     "title": "한국수력원자력 인트라넷(업무포털)",
-    "image": "img_port1",
+    "image": "no_img",
     "position": "Publising",
     "date": "2013.02 ~ 2013.02.",
-    "url": "#n"
+    "url": "#n",
+    "pointer": "none"
   },
   {
     "id": 14,
@@ -317,7 +356,8 @@
     "image": "img_gtp",
     "position": "Publising",
     "date": "2013.01 ~ 2013.01.",
-    "url": "https://www.gtp.or.kr/"
+    "url": "https://www.gtp.or.kr/",
+    "pointer": ""
   },
   {
     "id": 13,
@@ -325,7 +365,8 @@
     "image": "img_gtp",
     "position": "Publising",
     "date": "2013.01 ~ 2013.01.",
-    "url": "https://www.gtp.or.kr/"
+    "url": "https://www.gtp.or.kr/",
+    "pointer": ""
   },
   {
     "id": 12,
@@ -333,7 +374,8 @@
     "image": "img_klia",
     "position": "Publising",
     "date": "2012.11 ~ 2013.05.",
-    "url": "https://www.klia.or.kr/"
+    "url": "https://www.klia.or.kr/",
+    "pointer": ""
   },
   {
     "id": 11,
@@ -341,15 +383,17 @@
     "image": "img_joonggomall",
     "position": "Publising",
     "date": "2012.09. ~ 2012.11.",
-    "url": "https://www.joonggomall.or.kr/"
+    "url": "https://www.joonggomall.or.kr/",
+    "pointer": ""
   },
   {
     "id": 10,
     "title": "경기소셜락커",
-    "image": "google.jpg",
+    "image": "no_img",
     "position": "Publising",
     "date": "2012.08. ~ 2012.08.",
-    "url": "#n"
+    "url": "#n",
+    "pointer": "none"
   },
   {
     "id": 9,
@@ -357,7 +401,8 @@
     "image": "img_liscc",
     "position": "Publising",
     "date": "2012.08. ~ 2012.08.",
-    "url": "http://liscc.or.kr/"
+    "url": "http://liscc.or.kr/",
+    "pointer": ""
   },
   {
     "id": 8,
@@ -365,7 +410,8 @@
     "image": "img_kita",
     "position": "Publising",
     "date": "2012.07. ~ 2012.07.",
-    "url": "https://www.kita.net/"
+    "url": "https://www.kita.net/",
+    "pointer": ""
   },
   {
     "id": 7,
@@ -373,7 +419,8 @@
     "image": "img_ayventure",
     "position": "Publising",
     "date": "2012.05. ~ 2012.06.",
-    "url": "https://www.ayventure.net/"
+    "url": "https://www.ayventure.net/",
+    "pointer": ""
   },
   {
     "id": 6,
@@ -381,7 +428,8 @@
     "image": "img_kpub",
     "position": "Publising",
     "date": "2012.04. ~ 2012.08.",
-    "url": "https://kpub.knia.or.kr/main.do"
+    "url": "https://kpub.knia.or.kr/main.do",
+    "pointer": ""
   },
   {
     "id": 5,
@@ -389,7 +437,8 @@
     "image": "img_gits",
     "position": "Publising",
     "date": "2012.03. ~ 2012.04.",
-    "url": "https://gits.gg.go.kr/web/main/index.do"
+    "url": "https://gits.gg.go.kr/web/main/index.do",
+    "pointer": ""
   },
   {
     "id": 3,
@@ -397,7 +446,8 @@
     "image": "img_spacelink",
     "position": "Publising",
     "date": "2011",
-    "url": "http://www.spacelink.co.kr/main/index.php"
+    "url": "http://www.spacelink.co.kr/main/index.php",
+    "pointer": ""
   },
   {
     "id": 2,
@@ -405,14 +455,16 @@
     "image": "img_ice",
     "position": "Publising",
     "date": "2011",
-    "url": "https://ice.cs.ac.kr/"
+    "url": "https://ice.cs.ac.kr/",
+    "pointer": ""
   },
   {
     "id": 1,
     "title": "DR.FP 재무클리닉",
-    "image": "funny.jpg",
+    "image": "no_img",
     "position": "Publising",
     "date": "2011",
-    "url": "#n"
+    "url": "#n",
+    "pointer": "none"
   }
 ]

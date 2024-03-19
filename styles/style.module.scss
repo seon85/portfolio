@@ -963,7 +963,7 @@
     font-weight: 600;
     font-size: 22px;
 
-    span {
+    .t1 {
       position: absolute;
       left: 0;
       top: 0;
@@ -1284,6 +1284,10 @@
       //filter: blur(30px) drop-shadow(1px 11px 15px #000);
       filter: blur(20px);
     }
+  }
+
+  .point_none {
+    pointer-events: none;
   }
 
   .port_link {
