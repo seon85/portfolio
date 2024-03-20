@@ -15,7 +15,7 @@ export default function index({ index, title, href, manageModal }) {
       className={styles.project}>
       <Link href={href} target="_blank" title="새창으로 열림">
         <h2>{title}</h2>
-        <p>Design & Development</p>
+        <p>HTML & UI Development</p>
       </Link>
     </div>
   );

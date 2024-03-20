@@ -696,7 +696,7 @@ export default function About() {
                   <span className={styles.t1}>08</span>
                   연락처
                 </h4>
-                010 - 0000 - 0000
+                010-5042-4129
               </li>
             </ul>
             {/* <ul className={styles.abt_me_info} ref={meInfo}>

@@ -133,7 +133,7 @@ export default function Home() {
       <div className={styles.inner}>
         <div className={styles.tit} ref={projectTit}>
           <h3>PORTFOLIO</h3>
-          <p>Some of my most recent projects</p>
+          <p>Some of My Most Recent Projects</p>
         </div>
         <div className={styles.body} ref={projectList}>
           {projects.map((project, index) => {
