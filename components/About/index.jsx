@@ -106,11 +106,11 @@ export default function About() {
             </p>
             <p>
               저는 세련되고 현대적인 웹사이트, 웹 서비스에 관심이 많으며 하루하루 변화하는 최신 동향과 기술을 지속적으로
-              학습하고 관심을 가지고 있습니다. 이를 바탕으로 자기개발의 힘쓰고 있으며,{' '}
-              <strong className="highlight"> &lsquo;최고의 퍼포먼스 개발자&rsquo;</strong> 로 성장하고자 노력하고
-              있습니다.
+              학습하고 관심을 가지고 있습니다. 이를 바탕으로 자기 개발에 힘쓰고 있으며,{' '}
+              <strong className="highlight"> &lsquo;뛰어난 퍼포먼스 개발자&rsquo;</strong> 로 성장하고자 노력하고
+              있습니다. 여기서 간단한 제 소개를 마치고 웹 포트폴리오에서 보다 더 많은 정보를 확인해주세요!
             </p>
-            <p>웹 포트폴리오에서 그동안 제가 진행했던 프로젝트를 확인하실 수 있습니다.</p>
+            <p>그동안 제가 진행했던 프로젝트를 확인하실 수 있습니다.</p>
           </div>
           <div className={styles.exp} ref={exp}>
             <div className={`${styles.expnumber} ${expN ? styles.heartBeat : ''}`} ref={expNumber}>
