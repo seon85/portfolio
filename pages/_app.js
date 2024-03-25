@@ -33,14 +33,6 @@ export default function App({ Component, pageProps, router }) {
       }, 600);
     };
 
-    const entries = performance.getEntriesByType('navigation')[0];
-    //const entriesNavigationTiming = entries as PerformanceNavigationTiming
-    //console.log(entries.type);
-    if (entries.type == 'reload') {
-      console.log(entries.type);
-      ScrollTrigger.refresh();
-    }
-
     router.events.on('routeChangeComplete', handleRouteComplete);
     return () => {
       router.events.off('routeChangeComplete', handleRouteComplete);
@@ -65,7 +57,7 @@ export default function App({ Component, pageProps, router }) {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
       const locomotiveScroll = new LocomotiveScroll();
     })();
-
+    window.history.scrollRestoration = 'manual';
     window.scrollTo(0, 0);
 
     setTimeout(() => {
