@@ -25,7 +25,7 @@ export default function App({ Component, pageProps, router }) {
     //window.scrollTo(0, top);
     window.scrollTo(0, 0);
     ScrollTrigger.getAll().forEach(t => t.kill());
-    console.log('a');
+    console.log(ScrollTrigger.getAll());
 
     const handleRouteComplete = (url, { shallow }) => {
       setTimeout(() => {
