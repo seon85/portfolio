@@ -20,6 +20,8 @@ export default function About() {
   const [expT, setexpT] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(aboutTit.current, {
       y: 0,

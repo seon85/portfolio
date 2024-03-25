@@ -15,8 +15,6 @@ import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
 import { useRouter } from 'next/router';
 import Curve from '@/components/Layout/index';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 // import { motion } from 'framer-motion';
 
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -37,13 +35,7 @@ export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
 
-  useLayoutEffect(() => {
-    ScrollTrigger.getAll().forEach(t => t.kill());
-  }, []);
-
   useEffect(() => {
-    window.scrollTo(0, 0);
-
     // (async () => {
     //   setTimeout(() => {
     //     setIsLoading(false);
