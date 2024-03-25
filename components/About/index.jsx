@@ -23,7 +23,7 @@ export default function About() {
     setTimeout(() => {
       //console.log(ScrollTrigger.getAll());
       ScrollTrigger.refresh();
-    }, 1000);
+    }, 2000);
 
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(aboutTit.current, {
