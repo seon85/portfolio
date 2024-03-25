@@ -30,6 +30,12 @@ export default function Curve({ children, backgroundColor }) {
   });
 
   useEffect(() => {
+    const entries = performance.getEntriesByType('navigation')[0];
+    if (entries.type == 'reload') {
+      console.log('a');
+      window.scrollTo(0, 0);
+    }
+
     function resize() {
       setDimensions({
         width: window.innerWidth,
