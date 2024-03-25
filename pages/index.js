@@ -35,6 +35,10 @@ export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
 
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     (async () => {
       setTimeout(() => {
