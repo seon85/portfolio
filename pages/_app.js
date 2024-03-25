@@ -59,9 +59,9 @@ export default function App({ Component, pageProps, router }) {
     })();
 
     window.scrollTo(0, 0);
+    window.history.scrollRestoration = 'auto';
 
     setTimeout(() => {
-      //  window.history.scrollRestoration = 'manual';
       //const top = document.querySelector('body').getBoundingClientRect().top;
       //window.scrollTo(0, top);
       window.scrollTo(0, 0);
