@@ -39,18 +39,18 @@ export default function App({ Component, pageProps, router }) {
     };
   }, [router]);
 
-  useEffect(() => {
-    // const handleRouteComplete = (url, { shallow }) => {
-    //   setTimeout(() => {
-    //     window.scrollTo(0, 0);
-    //     //console.log('comp');
-    //   }, 1500);
-    // };
-    // router.events.on('routeChangeComplete', handleRouteComplete);
-    // return () => {
-    //   router.events.off('routeChangeComplete', handleRouteComplete);
-    // };
-  }, [router]);
+  // useEffect(() => {
+  //   const handleRouteComplete = (url, { shallow }) => {
+  //     setTimeout(() => {
+  //       window.scrollTo(0, 0);
+  //       //console.log('comp');
+  //     }, 1500);
+  //   };
+  //   router.events.on('routeChangeComplete', handleRouteComplete);
+  //   return () => {
+  //     router.events.off('routeChangeComplete', handleRouteComplete);
+  //   };
+  // }, [router]);
 
   useEffect(() => {
     (async () => {
@@ -59,6 +59,12 @@ export default function App({ Component, pageProps, router }) {
     })();
 
     window.scrollTo(0, 0);
+
+    const entries = performance.getEntriesByType('navigation')[0];
+    if (entries == 'reload') {
+      console.log('a');
+      window.scrollTo(0, 0);
+    }
 
     setTimeout(() => {
       //  window.history.scrollRestoration = 'manual';
@@ -90,7 +96,7 @@ export default function App({ Component, pageProps, router }) {
     <>
       <Header />
       <main>
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           <Component key={router.route} {...pageProps} />
         </AnimatePresence>
       </main>
