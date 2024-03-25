@@ -61,7 +61,7 @@ export default function App({ Component, pageProps, router }) {
     window.scrollTo(0, 0);
 
     const entries = performance.getEntriesByType('navigation')[0];
-    if (entries == 'reload') {
+    if (entries.type == 'reload') {
       console.log('a');
       window.scrollTo(0, 0);
     }
