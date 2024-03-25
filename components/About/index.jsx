@@ -20,6 +20,11 @@ export default function About() {
   const [expT, setexpT] = useState(false);
 
   useEffect(() => {
+    setTimeout(() => {
+      //console.log(ScrollTrigger.getAll());
+      ScrollTrigger.refresh();
+    }, 1000);
+
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(aboutTit.current, {
       y: 0,
