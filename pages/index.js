@@ -36,13 +36,11 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // (async () => {
-    //   setTimeout(() => {
-    //     setIsLoading(false);
-    //     //document.body.style.cursor = 'default';
-    //     window.scrollTo(0, 0);
-    //   }, 2000);
-    // })();
+    (async () => {
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 20);
+    })();
     // const handleRouteChange = (url, { shallow }) => {
     //   document.body.classList.add('main_hidden');
     //   setTimeout(() => {

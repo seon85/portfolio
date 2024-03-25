@@ -39,18 +39,18 @@ export default function App({ Component, pageProps, router }) {
     };
   }, [router]);
 
-  // useEffect(() => {
-  //   const handleRouteComplete = (url, { shallow }) => {
-  //     setTimeout(() => {
-  //       window.scrollTo(0, 0);
-  //       //console.log('comp');
-  //     }, 1500);
-  //   };
-  //   router.events.on('routeChangeComplete', handleRouteComplete);
-  //   return () => {
-  //     router.events.off('routeChangeComplete', handleRouteComplete);
-  //   };
-  // }, [router]);
+  useEffect(() => {
+    // const handleRouteComplete = (url, { shallow }) => {
+    //   setTimeout(() => {
+    //     window.scrollTo(0, 0);
+    //     //console.log('comp');
+    //   }, 1500);
+    // };
+    // router.events.on('routeChangeComplete', handleRouteComplete);
+    // return () => {
+    //   router.events.off('routeChangeComplete', handleRouteComplete);
+    // };
+  }, [router]);
 
   useEffect(() => {
     (async () => {
@@ -60,9 +60,8 @@ export default function App({ Component, pageProps, router }) {
 
     window.scrollTo(0, 0);
 
-    window.history.scrollRestoration = 'manual';
-
     setTimeout(() => {
+      //  window.history.scrollRestoration = 'manual';
       //const top = document.querySelector('body').getBoundingClientRect().top;
       //window.scrollTo(0, top);
       window.scrollTo(0, 0);
