@@ -66,7 +66,7 @@ export default function App({ Component, pageProps, router }) {
       //window.scrollTo(0, top);
       window.scrollTo(0, 0);
       //console.log('top');
-    }, 2500);
+    }, 10);
 
     const handleRouteChange = (url, { shallow }) => {
       // console.log(
