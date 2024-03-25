@@ -36,6 +36,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useLayoutEffect(() => {
+    window.history.scrollRestoration = 'manual';
     window.scrollTo(0, 0);
   }, []);
 
@@ -44,6 +45,7 @@ export default function Home() {
       setTimeout(() => {
         //setIsLoading(false);
         //document.body.style.cursor = 'default';
+        window.history.scrollRestoration = 'manual';
         window.scrollTo(0, 0);
       }, 15);
     })();
