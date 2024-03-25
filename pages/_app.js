@@ -53,6 +53,15 @@ export default function App({ Component, pageProps, router }) {
   }, [router]);
 
   useEffect(() => {
+    const entries = performance.getEntriesByType('navigation')[0];
+    //const entriesNavigationTiming = entries as PerformanceNavigationTiming
+    //console.log(entries.type);
+    if (entries.type == 'reload') {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
+  useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
       const locomotiveScroll = new LocomotiveScroll();

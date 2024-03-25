@@ -20,8 +20,6 @@ export default function About() {
   const [expT, setexpT] = useState(false);
 
   useEffect(() => {
-    ScrollTrigger.getAll().forEach(t => t.kill());
-
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(aboutTit.current, {
       y: 0,
