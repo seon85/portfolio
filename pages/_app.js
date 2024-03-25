@@ -57,7 +57,7 @@ export default function App({ Component, pageProps, router }) {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
       const locomotiveScroll = new LocomotiveScroll();
     })();
-    window.history.scrollRestoration = 'auto';
+
     window.scrollTo(0, 0);
 
     setTimeout(() => {
@@ -90,7 +90,7 @@ export default function App({ Component, pageProps, router }) {
     <>
       <Header />
       <main>
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           <Component key={router.route} {...pageProps} />
         </AnimatePresence>
       </main>
