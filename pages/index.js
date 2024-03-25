@@ -41,7 +41,7 @@ export default function Home() {
         //setIsLoading(false);
         //document.body.style.cursor = 'default';
         window.scrollTo(0, 0);
-      }, 20);
+      }, 10);
     })();
     // const handleRouteChange = (url, { shallow }) => {
     //   document.body.classList.add('main_hidden');
