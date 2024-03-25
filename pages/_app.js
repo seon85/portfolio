@@ -24,7 +24,7 @@ export default function App({ Component, pageProps, router }) {
     //const top = document.querySelector('body').getBoundingClientRect().top;
     //window.scrollTo(0, top);
     window.scrollTo(0, 0);
-    //console.log('a');
+    console.log('a');
 
     const handleRouteComplete = (url, { shallow }) => {
       setTimeout(() => {
