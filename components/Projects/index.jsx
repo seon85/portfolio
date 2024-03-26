@@ -111,12 +111,15 @@ export default function Home() {
   }, []);
 
   const moveItems = (x, y) => {
-    xMoveContainer.current(x);
-    yMoveContainer.current(y);
-    xMoveCursor.current(x);
-    yMoveCursor.current(y);
-    xMoveCursorLabel.current(x);
-    yMoveCursorLabel.current(y);
+    //console.log(navigator.maxTouchPoints);
+    if (navigator.maxTouchPoints < 1) {
+      xMoveContainer.current(x);
+      yMoveContainer.current(y);
+      xMoveCursor.current(x);
+      yMoveCursor.current(y);
+      xMoveCursorLabel.current(x);
+      yMoveCursorLabel.current(y);
+    }
   };
   const manageModal = (active, index, x, y) => {
     moveItems(x, y);
