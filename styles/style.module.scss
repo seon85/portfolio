@@ -410,6 +410,7 @@
 
 .project {
   width: 100%;
+
   a {
     display: flex;
     justify-content: space-between;
@@ -451,6 +452,23 @@
     p {
       transform: translateX(10px);
       font-weight: 500;
+    }
+  }
+
+  @media (width < 768px) {
+    a {
+      display: block;
+      padding: 30px 3vw 30px 3vw;
+    }
+
+    h2 {
+      padding-right: 0;
+      line-height: 1.4;
+      font-size: clamp(1.55rem, 4.3vw, 2.5rem);
+    }
+
+    p {
+      margin-top: 10px;
     }
   }
 }
