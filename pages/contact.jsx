@@ -149,8 +149,8 @@ export default function Contact() {
           content="웹 퍼블리셔 선종혁의 포트폴리오 사이트입니다. 저의 소개와 그동안 진행했던 프로젝트를 확인하실 수 있습니다."
         />
         <meta name="og:type" content="website" />
-        <meta name="og:url" content="" />
-        <meta name="og:url" content="/images/og_img.jpg" />
+        <meta name="og:url" content="https://portfolio-one-phi-86.vercel.app/" />
+        <meta property="og:image" content="/images/og_img.jpg" />
         <meta name="twitter:card" content="card" />
         <meta name="twitter:title" content="웹 퍼블리셔 선종혁의 포트폴리오" />
         <meta
