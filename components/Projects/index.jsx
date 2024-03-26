@@ -122,8 +122,10 @@ export default function Home() {
     }
   };
   const manageModal = (active, index, x, y) => {
-    moveItems(x, y);
-    setModal({ active, index });
+    if (navigator.maxTouchPoints < 1) {
+      moveItems(x, y);
+      setModal({ active, index });
+    }
   };
 
   return (
