@@ -130,7 +130,7 @@ export default function Contact() {
     <>
       {/* <PageLoading /> */}
       <Head>
-        <title>Contact | Jonghyuk's Portfolio</title>
+        <title>Contact | Jonghyuk&apos;s Portfolio</title>
         {/* <title>Contact</title> */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta

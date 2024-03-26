@@ -105,7 +105,7 @@ export default function Portfolio() {
     <>
       {/* <PageLoading /> */}
       <Head>
-        <title>Portfolio | Jonghyuk's Portfolio</title>
+        <title>Portfolio | Jonghyuk&apos;s Portfolio</title>
         {/* <title>Portfolio</title> */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
