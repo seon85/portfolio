@@ -41,10 +41,12 @@ export default function App({ Component, pageProps, router }) {
 
   useEffect(() => {
     const handleRouteComplete = (url, { shallow }) => {
+      ScrollTrigger.refresh();
       setTimeout(() => {
         //window.scrollTo(0, 0);
         //console.log('comp');
         document.body.style = '';
+        gsap.set(document.querySelector('header').nextSibling, { clearProps: true });
       }, 1500);
     };
     router.events.on('routeChangeComplete', handleRouteComplete);
@@ -77,6 +79,7 @@ export default function App({ Component, pageProps, router }) {
       // );
       //localStorage.removeItem('load');
       ScrollTrigger.getAll().forEach(t => t.kill());
+
       document.body.style.cssText = `
       position: fixed; 
       top: -${window.scrollY}px;
