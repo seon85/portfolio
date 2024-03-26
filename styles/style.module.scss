@@ -531,6 +531,9 @@
       z-index: 1;
       position: absolute;
       box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+      @media (width < 768px) {
+        height: 500%;
+      }
     }
   }
 
