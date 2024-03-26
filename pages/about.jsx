@@ -261,8 +261,8 @@ export default function About() {
     <>
       {/* <PageLoading /> */}
       <Head>
-        {/* <title>About | 선종혁의 웹 포트폴리오</title> */}
-        <title>About</title>
+        <title>About | Jonghyuk's Portfolio</title>
+        {/* <title>About</title> */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"

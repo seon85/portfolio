@@ -105,8 +105,8 @@ export default function Portfolio() {
     <>
       {/* <PageLoading /> */}
       <Head>
-        {/* <title>Portfolio | 선종혁의 웹 포트폴리오</title> */}
-        <title>Portfolio</title>
+        <title>Portfolio | Jonghyuk's Portfolio</title>
+        {/* <title>Portfolio</title> */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"

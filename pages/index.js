@@ -83,8 +83,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        {/* <title>선종혁의 웹 포트폴리오</title> */}
-        <title>메인</title>
+        <title>Jonghyuk's Portfolio</title>
+        {/* <title>메인</title> */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
