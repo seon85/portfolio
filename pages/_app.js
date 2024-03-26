@@ -40,16 +40,17 @@ export default function App({ Component, pageProps, router }) {
   }, [router]);
 
   useEffect(() => {
-    // const handleRouteComplete = (url, { shallow }) => {
-    //   setTimeout(() => {
-    //     window.scrollTo(0, 0);
-    //     //console.log('comp');
-    //   }, 1500);
-    // };
-    // router.events.on('routeChangeComplete', handleRouteComplete);
-    // return () => {
-    //   router.events.off('routeChangeComplete', handleRouteComplete);
-    // };
+    const handleRouteComplete = (url, { shallow }) => {
+      setTimeout(() => {
+        //window.scrollTo(0, 0);
+        //console.log('comp');
+        document.body.style = '';
+      }, 1500);
+    };
+    router.events.on('routeChangeComplete', handleRouteComplete);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteComplete);
+    };
   }, [router]);
 
   useEffect(() => {
@@ -76,6 +77,10 @@ export default function App({ Component, pageProps, router }) {
       // );
       //localStorage.removeItem('load');
       ScrollTrigger.getAll().forEach(t => t.kill());
+      document.body.style.cssText = `
+      position: fixed; 
+      top: -${window.scrollY}px;
+      width: 100%;`;
     };
 
     router.events.on('routeChangeStart', handleRouteChange);
