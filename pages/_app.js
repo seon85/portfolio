@@ -47,7 +47,8 @@ export default function App({ Component, pageProps, router }) {
         //console.log('comp');
         document.body.style = '';
         gsap.set(document.querySelector('header').nextSibling, { clearProps: true });
-      }, 1500);
+        window.scrollTo(0, 0);
+      }, 600);
     };
     router.events.on('routeChangeComplete', handleRouteComplete);
     return () => {
@@ -80,10 +81,12 @@ export default function App({ Component, pageProps, router }) {
       //localStorage.removeItem('load');
       ScrollTrigger.getAll().forEach(t => t.kill());
 
-      document.body.style.cssText = `
-      position: fixed; 
-      top: -${window.scrollY}px;
-      width: 100%;`;
+      if (router.pathname != '/') {
+        document.body.style.cssText = `
+        position: fixed; 
+        top: -${window.scrollY}px;
+        width: 100%;`;
+      }
     };
 
     router.events.on('routeChangeStart', handleRouteChange);
