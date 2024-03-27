@@ -138,6 +138,11 @@ export default function Home() {
         <SlidingImages />
         <Contact />
       </Curve>
+      <style jsx global>{`
+        body {
+          background: #1c1d20;
+        }
+      `}</style>
     </>
   );
 }
