@@ -1387,6 +1387,10 @@
       object-fit: cover;
       object-position: top;
     }
+
+    @media (width < 768px) {
+      padding: 15px;
+    }
   }
 
   .port_tit {
@@ -1657,6 +1661,12 @@
       font-size: 20px;
     }
   }
+
+  @media (width < 768px) {
+    > div {
+      height: 50px;
+    }
+  }
 }
 
 .cont_wrap {
@@ -1700,7 +1710,7 @@
     }
   }
 
-  @media (width > 768px) {
+  @media (width > 1000px) {
     display: grid;
     grid-template-columns: 1fr 300px;
     gap: 0 4vw;

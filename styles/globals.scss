@@ -228,6 +228,12 @@ button {
   @media (width > 768px) {
     padding: 40px 0;
   }
+
+  @media (width < 768px) {
+    .chakra-form__label {
+      font-size: 20px;
+    }
+  }
 }
 
 .curve {
