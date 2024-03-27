@@ -4,7 +4,7 @@
   z-index: 1;
   top: 0;
   color: #000;
-  padding: 35px;
+  padding: 35px 25px;
   justify-content: space-between;
   width: 100%;
   font-weight: 300;
@@ -104,7 +104,7 @@
     }
   }
 
-  @media (width > 1000px) {
+  @media (width > 768px) {
     padding: 50px 8vw;
   }
 }
