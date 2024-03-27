@@ -474,7 +474,7 @@
     }
 
     p {
-      margin-top: 13px;
+      margin-top: 20px;
     }
   }
 }
@@ -930,6 +930,12 @@
       right: 140px;
     }
   }
+
+  @media (width < 768px) {
+    .aboutTxt {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .abt_me {
@@ -1007,6 +1013,12 @@
       font-weight: 500;
       font-size: 14px;
       letter-spacing: -1px;
+    }
+  }
+
+  @media (width < 768px) {
+    li {
+      padding: 40px 20px;
     }
   }
 }
