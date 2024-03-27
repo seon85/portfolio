@@ -1107,6 +1107,10 @@
 .car_list_wrap {
   padding-left: 20px;
   border-left: 2px solid #f5df4e;
+
+  @media (width < 768px) {
+    padding-left: 10px;
+  }
 }
 
 .car_list {
