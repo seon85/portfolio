@@ -994,7 +994,7 @@ export default function About() {
               </div>
               <div className={styles.car_list}>
                 <h4>
-                  Adqua
+                  베리소프트
                   <span>2010.07. ~ 2011.03.</span>
                 </h4>
                 <p>
