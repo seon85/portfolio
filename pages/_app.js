@@ -1,5 +1,7 @@
 import '@/styles/globals.scss';
 import { useEffect, useLayoutEffect } from 'react';
+import Script from 'next/script';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -99,6 +101,21 @@ export default function App({ Component, pageProps, router }) {
   }, [router]);
   return (
     <>
+      <Head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-48JQD0WNBQ" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-48JQD0WNBQ', {
+            page_path: window.location.pathname,
+          });
+        `,
+          }}
+        />
+      </Head>
       <Header />
       <main>
         <AnimatePresence mode="wait">
