@@ -109,9 +109,7 @@ export default function App({ Component, pageProps, router }) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-48JQD0WNBQ', {
-            page_path: window.location.pathname,
-          });
+          gtag('config', 'G-48JQD0WNBQ');
         `,
           }}
         />
