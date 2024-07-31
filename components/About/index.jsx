@@ -28,7 +28,7 @@ export default function About() {
       scrollTrigger: {
         trigger: about.current,
         //scrub: 1,
-        start: '3% 100%',
+        start: '13% 100%',
         end: '17% 60%',
         pin: false,
         //markers: true,
