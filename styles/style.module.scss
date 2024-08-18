@@ -53,11 +53,21 @@
     height: 6.6vw;
     border: 0.8vw solid #222;
     border-radius: 100px;
+
+    @media (width > 3200px) {
+      height: 5.1vw;
+    }
   }
 
   @media (width > 768px) {
     p {
       font-size: 9.111111vw;
+    }
+  }
+
+  @media (width > 3200px) {
+    p {
+      font-size: 7.111111vw;
     }
   }
 
@@ -137,6 +147,10 @@
   overflow: hidden;
   @media (width > 768px) {
     padding: 6vw;
+  }
+
+  @media (width > 2000px) {
+    max-width: 2000px;
   }
 }
 
@@ -384,6 +398,14 @@
   .modal img {
     //height: auto;
     height: 11vw;
+
+    @media (width > 2000px) {
+      height: 8vw;
+    }
+
+    @media (width > 3000px) {
+      height: 6vw;
+    }
   }
 
   .cursor,
@@ -561,6 +583,7 @@
   .body {
     padding: 50vw 8vw 0;
     width: 100%;
+    //height: 100vh;
     max-width: 1700px;
     background-color: #1c1d20;
 
@@ -681,7 +704,7 @@
       }
     }
 
-    @media (width > 768px) {
+    @media (width > 767px) {
       //padding: 200px 6vw 0;
       padding: 200px 6vw 0;
       .title {
@@ -702,6 +725,21 @@
           margin-bottom: 0;
         }
       }
+    }
+
+    @media (height > 1023px) {
+      height: 100vh;
+    }
+
+    @media (height > 1199px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (width > 2000px) {
+      max-width: 2000px;
+      //height: 100vh;
     }
   }
 }
