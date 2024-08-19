@@ -953,7 +953,8 @@
       padding-right: 50px;
       font-size: max(1rem, min(2.17152vw + 0.25667rem, 5.0625rem));
       p {
-        padding-left: 45px;
+        // padding-left: 45px;
+        padding-left: 2.5vw;
         &:not(:last-child) {
           margin-bottom: 20px;
         }
@@ -968,6 +969,22 @@
       right: 140px;
     }
   }
+
+  // @media (width > 2600px) {
+  //   .aboutTxt {
+  //     p {
+  //       padding-left: 53px;
+  //     }
+  //   }
+  // }
+
+  // @media (width > 3000px) {
+  //   .aboutTxt {
+  //     p {
+  //       padding-left: 65px;
+  //     }
+  //   }
+  // }
 
   @media (width < 768px) {
     .aboutTxt {
