@@ -185,7 +185,7 @@ export default function About() {
       y: 0,
       scrollTrigger: {
         trigger: expe.current,
-        start: '10% 70%',
+        start: '0% 70%',
         end: '50% 90%',
         //end: window.innerHeight,
         //scrub: 2,
