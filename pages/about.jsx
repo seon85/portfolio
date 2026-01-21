@@ -661,14 +661,14 @@ export default function About() {
                   <span className={styles.t1}>03</span>
                   나이
                 </h4>
-                38세
+                41세
               </li>
               <li>
                 <h4>
                   <span className={styles.t1}>04</span>
                   경력
                 </h4>
-                13년
+                14년
               </li>
               <li>
                 <h4>
@@ -968,6 +968,16 @@ export default function About() {
               />
             </svg>
             <div className={styles.car_list_wrap}>
+              <div className={styles.car_list}>
+                <h4>
+                  짙은
+                  <span>2025.02. ~ 재직중</span>
+                </h4>
+                <p>
+                  공공기관, 기업, 대학교 등 SI 프로젝트를 수행하였으며, 웹사이트 마크업 및 유지보수 업무를
+                  담당하였습니다.
+                </p>
+              </div>
               <div className={styles.car_list}>
                 <h4>
                   짙은
