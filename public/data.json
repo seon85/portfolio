@@ -1,6 +1,24 @@
 [
   {
-    "id": 54,
+    "id": 58,
+    "title": "한국고용노동교육원",
+    "image": "img_keli",
+    "position": "<img src='/images/html.webp' alt='HTML' style='width: 35px'> <img src='/images/css.webp' alt='CSS' style='width: 35px'> <img src='/images/js-file.webp' alt='JS' style='width: 35px'>",
+    "date": "2023.07 ~ 2024.01.",
+    "url": "https://www.keli.kr/",
+    "pointer": ""
+  },
+  {
+    "id": 57,
+    "title": "문화체육관광 통계 포털 문화셈터",
+    "image": "img_stat",
+    "position": "<img src='/images/html.webp' alt='HTML' style='width: 35px'> <img src='/images/css.webp' alt='CSS' style='width: 35px'> <img src='/images/js-file.webp' alt='JS' style='width: 35px'>",
+    "date": "2023.07 ~ 2024.01.",
+    "url": "https://stat.mcst.go.kr/portal/main",
+    "pointer": ""
+  },
+  {
+    "id": 56,
     "title": "한국건설기술인협회",
     "image": "img_kocea",
     "position": "<img src='/images/html.webp' alt='HTML' style='width: 35px'> <img src='/images/css.webp' alt='CSS' style='width: 35px'> <img src='/images/js-file.webp' alt='JS' style='width: 35px'>",
