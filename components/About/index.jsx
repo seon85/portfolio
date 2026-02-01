@@ -114,7 +114,7 @@ export default function About() {
           </div>
           <div className={styles.exp} ref={exp}>
             <div className={`${styles.expnumber} ${expN ? styles.heartBeat : ''}`} ref={expNumber}>
-              13
+              14
             </div>
             <div className={`${styles.exptxt} ${expT ? styles.rubberBand : ''}`} ref={expTxt}>
               Years of <strong>Experiance</strong>
