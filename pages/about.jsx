@@ -971,7 +971,7 @@ export default function About() {
               <div className={styles.car_list}>
                 <h4>
                   짙은
-                  <span>2025.02. ~ 재직중</span>
+                  <span>2025.02. ~ 2026.02</span>
                 </h4>
                 <p>
                   공공기관, 기업, 대학교 등 SI 프로젝트를 수행하였으며, 웹사이트 마크업 및 유지보수 업무를
